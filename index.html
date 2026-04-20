@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pan Hardfeldt</title>
+<meta name="description" content="AI architect, author, social work expert. Building tools that reveal how minds work.">
+<meta property="og:title" content="Pan Hardfeldt">
+<meta property="og:description" content="AI architect, author, social work expert.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0c0b0f;
+  --bg-card: #14131a;
+  --bg-card-hover: #1a1924;
+  --text: #e8e4de;
+  --text-muted: #8a857d;
+  --text-dim: #5a564f;
+  --accent: #c8a46e;
+  --accent-glow: #c8a46e22;
+  --accent-bright: #ddb978;
+  --border: #2a2832;
+  --serif: 'Cormorant Garamond', Georgia, serif;
+  --sans: 'DM Sans', -apple-system, sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  background: var(--bg);
+}
+
+body {
+  font-family: var(--sans);
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.7;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Noise texture overlay */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 9999;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+a:hover { color: var(--accent-bright); }
+
+/* ─── LANGUAGE TOGGLE ─── */
+.lang-toggle {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  z-index: 100;
+  display: flex;
+  gap: 0;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+  background: var(--bg-card);
+  backdrop-filter: blur(20px);
+}
+.lang-btn {
+  padding: 0.4rem 0.9rem;
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  background: transparent;
+  color: var(--text-muted);
+  transition: all 0.3s ease;
+}
+.lang-btn.active {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+/* ─── NAV ─── */
+nav {
+  position: fixed;
+  top: 2rem;
+  left: 2rem;
+  z-index: 100;
+  display: flex;
+  gap: 1.5rem;
+}
+nav a {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  transition: color 0.3s ease;
+}
+nav a:hover { color: var(--accent); }
+
+/* ─── SECTIONS ─── */
+section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6rem 2rem;
+}
+
+.container {
+  max-width: 900px;
+  width: 100%;
+}
+
+/* ─── HERO ─── */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 6rem 2rem;
+  position: relative;
+}
+
+.hero-name {
+  font-family: var(--serif);
+  font-size: clamp(3.5rem, 8vw, 7rem);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  margin-bottom: 1.5rem;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1s ease 0.3s forwards;
+}
+
+.hero-line {
+  width: 80px;
+  height: 1px;
+  background: var(--accent);
+  margin-bottom: 2rem;
+  opacity: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: lineIn 0.8s ease 0.8s forwards;
+}
+
+.hero-tagline {
+  font-family: var(--serif);
+  font-size: clamp(1.15rem, 2.5vw, 1.5rem);
+  font-weight: 400;
+  font-style: italic;
+  color: var(--text-muted);
+  max-width: 600px;
+  line-height: 1.6;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 1s ease 1.1s forwards;
+}
+
+.hero-roles {
+  margin-top: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  opacity: 0;
+  animation: fadeUp 1s ease 1.4s forwards;
+}
+
+.role-tag {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  padding: 0.45rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+.role-tag:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.scroll-hint {
+  position: absolute;
+  bottom: 3rem;
+  left: 2rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  opacity: 0;
+  animation: fadeUp 1s ease 1.8s forwards;
+}
+.scroll-hint::after {
+  content: '';
+  display: block;
+  width: 1px;
+  height: 40px;
+  background: linear-gradient(to bottom, var(--accent), transparent);
+  margin-top: 0.8rem;
+  animation: pulse 2s ease infinite;
+}
+
+/* ─── CARDS GRID ─── */
+.section-label {
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1.5rem;
+}
+
+.section-title {
+  font-family: var(--serif);
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.section-desc {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  max-width: 600px;
+  margin-bottom: 3rem;
+  line-height: 1.8;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 2.5rem;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent), transparent);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.card:hover {
+  background: var(--bg-card-hover);
+  border-color: #3a3842;
+  transform: translateY(-2px);
+}
+.card:hover::before { opacity: 1; }
+
+.card-icon {
+  font-size: 1.8rem;
+  margin-bottom: 1.2rem;
+  display: block;
+}
+
+.card-title {
+  font-family: var(--serif);
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+}
+
+.card-subtitle {
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.card-text {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.card-link {
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: gap 0.3s ease;
+}
+.card-link:hover { gap: 0.8rem; }
+.card-link::after { content: '→'; }
+
+/* ─── LITERATURE SPECIAL ─── */
+.book-card {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.book-quote {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  border-left: 2px solid var(--accent);
+  padding-left: 1.5rem;
+  margin-top: 1rem;
+  line-height: 1.7;
+}
+
+/* ─── SPEAKING / METHODOLOGY ─── */
+.method-principles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.principle {
+  padding: 1.2rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  transition: border-color 0.3s ease;
+}
+.principle:hover { border-color: var(--accent); }
+
+.principle-num {
+  font-family: var(--serif);
+  font-size: 1.4rem;
+  color: var(--accent);
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+.method-stats {
+  display: flex;
+  gap: 3rem;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.method-stat {
+  display: flex;
+  flex-direction: column;
+}
+
+.method-stat-num {
+  font-family: var(--serif);
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1;
+}
+
+.method-stat-label {
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-top: 0.3rem;
+}
+
+.method-requirements p {
+  padding-left: 1rem;
+  border-left: 2px solid var(--border);
+  margin-bottom: 1rem;
+}
+.method-requirements p:last-child { margin-bottom: 0; }
+
+@media (max-width: 768px) {
+  .method-stats {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+}
+
+/* ─── CONTACT ─── */
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.contact-btn {
+  padding: 0.8rem 1.8rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text);
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.contact-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.contact-btn.primary {
+  background: var(--accent);
+  color: var(--bg);
+  border-color: var(--accent);
+}
+.contact-btn.primary:hover {
+  background: var(--accent-bright);
+}
+
+/* ─── FOOTER ─── */
+footer {
+  padding: 4rem 2rem;
+  text-align: center;
+  color: var(--text-dim);
+  font-size: 0.8rem;
+  border-top: 1px solid var(--border);
+}
+
+/* ─── ANIMATIONS ─── */
+@keyframes fadeUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes lineIn {
+  to { opacity: 1; transform: scaleX(1); }
+}
+@keyframes pulse {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 1; }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ─── RESPONSIVE ─── */
+@media (min-width: 768px) {
+  .cards { grid-template-columns: repeat(2, 1fr); }
+  .card.full-width { grid-column: 1 / -1; }
+  nav { gap: 2rem; }
+}
+
+@media (max-width: 768px) {
+  nav { display: none; }
+  .lang-toggle { top: 1.2rem; right: 1.2rem; }
+  section { padding: 4rem 1.5rem; }
+  .hero { padding: 4rem 1.5rem; }
+  .card { padding: 1.8rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- Language Toggle -->
+<div class="lang-toggle">
+  <button class="lang-btn active" onclick="setLang('sv')">SV</button>
+  <button class="lang-btn" onclick="setLang('en')">EN</button>
+</div>
+
+<!-- Nav -->
+<nav>
+  <a href="#work" data-sv="Arbete" data-en="Work">Arbete</a>
+  <a href="#literature" data-sv="Litteratur" data-en="Literature">Litteratur</a>
+  <a href="#method" data-sv="Metodologi" data-en="Methodology">Metodologi</a>
+  <a href="#contact" data-sv="Kontakt" data-en="Contact">Kontakt</a>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="container">
+    <h1 class="hero-name">Pan Hardfeldt</h1>
+    <div class="hero-line"></div>
+    <p class="hero-tagline" data-sv="Jag bygger verktyg som avslöjar hur medvetanden fungerar — med AI, genom spel, i ord och i praktik." data-en="I build tools that reveal how minds work — with AI, through games, in prose, and in practice.">Jag bygger verktyg som avslöjar hur medvetanden fungerar — med AI, genom spel, i ord och i praktik.</p>
+    <div class="hero-roles">
+      <span class="role-tag" data-sv="AI-arkitekt" data-en="AI Architect">AI-arkitekt</span>
+      <span class="role-tag" data-sv="Författare" data-en="Author">Författare</span>
+      <span class="role-tag" data-sv="Socialt arbete" data-en="Social Work">Socialt arbete</span>
+      <span class="role-tag" data-sv="Föreläsare" data-en="Speaker">Föreläsare</span>
+    </div>
+  </div>
+  <div class="scroll-hint" data-sv="Scrolla" data-en="Scroll">Scrolla</div>
+</section>
+
+<!-- Work -->
+<section id="work">
+  <div class="container">
+    <div class="reveal">
+      <span class="section-label" data-sv="Arbete" data-en="Work">Arbete</span>
+      <h2 class="section-title" data-sv="Fyra projekt. En röd tråd." data-en="Four projects. One thread.">Fyra projekt. En röd tråd.</h2>
+      <p class="section-desc" data-sv="Varje projekt handlar om samma sak: att förstå hur människor fattar beslut — och bygga system som gör den förståelsen användbar." data-en="Every project is about the same thing: understanding how people make decisions — and building systems that make that understanding useful.">Varje projekt handlar om samma sak: att förstå hur människor fattar beslut — och bygga system som gör den förståelsen användbar.</p>
+    </div>
+
+    <div class="cards">
+      <!-- AI-GameFriend -->
+      <div class="card reveal">
+        <span class="card-icon">🧠</span>
+        <h3 class="card-title">AI-GameFriend</h3>
+        <p class="card-subtitle" data-sv="Beteendepsykologi genom strategispel" data-en="Behavioral psychology through strategy games">Beteendepsykologi genom strategispel</p>
+        <p class="card-text" data-sv="En plattform där du spelar strategispel mot AI som faktiskt tänker — Claude, GPT, Gemini, Grok. Varje val du gör bygger din psykologiska profil. Tio MindGames, 28 strategispel, interaktiv fiktion. Inte en spelmotor — ett instrument för att mäta hur medvetanden fattar beslut under press." data-en="A platform where you play strategy games against AI that actually thinks — Claude, GPT, Gemini, Grok. Every choice you make builds your psychological profile. Ten MindGames, 28 strategy games, interactive fiction. Not a game engine — an instrument for measuring how minds make decisions under pressure.">En plattform där du spelar strategispel mot AI som faktiskt tänker — Claude, GPT, Gemini, Grok. Varje val du gör bygger din psykologiska profil. Tio MindGames, 28 strategispel, interaktiv fiktion. Inte en spelmotor — ett instrument för att mäta hur medvetanden fattar beslut under press.</p>
+        <a href="https://getnextool.com/ai-gamefriend" class="card-link" target="_blank" data-sv="Prova gratis" data-en="Try free">Prova gratis</a>
+      </div>
+
+      <!-- Lupino -->
+      <div class="card reveal">
+        <span class="card-icon">🛡️</span>
+        <h3 class="card-title">Lupino</h3>
+        <p class="card-subtitle" data-sv="Digital plattform för socialtjänstens barn- och ungdomsvård" data-en="Digital platform for child welfare services">Digital plattform för socialtjänstens barn- och ungdomsvård</p>
+        <p class="card-text" data-sv="Kompetenstestning, utredningsstöd och handläggarträning i ett verktyg. Bygger på svensk lagstiftning (SoL, LVU) och BBIC-ramverket. 150 utredningsfrågor per missförhållande. Certifiering av handläggare. Internationell modul (LCWAF) för utvecklingsländer." data-en="Competency testing, investigation support, and caseworker training in one tool. Built on Swedish legislation (SoL, LVU) and the BBIC framework. 150 investigation questions per case type. Caseworker certification. International module (LCWAF) for developing countries.">Kompetenstestning, utredningsstöd och handläggarträning i ett verktyg. Bygger på svensk lagstiftning (SoL, LVU) och BBIC-ramverket. 150 utredningsfrågor per missförhållande. Certifiering av handläggare. Internationell modul (LCWAF) för utvecklingsländer.</p>
+        <a href="https://lupino.se" class="card-link" target="_blank" data-sv="Besök Lupino" data-en="Visit Lupino">Besök Lupino</a>
+      </div>
+
+      <!-- Consulting -->
+      <div class="card reveal">
+        <span class="card-icon">⚖️</span>
+        <h3 class="card-title">Hardfeldt Moberg Consulting AB</h3>
+        <p class="card-subtitle" data-sv="Konsulttjänster för socialtjänsten" data-en="Social services consulting">Konsulttjänster för socialtjänsten</p>
+        <p class="card-text" data-sv="14 års erfarenhet inom socialt arbete. Myndighetsutövning barn och unga, handläggning och behandlingsarbete. Erfarenhet av processföring vid förvaltningsrätt och kammarrätt — bevisvärdering, förvaltningsrättsliga principer, juridisk underbyggnad. Kommuner anlitar oss när de behöver en erfaren resurs som snabbt levererar kvalitet." data-en="14 years of social work experience. Child welfare case management, investigative and therapeutic work. Experience representing parties in administrative courts — evidence evaluation, legal principles, case preparation. Municipalities engage us when they need experienced expertise that delivers quality fast.">14 års erfarenhet inom socialt arbete. Myndighetsutövning barn och unga, handläggning och behandlingsarbete. Erfarenhet av processföring vid förvaltningsrätt och kammarrätt — bevisvärdering, förvaltningsrättsliga principer, juridisk underbyggnad. Kommuner anlitar oss när de behöver en erfaren resurs som snabbt levererar kvalitet.</p>
+        <a href="mailto:pan@hardfeldtmoberg.se" class="card-link" data-sv="Kontakta oss" data-en="Get in touch">Kontakta oss</a>
+      </div>
+
+      <!-- NexTool -->
+      <div class="card reveal">
+        <span class="card-icon">📊</span>
+        <h3 class="card-title">NexTool</h3>
+        <p class="card-subtitle" data-sv="333 finansiella kalkylatorer" data-en="333 financial calculators">333 finansiella kalkylatorer</p>
+        <p class="card-text" data-sv="Gratis verktygsplattform med kalkylatorer för bolån, investeringar, skatt, pension, budget och företagsanalys. Plattformen som bär AI-GameFriend." data-en="Free tool platform with calculators for mortgages, investments, tax, retirement, budgeting and business analysis. The platform that hosts AI-GameFriend.">Gratis verktygsplattform med kalkylatorer för bolån, investeringar, skatt, pension, budget och företagsanalys. Plattformen som bär AI-GameFriend.</p>
+        <a href="https://getnextool.com" class="card-link" target="_blank" data-sv="Öppna NexTool" data-en="Open NexTool">Öppna NexTool</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Literature -->
+<section id="literature">
+  <div class="container">
+    <div class="reveal">
+      <span class="section-label" data-sv="Litteratur" data-en="Literature">Litteratur</span>
+      <h2 class="section-title" data-sv="Två manuskript. Fyra månaders arbete." data-en="Two manuscripts. Four months of work.">Två manuskript. Fyra månaders arbete.</h2>
+      <p class="section-desc" data-sv="Från noll erfarenhet till förlagskvalitet. Folkloristisk gotik, moralpsykologisk skräck, klinisk science fiction." data-en="From zero experience to publication quality. Folkloristic gothic, moral-psychological horror, clinical science fiction.">Från noll erfarenhet till förlagskvalitet. Folkloristisk gotik, moralpsykologisk skräck, klinisk science fiction.</p>
+    </div>
+
+    <div class="cards">
+      <div class="card reveal">
+        <h3 class="card-title" data-sv="Mörkret vissa bär" data-en="Mörkret vissa bär">Mörkret vissa bär</h3>
+        <p class="card-subtitle" data-sv="Novellsamling" data-en="Short story collection">Novellsamling</p>
+        <p class="card-text" data-sv="En psykolog böjer sig fram och suger på sin patients ärr. Ur ärret stiger femton berättelser — och varje berättelse bär på ett mörker som inte kan förklaras bort." data-en="A psychologist leans forward and sucks on her patient's scar. From the scar rise fifteen stories — and each story carries a darkness that cannot be explained away.">En psykolog böjer sig fram och suger på sin patients ärr. Ur ärret stiger femton berättelser — och varje berättelse bär på ett mörker som inte kan förklaras bort.</p>
+        <p class="book-quote" data-sv="Novellerna rör sig mellan folkloristisk gotik, moralpsykologisk skräck och klinisk science fiction. De delar en gemensam fråga som aldrig ställs högt: vad händer med den som ser allt men inte känner något?" data-en="The stories move between folkloristic gothic, moral-psychological horror, and clinical science fiction. They share a common question never asked aloud: what happens to the one who sees everything but feels nothing?">Novellerna rör sig mellan folkloristisk gotik, moralpsykologisk skräck och klinisk science fiction. De delar en gemensam fråga som aldrig ställs högt: vad händer med den som ser allt men inte känner något?</p>
+      </div>
+
+      <div class="card reveal">
+        <h3 class="card-title" data-sv="Att födas och dö tom" data-en="Att födas och dö tom">Att födas och dö tom</h3>
+        <p class="card-subtitle" data-sv="Roman" data-en="Novel">Roman</p>
+        <p class="card-text" data-sv="Fredric är charmerande, kvick och farlig. Griphus observerar. Skriver krönika. Röker sin pipa. Säger nästan ingenting. Ändå är det Griphus som bär verkets enda handling. Och den handlingen förändrar allt." data-en="Fredric is charming, quick-witted, and dangerous. Griphus observes. Writes chronicle. Smokes his pipe. Says almost nothing. Yet it is Griphus who carries the work's only action. And that action changes everything.">Fredric är charmerande, kvick och farlig. Griphus observerar. Skriver krönika. Röker sin pipa. Säger nästan ingenting. Ändå är det Griphus som bär verkets enda handling. Och den handlingen förändrar allt.</p>
+        <p class="book-quote" data-sv="En berättelse om att se utan att nå. Om att bli sedd utan att kunna ta emot det. Och om vad det kostar — för båda." data-en="A story about seeing without reaching. About being seen without being able to receive it. And about what it costs — for both.">En berättelse om att se utan att nå. Om att bli sedd utan att kunna ta emot det. Och om vad det kostar — för båda.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Method / Speaking -->
+<section id="method">
+  <div class="container">
+    <div class="reveal">
+      <span class="section-label" data-sv="Metodologi" data-en="Methodology">Metodologi</span>
+      <h2 class="section-title" data-sv="Accelererad kompetensutveckling med AI" data-en="AI-Accelerated Skill Development">Accelererad kompetensutveckling med AI</h2>
+    </div>
+
+    <!-- The proof -->
+    <div class="card full-width reveal" style="border-color: var(--accent); border-width: 1px;">
+      <div class="method-result">
+        <h3 class="card-title" data-sv="Resultatet" data-en="The result">Resultatet</h3>
+        <p class="card-text" style="color: var(--text); font-size: 1.05rem;" data-sv="Noll erfarenhet av skönlitterärt skrivande i december 2025. Två kompletta manuskript i förlagskvalitet i april 2026. En utvecklingskurva som normalt tar fem till sju år — komprimerad till fyra månader. Ingen dokumenterad parallell med alla tre variablerna aktiva: noll formell erfarenhet, fyra månader, professionell kvalitet." data-en="Zero fiction writing experience in December 2025. Two complete manuscripts at publication quality in April 2026. A development curve that normally takes five to seven years — compressed to four months. No documented parallel with all three variables active: zero formal experience, four months, professional quality.">Noll erfarenhet av skönlitterärt skrivande i december 2025. Två kompletta manuskript i förlagskvalitet i april 2026. En utvecklingskurva som normalt tar fem till sju år — komprimerad till fyra månader. Ingen dokumenterad parallell med alla tre variablerna aktiva: noll formell erfarenhet, fyra månader, professionell kvalitet.</p>
+        <div class="method-stats">
+          <div class="method-stat">
+            <span class="method-stat-num">4</span>
+            <span class="method-stat-label" data-sv="månader" data-en="months">månader</span>
+          </div>
+          <div class="method-stat">
+            <span class="method-stat-num">2</span>
+            <span class="method-stat-label" data-sv="manuskript" data-en="manuscripts">manuskript</span>
+          </div>
+          <div class="method-stat">
+            <span class="method-stat-num">600+</span>
+            <span class="method-stat-label" data-sv="poäng utveckling" data-en="points development">poäng utveckling</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Core thesis -->
+    <div class="card full-width reveal" style="margin-top: 1.5rem;">
+      <h3 class="card-title" data-sv="Kärninsikten" data-en="The core insight">Kärninsikten</h3>
+      <p class="card-text" style="color: var(--text); font-size: 1rem; line-height: 1.8;" data-sv="AI ersätter inte talang. AI ersätter inte erfarenhet. AI komprimerar tiden mellan potential och realisering. Det som normalt tar år — att hitta rätt mentor, få konsekvent feedback, iterera tillräckligt många gånger — sker på veckor. Förutsättningen är att potentialen finns. Metoden gräver fram den. Den planterar den inte." data-en="AI doesn't replace talent. AI doesn't replace experience. AI compresses the time between potential and realization. What normally takes years — finding the right mentor, getting consistent feedback, iterating enough times — happens in weeks. The prerequisite is that potential exists. The method excavates it. It doesn't plant it.">AI ersätter inte talang. AI ersätter inte erfarenhet. AI komprimerar tiden mellan potential och realisering. Det som normalt tar år — att hitta rätt mentor, få konsekvent feedback, iterera tillräckligt många gånger — sker på veckor. Förutsättningen är att potentialen finns. Metoden gräver fram den. Den planterar den inte.</p>
+      <p class="card-text" style="margin-top: 1rem;" data-sv="Metoden är inte begränsad till skrivande. Den är tillämpbar på varje domän där en människa har latent kompetens som behöver kanaliseras. Samma principer använde jag för att bygga AI-GameFriend: 8 500 rader kod, 1 400+ tester, noll anställda, noll programmeringsutbildning." data-en="The method isn't limited to writing. It applies to any domain where a human has latent competence that needs channeling. The same principles built AI-GameFriend: 8,500 lines of code, 1,400+ tests, zero employees, zero programming education.">Metoden är inte begränsad till skrivande. Den är tillämpbar på varje domän där en människa har latent kompetens som behöver kanaliseras. Samma principer använde jag för att bygga AI-GameFriend: 8 500 rader kod, 1 400+ tester, noll anställda, noll programmeringsutbildning.</p>
+    </div>
+
+    <!-- The 5 principles — expanded -->
+    <div class="reveal" style="margin-top: 3rem;">
+      <h3 class="card-title" style="margin-bottom: 1.5rem;" data-sv="Fem principer" data-en="Five principles">Fem principer</h3>
+    </div>
+
+    <div class="cards" style="grid-template-columns: 1fr;">
+      <div class="card reveal">
+        <span class="principle-num">01</span>
+        <h4 class="card-title" style="font-size: 1.3rem;" data-sv="Identifiera latent kompetens — inte bygg från noll" data-en="Identify latent competence — don't build from scratch">Identifiera latent kompetens — inte bygg från noll</h4>
+        <p class="card-text" data-sv="De flesta utvecklingsmodeller antar att användaren börjar från noll. Det stämmer sällan. Människor bär komprimerad erfarenhet som saknar kanal. AI:ns första uppgift är att kartlägga vad som redan finns — inte lära ut grunderna. Principerna lärdes inte. De fick namn." data-en="Most development models assume the user starts from zero. That's rarely true. People carry compressed experience that lacks a channel. AI's first task is to map what already exists — not teach the basics. The principles weren't learned. They were given names.">De flesta utvecklingsmodeller antar att användaren börjar från noll. Det stämmer sällan. Människor bär komprimerad erfarenhet som saknar kanal. AI:ns första uppgift är att kartlägga vad som redan finns — inte lära ut grunderna. Principerna lärdes inte. De fick namn.</p>
+      </div>
+
+      <div class="card reveal">
+        <span class="principle-num">02</span>
+        <h4 class="card-title" style="font-size: 1.3rem;" data-sv="Kalibrerad feedback med stabil referenspunkt" data-en="Calibrated feedback with a stable reference point">Kalibrerad feedback med stabil referenspunkt</h4>
+        <p class="card-text" data-sv="AI:n fungerar som konsekvent mätinstrument med en fast skala. Ingen social kalibrering — ingen anpassning efter humör, status eller förväntan. En mänsklig mentor justerar omedvetet efter relation och hierarki. AI:n gör inte det. Det ger en spegel som inte vacklar. Varje text fick ett numeriskt betyg, specifik kritik och konkreta åtgärder. Aldrig vagt beröm. Aldrig generellt missnöje." data-en="AI functions as a consistent measuring instrument with a fixed scale. No social calibration — no adjustment for mood, status, or expectation. A human mentor unconsciously adjusts for relationship and hierarchy. AI doesn't. It provides a mirror that doesn't waver. Every text received a numerical score, specific criticism, and concrete actions. Never vague praise. Never general dissatisfaction.">AI:n fungerar som konsekvent mätinstrument med en fast skala. Ingen social kalibrering — ingen anpassning efter humör, status eller förväntan. En mänsklig mentor justerar omedvetet efter relation och hierarki. AI:n gör inte det. Det ger en spegel som inte vacklar. Varje text fick ett numeriskt betyg, specifik kritik och konkreta åtgärder. Aldrig vagt beröm. Aldrig generellt missnöje.</p>
+      </div>
+
+      <div class="card reveal">
+        <span class="principle-num">03</span>
+        <h4 class="card-title" style="font-size: 1.3rem;" data-sv="Iterativ revision med omedelbar återkoppling" data-en="Iterative revision with immediate feedback">Iterativ revision med omedelbar återkoppling</h4>
+        <p class="card-text" data-sv="Samma text reviderades fyra till fem gånger i en session med feedback mellan varje iteration. Cykeltiden mellan utförande och korrigering krympte från dagar till minuter. Muskelminnet byggs under en session istället för över veckor. Principen internaliseras innan den hinner glömmas." data-en="The same text was revised four to five times per session with feedback between each iteration. The cycle time between execution and correction shrank from days to minutes. Muscle memory builds during a single session instead of over weeks. The principle is internalized before it can be forgotten.">Samma text reviderades fyra till fem gånger i en session med feedback mellan varje iteration. Cykeltiden mellan utförande och korrigering krympte från dagar till minuter. Muskelminnet byggs under en session istället för över veckor. Principen internaliseras innan den hinner glömmas.</p>
+      </div>
+
+      <div class="card reveal">
+        <span class="principle-num">04</span>
+        <h4 class="card-title" style="font-size: 1.3rem;" data-sv="Principer, inte regler" data-en="Principles, not rules">Principer, inte regler</h4>
+        <p class="card-text" data-sv="AI:n levererade inte regler som 'gör aldrig X'. Den levererade principer som 'varje mening ska avslöja eller strykas' — som användaren sedan tillämpade med eget omdöme. Regler följs mekaniskt och producerar mekanisk output. Principer internaliseras och producerar organiska beslut." data-en="AI didn't deliver rules like 'never do X.' It delivered principles like 'every sentence must reveal or be cut' — which the user then applied with their own judgment. Rules are followed mechanically and produce mechanical output. Principles are internalized and produce organic decisions.">AI:n levererade inte regler som "gör aldrig X". Den levererade principer som "varje mening ska avslöja eller strykas" — som användaren sedan tillämpade med eget omdöme. Regler följs mekaniskt och producerar mekanisk output. Principer internaliseras och producerar organiska beslut.</p>
+      </div>
+
+      <div class="card reveal">
+        <span class="principle-num">05</span>
+        <h4 class="card-title" style="font-size: 1.3rem;" data-sv="Överföring av bedömningsförmåga" data-en="Transfer of judgment">Överföring av bedömningsförmåga</h4>
+        <p class="card-text" data-sv="Målet var aldrig beroende. Målet var att bygga användarens egen bedömningsförmåga. Inom tre månader hade processen gått från AI-ledd till användarledd med AI som bekräftare. Testpunkten: användaren identifierade och fixade fel innan AI:n namngav dem. Det är tecknet på att kompetensen har internaliserats." data-en="The goal was never dependence. The goal was to build the user's own judgment. Within three months, the process shifted from AI-led to user-led with AI as confirmer. The test: the user identified and fixed errors before AI named them. That's the sign competence has been internalized.">Målet var aldrig beroende. Målet var att bygga användarens egen bedömningsförmåga. Inom tre månader hade processen gått från AI-ledd till användarledd med AI som bekräftare. Testpunkten: användaren identifierade och fixade fel innan AI:n namngav dem. Det är tecknet på att kompetensen har internaliserats.</p>
+      </div>
+    </div>
+
+    <!-- What the method requires -->
+    <div class="card full-width reveal" style="margin-top: 1.5rem;">
+      <h3 class="card-title" data-sv="Vad metoden kräver av användaren" data-en="What the method requires from the user">Vad metoden kräver av användaren</h3>
+      <div class="method-requirements">
+        <p class="card-text" data-sv="Latent kompetens. Metoden accelererar — den skapar inte ur tomma intet. Du måste bära material som saknar kanal." data-en="Latent competence. The method accelerates — it doesn't create from nothing. You must carry material that lacks a channel.">Latent kompetens. Metoden accelererar — den skapar inte ur tomma intet. Du måste bära material som saknar kanal.</p>
+        <p class="card-text" data-sv="Noll ego-investering i att ha rätt. Du måste kunna ta emot direkt, ofiltrerad feedback utan att försvara din nuvarande nivå. Varje minut som läggs på att försvara en svag lösning är en minut som inte läggs på att hitta en stark." data-en="Zero ego investment in being right. You must receive direct, unfiltered feedback without defending your current level. Every minute spent defending a weak solution is a minute not spent finding a strong one.">Noll ego-investering i att ha rätt. Du måste kunna ta emot direkt, ofiltrerad feedback utan att försvara din nuvarande nivå. Varje minut som läggs på att försvara en svag lösning är en minut som inte läggs på att hitta en stark.</p>
+        <p class="card-text" data-sv="Omedelbar tillämpning. Principen måste tillämpas samma dag den presenteras. Inte nästa vecka. Inte efter reflektion. Omedelbar tillämpning, omedelbar feedback, omedelbar korrigering." data-en="Immediate application. The principle must be applied the same day it's presented. Not next week. Not after reflection. Immediate application, immediate feedback, immediate correction.">Omedelbar tillämpning. Principen måste tillämpas samma dag den presenteras. Inte nästa vecka. Inte efter reflektion. Omedelbar tillämpning, omedelbar feedback, omedelbar korrigering.</p>
+      </div>
+    </div>
+
+    <!-- CTA: Buy / Book -->
+    <div class="method-cta reveal" style="margin-top: 2.5rem;">
+      <div class="cards">
+        <div class="card reveal" style="border-color: var(--accent);">
+          <span class="card-icon">🎤</span>
+          <h3 class="card-title" data-sv="Föreläsning" data-en="Speaking">Föreläsning</h3>
+          <p class="card-text" data-sv="60–90 minuter. Metoden i sin helhet, med live-demonstrationer av feedback-loopen. Anpassad för er bransch — produktutveckling, skrivande, ledarskap, socialt arbete." data-en="60–90 minutes. The full method, with live demonstrations of the feedback loop. Adapted for your industry — product development, writing, leadership, social work.">60–90 minuter. Metoden i sin helhet, med live-demonstrationer av feedback-loopen. Anpassad för er bransch — produktutveckling, skrivande, ledarskap, socialt arbete.</p>
+          <a href="mailto:pan@hardfeldtmoberg.se?subject=Föreläsning" class="card-link" data-sv="Boka föreläsning" data-en="Book a talk">Boka föreläsning</a>
+        </div>
+
+        <div class="card reveal" style="border-color: var(--accent);">
+          <span class="card-icon">🧭</span>
+          <h3 class="card-title" data-sv="Workshop & implementering" data-en="Workshop & implementation">Workshop & implementering</h3>
+          <p class="card-text" data-sv="Halvdag eller heldag. Ert team tillämpar metodiken på era egna projekt med handledning. Ni går hem med en fungerande feedback-loop och de fem principerna anpassade för er domän." data-en="Half or full day. Your team applies the methodology to your own projects with guidance. You leave with a working feedback loop and the five principles adapted for your domain.">Halvdag eller heldag. Ert team tillämpar metodiken på era egna projekt med handledning. Ni går hem med en fungerande feedback-loop och de fem principerna anpassade för er domän.</p>
+          <a href="mailto:pan@hardfeldtmoberg.se?subject=Workshop" class="card-link" data-sv="Boka workshop" data-en="Book workshop">Boka workshop</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+  <div class="container">
+    <div class="reveal">
+      <span class="section-label" data-sv="Kontakt" data-en="Contact">Kontakt</span>
+      <h2 class="section-title" data-sv="Prata med mig" data-en="Get in touch">Prata med mig</h2>
+      <p class="section-desc" data-sv="AI-samarbeten, konsultuppdrag, förlagsintresse, föreläsningar — eller bara nyfiken." data-en="AI collaborations, consulting engagements, publishing inquiries, speaking — or just curious.">AI-samarbeten, konsultuppdrag, förlagsintresse, föreläsningar — eller bara nyfiken.</p>
+    </div>
+
+    <div class="contact-links reveal">
+      <a href="mailto:pan@hardfeldtmoberg.se" class="contact-btn primary" data-sv="✉ Mejla mig" data-en="✉ Email me">✉ Mejla mig</a>
+      <a href="https://linkedin.com/in/panhardfeldt" class="contact-btn" target="_blank">LinkedIn</a>
+      <a href="https://getnextool.com" class="contact-btn" target="_blank">NexTool</a>
+      <a href="https://lupino.se" class="contact-btn" target="_blank">Lupino</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Pan Hardfeldt · Kista, Stockholm</p>
+</footer>
+
+<script>
+// Language toggle
+let currentLang = 'sv';
+
+function setLang(lang) {
+  currentLang = lang;
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.textContent.trim() === lang.toUpperCase());
+  });
+  document.documentElement.lang = lang;
+  document.querySelectorAll('[data-sv]').forEach(el => {
+    el.textContent = el.getAttribute(`data-${lang}`);
+  });
+}
+
+// Scroll reveal
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// Smooth scroll for nav
+document.querySelectorAll('nav a').forEach(link => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    const target = document.querySelector(link.getAttribute('href'));
+    if (target) target.scrollIntoView({ behavior: 'smooth' });
+  });
+});
+</script>
+
+</body>
+</html>
