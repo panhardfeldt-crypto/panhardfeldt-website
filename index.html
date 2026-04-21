@@ -4,10 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pan Hardfeldt</title>
-<meta name="description" content="AI architect, author, social work expert. Building tools that reveal how minds work.">
-<meta property="og:title" content="Pan Hardfeldt">
-<meta property="og:description" content="AI architect, author, social work expert.">
+<meta name="description" content="Pan Hardfeldt — AI architect, author, social work expert. Building tools that reveal how minds make decisions. Founder of AI-GameFriend and co-founder of Lupino.">
+<meta property="og:title" content="Pan Hardfeldt — AI Architect, Author, Social Work Expert">
+<meta property="og:description" content="Building tools that reveal how minds make decisions. AI-GameFriend, Lupino, literary fiction, and a methodology that compressed 5 years into 4 months.">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://panhardfeldt.com">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Pan Hardfeldt — AI Architect, Author, Social Work Expert">
+<meta name="twitter:description" content="Building tools that reveal how minds make decisions.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
@@ -138,6 +142,78 @@ section {
   justify-content: center;
   padding: 6rem 2rem;
   position: relative;
+}
+
+.hero-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.hero-text {
+  order: 1;
+}
+
+.hero-portrait {
+  order: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transform: translateX(30px);
+  animation: fadeLeft 1s ease 0.6s forwards;
+}
+
+.portrait-frame {
+  width: 320px;
+  height: 400px;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+}
+
+.portrait-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(30%) contrast(1.05);
+  transition: filter 0.5s ease;
+}
+
+.portrait-frame:hover img {
+  filter: grayscale(0%) contrast(1);
+}
+
+.portrait-placeholder {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--serif);
+  font-size: 5rem;
+  font-weight: 300;
+  color: var(--accent);
+  letter-spacing: 0.05em;
+  opacity: 0.4;
+}
+
+.portrait-frame:not(.no-photo) .portrait-placeholder {
+  display: none;
+}
+
+.portrait-frame::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40%;
+  background: linear-gradient(to top, var(--bg), transparent);
+  pointer-events: none;
 }
 
 .hero-name {
@@ -461,6 +537,9 @@ footer {
 @keyframes fadeUp {
   to { opacity: 1; transform: translateY(0); }
 }
+@keyframes fadeLeft {
+  to { opacity: 1; transform: translateX(0); }
+}
 @keyframes lineIn {
   to { opacity: 1; transform: scaleX(1); }
 }
@@ -491,6 +570,16 @@ footer {
   .lang-toggle { top: 1.2rem; right: 1.2rem; }
   section { padding: 4rem 1.5rem; }
   .hero { padding: 4rem 1.5rem; }
+  .hero-split {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .hero-portrait { order: 1; }
+  .hero-text { order: 2; }
+  .portrait-frame {
+    width: 220px;
+    height: 280px;
+  }
   .card { padding: 1.8rem; }
 }
 </style>
@@ -513,15 +602,24 @@ footer {
 
 <!-- Hero -->
 <section class="hero">
-  <div class="container">
-    <h1 class="hero-name">Pan Hardfeldt</h1>
-    <div class="hero-line"></div>
-    <p class="hero-tagline" data-sv="Jag bygger verktyg som avslöjar hur medvetanden fungerar — med AI, genom spel, i ord och i praktik." data-en="I build tools that reveal how minds work — with AI, through games, in prose, and in practice.">Jag bygger verktyg som avslöjar hur medvetanden fungerar — med AI, genom spel, i ord och i praktik.</p>
-    <div class="hero-roles">
-      <span class="role-tag" data-sv="AI-arkitekt" data-en="AI Architect">AI-arkitekt</span>
-      <span class="role-tag" data-sv="Författare" data-en="Author">Författare</span>
-      <span class="role-tag" data-sv="Socialt arbete" data-en="Social Work">Socialt arbete</span>
-      <span class="role-tag" data-sv="Föreläsare" data-en="Speaker">Föreläsare</span>
+  <div class="container hero-split">
+    <div class="hero-text">
+      <h1 class="hero-name">Pan Hardfeldt</h1>
+      <div class="hero-line"></div>
+      <p class="hero-tagline" data-sv="Jag bygger verktyg som avslöjar hur medvetanden fungerar — med AI, genom spel, i ord och i praktik." data-en="I build tools that reveal how minds work — with AI, through games, in prose, and in practice.">Jag bygger verktyg som avslöjar hur medvetanden fungerar — med AI, genom spel, i ord och i praktik.</p>
+      <div class="hero-roles">
+        <span class="role-tag" data-sv="AI-arkitekt" data-en="AI Architect">AI-arkitekt</span>
+        <span class="role-tag" data-sv="Författare" data-en="Author">Författare</span>
+        <span class="role-tag" data-sv="Socialt arbete" data-en="Social Work">Socialt arbete</span>
+        <span class="role-tag" data-sv="Föreläsare" data-en="Speaker">Föreläsare</span>
+      </div>
+    </div>
+    <div class="hero-portrait">
+      <div class="portrait-frame">
+        <!-- Replace src with your photo: portrait.jpg -->
+        <img src="portrait.jpg" alt="Pan Hardfeldt" onerror="this.style.display='none'; this.parentElement.classList.add('no-photo');">
+        <div class="portrait-placeholder">PH</div>
+      </div>
     </div>
   </div>
   <div class="scroll-hint" data-sv="Scrolla" data-en="Scroll">Scrolla</div>
@@ -532,8 +630,8 @@ footer {
   <div class="container">
     <div class="reveal">
       <span class="section-label" data-sv="Arbete" data-en="Work">Arbete</span>
-      <h2 class="section-title" data-sv="Fyra projekt. En röd tråd." data-en="Four projects. One thread.">Fyra projekt. En röd tråd.</h2>
-      <p class="section-desc" data-sv="Varje projekt handlar om samma sak: att förstå hur människor fattar beslut — och bygga system som gör den förståelsen användbar." data-en="Every project is about the same thing: understanding how people make decisions — and building systems that make that understanding useful.">Varje projekt handlar om samma sak: att förstå hur människor fattar beslut — och bygga system som gör den förståelsen användbar.</p>
+      <h2 class="section-title" data-sv="Fyra projekt. Samma grundfråga." data-en="Four projects. Same core question.">Fyra projekt. Samma grundfråga.</h2>
+      <p class="section-desc" data-sv="Hur fattar människor beslut under press — och hur gör man den insikten användbar? Varje projekt angriper frågan från en annan vinkel: genom spel, genom barnavård, genom juridik, genom data." data-en="How do people make decisions under pressure — and how do you make that insight useful? Each project attacks the question from a different angle: through games, through child welfare, through law, through data.">Hur fattar människor beslut under press — och hur gör man den insikten användbar? Varje projekt angriper frågan från en annan vinkel: genom spel, genom barnavård, genom juridik, genom data.</p>
     </div>
 
     <div class="cards">
@@ -541,8 +639,8 @@ footer {
       <div class="card reveal">
         <span class="card-icon">🧠</span>
         <h3 class="card-title">AI-GameFriend</h3>
-        <p class="card-subtitle" data-sv="Beteendepsykologi genom strategispel" data-en="Behavioral psychology through strategy games">Beteendepsykologi genom strategispel</p>
-        <p class="card-text" data-sv="En plattform där du spelar strategispel mot AI som faktiskt tänker — Claude, GPT, Gemini, Grok. Varje val du gör bygger din psykologiska profil. Tio MindGames, 28 strategispel, interaktiv fiktion. Inte en spelmotor — ett instrument för att mäta hur medvetanden fattar beslut under press." data-en="A platform where you play strategy games against AI that actually thinks — Claude, GPT, Gemini, Grok. Every choice you make builds your psychological profile. Ten MindGames, 28 strategy games, interactive fiction. Not a game engine — an instrument for measuring how minds make decisions under pressure.">En plattform där du spelar strategispel mot AI som faktiskt tänker — Claude, GPT, Gemini, Grok. Varje val du gör bygger din psykologiska profil. Tio MindGames, 28 strategispel, interaktiv fiktion. Inte en spelmotor — ett instrument för att mäta hur medvetanden fattar beslut under press.</p>
+        <p class="card-subtitle" data-sv="Grundare · Beteendepsykologi genom strategispel" data-en="Founder · Behavioral psychology through strategy games">Grundare · Beteendepsykologi genom strategispel</p>
+        <p class="card-text" data-sv="Spela strategispel mot Claude, GPT, Gemini eller Grok — AI som faktiskt resonerar, anpassar sig och minns dina drag. 460+ tester, 8 500+ rader kod, 10 psykologiska experiment, 6 strategirådgivare, interaktiv fiktion. Varje val du gör mäts och profileras. Byggt av en person, noll anställda." data-en="Play strategy games against Claude, GPT, Gemini, or Grok — AI that actually reasons, adapts, and remembers your moves. 460+ tests, 8,500+ lines of code, 10 psychological experiments, 6 strategy advisors, interactive fiction. Every choice you make is measured and profiled. Built by one person, zero employees.">Spela strategispel mot Claude, GPT, Gemini eller Grok — AI som faktiskt resonerar, anpassar sig och minns dina drag. 460+ tester, 8 500+ rader kod, 10 psykologiska experiment, 6 strategirådgivare, interaktiv fiktion. Varje val du gör mäts och profileras. Byggt av en person, noll anställda.</p>
         <a href="https://getnextool.com/ai-gamefriend" class="card-link" target="_blank" data-sv="Prova gratis" data-en="Try free">Prova gratis</a>
       </div>
 
@@ -550,8 +648,8 @@ footer {
       <div class="card reveal">
         <span class="card-icon">🛡️</span>
         <h3 class="card-title">Lupino</h3>
-        <p class="card-subtitle" data-sv="Digital plattform för socialtjänstens barn- och ungdomsvård" data-en="Digital platform for child welfare services">Digital plattform för socialtjänstens barn- och ungdomsvård</p>
-        <p class="card-text" data-sv="Kompetenstestning, utredningsstöd och handläggarträning i ett verktyg. Bygger på svensk lagstiftning (SoL, LVU) och BBIC-ramverket. 150 utredningsfrågor per missförhållande. Certifiering av handläggare. Internationell modul (LCWAF) för utvecklingsländer." data-en="Competency testing, investigation support, and caseworker training in one tool. Built on Swedish legislation (SoL, LVU) and the BBIC framework. 150 investigation questions per case type. Caseworker certification. International module (LCWAF) for developing countries.">Kompetenstestning, utredningsstöd och handläggarträning i ett verktyg. Bygger på svensk lagstiftning (SoL, LVU) och BBIC-ramverket. 150 utredningsfrågor per missförhållande. Certifiering av handläggare. Internationell modul (LCWAF) för utvecklingsländer.</p>
+        <p class="card-subtitle" data-sv="Medgrundare · Digital plattform för barn- och ungdomsvård" data-en="Co-founder · Digital platform for child welfare services">Medgrundare · Digital plattform för barn- och ungdomsvård</p>
+        <p class="card-text" data-sv="Kompetenstestning, utredningsstöd och handläggarträning för socialtjänsten — i ett verktyg. Bygger på svensk lagstiftning (SoL, LVU) och BBIC-ramverket. 150 utredningsfrågor per missförhållande, genererade på minuter istället för timmar. Certifiering av handläggare inom fem kompetensområden. Internationell modul (LCWAF) för barnavårdsbedömningar i utvecklingsländer." data-en="Competency testing, investigation support, and caseworker training for child welfare services — in one tool. Built on Swedish legislation (SoL, LVU) and the BBIC framework. 150 investigation questions per case type, generated in minutes instead of hours. Caseworker certification across five competency areas. International module (LCWAF) for child welfare assessment in developing countries.">Kompetenstestning, utredningsstöd och handläggarträning för socialtjänsten — i ett verktyg. Bygger på svensk lagstiftning (SoL, LVU) och BBIC-ramverket. 150 utredningsfrågor per missförhållande, genererade på minuter istället för timmar. Certifiering av handläggare inom fem kompetensområden. Internationell modul (LCWAF) för barnavårdsbedömningar i utvecklingsländer.</p>
         <a href="https://lupino.se" class="card-link" target="_blank" data-sv="Besök Lupino" data-en="Visit Lupino">Besök Lupino</a>
       </div>
 
@@ -559,8 +657,8 @@ footer {
       <div class="card reveal">
         <span class="card-icon">⚖️</span>
         <h3 class="card-title">Hardfeldt Moberg Consulting AB</h3>
-        <p class="card-subtitle" data-sv="Konsulttjänster för socialtjänsten" data-en="Social services consulting">Konsulttjänster för socialtjänsten</p>
-        <p class="card-text" data-sv="14 års erfarenhet inom socialt arbete. Myndighetsutövning barn och unga, handläggning och behandlingsarbete. Erfarenhet av processföring vid förvaltningsrätt och kammarrätt — bevisvärdering, förvaltningsrättsliga principer, juridisk underbyggnad. Kommuner anlitar oss när de behöver en erfaren resurs som snabbt levererar kvalitet." data-en="14 years of social work experience. Child welfare case management, investigative and therapeutic work. Experience representing parties in administrative courts — evidence evaluation, legal principles, case preparation. Municipalities engage us when they need experienced expertise that delivers quality fast.">14 års erfarenhet inom socialt arbete. Myndighetsutövning barn och unga, handläggning och behandlingsarbete. Erfarenhet av processföring vid förvaltningsrätt och kammarrätt — bevisvärdering, förvaltningsrättsliga principer, juridisk underbyggnad. Kommuner anlitar oss när de behöver en erfaren resurs som snabbt levererar kvalitet.</p>
+        <p class="card-subtitle" data-sv="Grundare · Kvalificerade konsulttjänster inom socialt arbete" data-en="Founder · Specialized social work consulting">Grundare · Kvalificerade konsulttjänster inom socialt arbete</p>
+        <p class="card-text" data-sv="14 års erfarenhet inom myndighetsutövning barn och unga. Handläggning, behandlingsarbete och processföring vid förvaltningsrätt och kammarrätt. Kommuner anlitar oss för komplexa ärenden, hög arbetsbelastning eller juridiskt krävande situationer där kvalitet och rättssäkerhet inte kan kompromissas." data-en="14 years of experience in child welfare case management. Investigative work, therapeutic intervention, and legal representation in administrative courts. Municipalities engage us for complex cases, high workloads, or legally demanding situations where quality and legal certainty cannot be compromised.">14 års erfarenhet inom myndighetsutövning barn och unga. Handläggning, behandlingsarbete och processföring vid förvaltningsrätt och kammarrätt. Kommuner anlitar oss för komplexa ärenden, hög arbetsbelastning eller juridiskt krävande situationer där kvalitet och rättssäkerhet inte kan kompromissas.</p>
         <a href="mailto:pan@hardfeldtmoberg.se" class="card-link" data-sv="Kontakta oss" data-en="Get in touch">Kontakta oss</a>
       </div>
 
@@ -568,8 +666,8 @@ footer {
       <div class="card reveal">
         <span class="card-icon">📊</span>
         <h3 class="card-title">NexTool</h3>
-        <p class="card-subtitle" data-sv="333 finansiella kalkylatorer" data-en="333 financial calculators">333 finansiella kalkylatorer</p>
-        <p class="card-text" data-sv="Gratis verktygsplattform med kalkylatorer för bolån, investeringar, skatt, pension, budget och företagsanalys. Plattformen som bär AI-GameFriend." data-en="Free tool platform with calculators for mortgages, investments, tax, retirement, budgeting and business analysis. The platform that hosts AI-GameFriend.">Gratis verktygsplattform med kalkylatorer för bolån, investeringar, skatt, pension, budget och företagsanalys. Plattformen som bär AI-GameFriend.</p>
+        <p class="card-subtitle" data-sv="Grundare · 333 finansiella verktyg · 50 000+ besökare/vecka" data-en="Founder · 333 financial tools · 50,000+ visitors/week">Grundare · 333 finansiella verktyg · 50 000+ besökare/vecka</p>
+        <p class="card-text" data-sv="Gratis verktygsplattform med kalkylatorer för bolån, investeringar, skatt, pension, budget och företagsanalys. 1 350+ indexerade sidor. Plattformen som bär AI-GameFriend." data-en="Free tool platform with calculators for mortgages, investments, tax, retirement, budgeting, and business analysis. 1,350+ indexed pages. The platform that hosts AI-GameFriend.">Gratis verktygsplattform med kalkylatorer för bolån, investeringar, skatt, pension, budget och företagsanalys. 1 350+ indexerade sidor. Plattformen som bär AI-GameFriend.</p>
         <a href="https://getnextool.com" class="card-link" target="_blank" data-sv="Öppna NexTool" data-en="Open NexTool">Öppna NexTool</a>
       </div>
     </div>
@@ -581,8 +679,8 @@ footer {
   <div class="container">
     <div class="reveal">
       <span class="section-label" data-sv="Litteratur" data-en="Literature">Litteratur</span>
-      <h2 class="section-title" data-sv="Två manuskript. Fyra månaders arbete." data-en="Two manuscripts. Four months of work.">Två manuskript. Fyra månaders arbete.</h2>
-      <p class="section-desc" data-sv="Från noll erfarenhet till förlagskvalitet. Folkloristisk gotik, moralpsykologisk skräck, klinisk science fiction." data-en="From zero experience to publication quality. Folkloristic gothic, moral-psychological horror, clinical science fiction.">Från noll erfarenhet till förlagskvalitet. Folkloristisk gotik, moralpsykologisk skräck, klinisk science fiction.</p>
+      <h2 class="section-title" data-sv="Två manuskript. Fyra månader. Noll erfarenhet dessförinnan." data-en="Two manuscripts. Four months. Zero prior experience.">Två manuskript. Fyra månader. Noll erfarenhet dessförinnan.</h2>
+      <p class="section-desc" data-sv="Folkloristisk gotik, moralpsykologisk skräck och klinisk science fiction. Manuskripten söker förlag." data-en="Folkloristic gothic, moral-psychological horror, and clinical science fiction. The manuscripts are seeking a publisher.">Folkloristisk gotik, moralpsykologisk skräck och klinisk science fiction. Manuskripten söker förlag.</p>
     </div>
 
     <div class="cards">
@@ -713,8 +811,8 @@ footer {
   <div class="container">
     <div class="reveal">
       <span class="section-label" data-sv="Kontakt" data-en="Contact">Kontakt</span>
-      <h2 class="section-title" data-sv="Prata med mig" data-en="Get in touch">Prata med mig</h2>
-      <p class="section-desc" data-sv="AI-samarbeten, konsultuppdrag, förlagsintresse, föreläsningar — eller bara nyfiken." data-en="AI collaborations, consulting engagements, publishing inquiries, speaking — or just curious.">AI-samarbeten, konsultuppdrag, förlagsintresse, föreläsningar — eller bara nyfiken.</p>
+      <h2 class="section-title" data-sv="Jag svarar samma dag" data-en="I respond the same day">Jag svarar samma dag</h2>
+      <p class="section-desc" data-sv="Förlagsintresse för manuskripten. Kommuner som behöver konsultkompetens. Organisationer som vill boka föreläsning eller workshop. AI-labb som vill diskutera beteendedata. Eller bara nyfiken." data-en="Publishing inquiries for the manuscripts. Municipalities needing consulting expertise. Organizations looking to book a talk or workshop. AI labs interested in behavioral data. Or just curious.">Förlagsintresse för manuskripten. Kommuner som behöver konsultkompetens. Organisationer som vill boka föreläsning eller workshop. AI-labb som vill diskutera beteendedata. Eller bara nyfiken.</p>
     </div>
 
     <div class="contact-links reveal">
