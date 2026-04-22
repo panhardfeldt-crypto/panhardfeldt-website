@@ -253,29 +253,23 @@ section {
   animation: fadeUp 1s ease 1.1s forwards;
 }
 
-.hero-roles {
-  margin-top: 3rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.6rem;
+.hero-audience {
+  margin-top: 2.5rem;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: var(--text-muted);
   opacity: 0;
   animation: fadeUp 1s ease 1.4s forwards;
 }
-
-.role-tag {
-  font-size: 0.72rem;
-  font-weight: 500;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--text-dim);
-  padding: 0.45rem 1rem;
-  border: 1px solid var(--border);
-  border-radius: 4px;
-  transition: all 0.3s ease;
+.hero-audience a {
+  color: var(--text-muted);
+  border-bottom: 1px solid transparent;
+  padding-bottom: 1px;
+  transition: color 0.3s ease, border-color 0.3s ease;
 }
-.role-tag:hover {
-  border-color: var(--accent);
+.hero-audience a:hover {
   color: var(--accent);
+  border-bottom-color: var(--accent);
 }
 
 .scroll-hint {
@@ -358,7 +352,11 @@ section {
 .card:hover::before { opacity: 1; }
 
 .card-icon {
-  font-size: 1.8rem;
+  font-family: var(--serif);
+  font-size: 1.6rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  color: var(--accent);
   margin-bottom: 1.2rem;
   display: block;
 }
@@ -386,6 +384,7 @@ section {
 }
 
 .card-link {
+  font-family: var(--sans);
   font-size: 0.78rem;
   font-weight: 500;
   letter-spacing: 0.08em;
@@ -394,9 +393,16 @@ section {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  transition: gap 0.3s ease;
+  padding: 0.65rem 1.2rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  transition: gap 0.3s ease, border-color 0.3s ease, background 0.3s ease;
 }
-.card-link:hover { gap: 0.8rem; }
+.card-link:hover {
+  gap: 0.8rem;
+  border-color: var(--accent);
+  background: var(--accent-glow);
+}
 .card-link::after { content: '→'; }
 
 /* ─── LITERATURE SPECIAL ─── */
@@ -524,6 +530,25 @@ section {
   background: var(--accent-bright);
 }
 
+.contact-secondary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+.contact-secondary a {
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  border-bottom: 1px solid transparent;
+  padding-bottom: 1px;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+.contact-secondary a:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
 /* ─── FOOTER ─── */
 footer {
   padding: 4rem 2rem;
@@ -607,12 +632,13 @@ footer {
       <h1 class="hero-name">Pan Hardfeldt</h1>
       <div class="hero-line"></div>
       <p class="hero-tagline" data-sv="Jag bygger verktyg som avslöjar hur medvetanden fungerar — med AI, genom spel, i ord och i praktik." data-en="I build tools that reveal how minds work — with AI, through games, in prose, and in practice.">Jag bygger verktyg som avslöjar hur medvetanden fungerar — med AI, genom spel, i ord och i praktik.</p>
-      <div class="hero-roles">
-        <span class="role-tag" data-sv="AI-arkitekt" data-en="AI Architect">AI-arkitekt</span>
-        <span class="role-tag" data-sv="Författare" data-en="Author">Författare</span>
-        <span class="role-tag" data-sv="Socialt arbete" data-en="Social Work">Socialt arbete</span>
-        <span class="role-tag" data-sv="Föreläsare" data-en="Speaker">Föreläsare</span>
-      </div>
+      <p class="hero-audience">
+        <span data-sv="Söker du:" data-en="Looking for:">Söker du:</span>
+        <a href="#consulting" data-sv="socialtjänstkonsult" data-en="social services consulting">socialtjänstkonsult</a> ·
+        <a href="#ai-gamefriend" data-sv="AI-samarbete" data-en="AI collaboration">AI-samarbete</a> ·
+        <a href="#literature" data-sv="förlagsintresse" data-en="publishing interest">förlagsintresse</a> ·
+        <a href="#contact" data-sv="nyfiken?" data-en="curious?">nyfiken?</a>
+      </p>
     </div>
     <div class="hero-portrait">
       <div class="portrait-frame">
@@ -636,8 +662,8 @@ footer {
 
     <div class="cards">
       <!-- AI-GameFriend -->
-      <div class="card reveal">
-        <span class="card-icon">🧠</span>
+      <div class="card reveal" id="ai-gamefriend">
+        <span class="card-icon">01</span>
         <h3 class="card-title">AI-GameFriend</h3>
         <p class="card-subtitle" data-sv="Grundare · Beteendepsykologi genom strategispel" data-en="Founder · Behavioral psychology through strategy games">Grundare · Beteendepsykologi genom strategispel</p>
         <p class="card-text" data-sv="Spela strategispel mot Claude, GPT, Gemini eller Grok — AI som faktiskt resonerar, anpassar sig och minns dina drag. 460+ tester, 8 500+ rader kod, 10 psykologiska experiment, 6 strategirådgivare, interaktiv fiktion. Varje val du gör mäts och profileras. Byggt av en person, noll anställda." data-en="Play strategy games against Claude, GPT, Gemini, or Grok — AI that actually reasons, adapts, and remembers your moves. 460+ tests, 8,500+ lines of code, 10 psychological experiments, 6 strategy advisors, interactive fiction. Every choice you make is measured and profiled. Built by one person, zero employees.">Spela strategispel mot Claude, GPT, Gemini eller Grok — AI som faktiskt resonerar, anpassar sig och minns dina drag. 460+ tester, 8 500+ rader kod, 10 psykologiska experiment, 6 strategirådgivare, interaktiv fiktion. Varje val du gör mäts och profileras. Byggt av en person, noll anställda.</p>
@@ -646,7 +672,7 @@ footer {
 
       <!-- Lupino -->
       <div class="card reveal">
-        <span class="card-icon">🛡️</span>
+        <span class="card-icon">02</span>
         <h3 class="card-title">Lupino</h3>
         <p class="card-subtitle" data-sv="Medgrundare · Digital plattform för barn- och ungdomsvård" data-en="Co-founder · Digital platform for child welfare services">Medgrundare · Digital plattform för barn- och ungdomsvård</p>
         <p class="card-text" data-sv="Kompetenstestning, utredningsstöd och handläggarträning för socialtjänsten — i ett verktyg. Bygger på svensk lagstiftning (SoL, LVU) och BBIC-ramverket. 150 utredningsfrågor per missförhållande, genererade på minuter istället för timmar. Certifiering av handläggare inom fem kompetensområden. Internationell modul (LCWAF) för barnavårdsbedömningar i utvecklingsländer." data-en="Competency testing, investigation support, and caseworker training for child welfare services — in one tool. Built on Swedish legislation (SoL, LVU) and the BBIC framework. 150 investigation questions per case type, generated in minutes instead of hours. Caseworker certification across five competency areas. International module (LCWAF) for child welfare assessment in developing countries.">Kompetenstestning, utredningsstöd och handläggarträning för socialtjänsten — i ett verktyg. Bygger på svensk lagstiftning (SoL, LVU) och BBIC-ramverket. 150 utredningsfrågor per missförhållande, genererade på minuter istället för timmar. Certifiering av handläggare inom fem kompetensområden. Internationell modul (LCWAF) för barnavårdsbedömningar i utvecklingsländer.</p>
@@ -654,8 +680,8 @@ footer {
       </div>
 
       <!-- Consulting -->
-      <div class="card reveal">
-        <span class="card-icon">⚖️</span>
+      <div class="card reveal" id="consulting">
+        <span class="card-icon">03</span>
         <h3 class="card-title">Hardfeldt Moberg Consulting AB</h3>
         <p class="card-subtitle" data-sv="Grundare · Kvalificerade konsulttjänster inom socialt arbete" data-en="Founder · Specialized social work consulting">Grundare · Kvalificerade konsulttjänster inom socialt arbete</p>
         <p class="card-text" data-sv="14 års erfarenhet inom myndighetsutövning barn och unga. Handläggning, behandlingsarbete och processföring vid förvaltningsrätt och kammarrätt. Kommuner anlitar oss för komplexa ärenden, hög arbetsbelastning eller juridiskt krävande situationer där kvalitet och rättssäkerhet inte kan kompromissas." data-en="14 years of experience in child welfare case management. Investigative work, therapeutic intervention, and legal representation in administrative courts. Municipalities engage us for complex cases, high workloads, or legally demanding situations where quality and legal certainty cannot be compromised.">14 års erfarenhet inom myndighetsutövning barn och unga. Handläggning, behandlingsarbete och processföring vid förvaltningsrätt och kammarrätt. Kommuner anlitar oss för komplexa ärenden, hög arbetsbelastning eller juridiskt krävande situationer där kvalitet och rättssäkerhet inte kan kompromissas.</p>
@@ -664,7 +690,7 @@ footer {
 
       <!-- NexTool -->
       <div class="card reveal">
-        <span class="card-icon">📊</span>
+        <span class="card-icon">04</span>
         <h3 class="card-title">NexTool</h3>
         <p class="card-subtitle" data-sv="Grundare · 333 finansiella verktyg · 50 000+ besökare/vecka" data-en="Founder · 333 financial tools · 50,000+ visitors/week">Grundare · 333 finansiella verktyg · 50 000+ besökare/vecka</p>
         <p class="card-text" data-sv="Gratis verktygsplattform med kalkylatorer för bolån, investeringar, skatt, pension, budget och företagsanalys. 1 350+ indexerade sidor. Plattformen som bär AI-GameFriend." data-en="Free tool platform with calculators for mortgages, investments, tax, retirement, budgeting, and business analysis. 1,350+ indexed pages. The platform that hosts AI-GameFriend.">Gratis verktygsplattform med kalkylatorer för bolån, investeringar, skatt, pension, budget och företagsanalys. 1 350+ indexerade sidor. Plattformen som bär AI-GameFriend.</p>
@@ -713,7 +739,7 @@ footer {
     <div class="card full-width reveal" style="border-color: var(--accent); border-width: 1px;">
       <div class="method-result">
         <h3 class="card-title" data-sv="Resultatet" data-en="The result">Resultatet</h3>
-        <p class="card-text" style="color: var(--text); font-size: 1.05rem;" data-sv="Noll erfarenhet av skönlitterärt skrivande i december 2025. Två kompletta manuskript i förlagskvalitet i april 2026. En utvecklingskurva som normalt tar fem till sju år — komprimerad till fyra månader. Ingen dokumenterad parallell med alla tre variablerna aktiva: noll formell erfarenhet, fyra månader, professionell kvalitet." data-en="Zero fiction writing experience in December 2025. Two complete manuscripts at publication quality in April 2026. A development curve that normally takes five to seven years — compressed to four months. No documented parallel with all three variables active: zero formal experience, four months, professional quality.">Noll erfarenhet av skönlitterärt skrivande i december 2025. Två kompletta manuskript i förlagskvalitet i april 2026. En utvecklingskurva som normalt tar fem till sju år — komprimerad till fyra månader. Ingen dokumenterad parallell med alla tre variablerna aktiva: noll formell erfarenhet, fyra månader, professionell kvalitet.</p>
+        <p class="card-text" style="color: var(--text); font-size: 1.05rem;" data-sv="Noll erfarenhet av skönlitterärt skrivande i december 2025. Två kompletta manuskript i förlagskvalitet i april 2026. En utvecklingskurva som normalt tar fem till sju år — komprimerad till fyra månader." data-en="Zero fiction writing experience in December 2025. Two complete manuscripts at publication quality in April 2026. A development curve that normally takes five to seven years — compressed to four months.">Noll erfarenhet av skönlitterärt skrivande i december 2025. Två kompletta manuskript i förlagskvalitet i april 2026. En utvecklingskurva som normalt tar fem till sju år — komprimerad till fyra månader.</p>
         <div class="method-stats">
           <div class="method-stat">
             <span class="method-stat-num">4</span>
@@ -722,10 +748,6 @@ footer {
           <div class="method-stat">
             <span class="method-stat-num">2</span>
             <span class="method-stat-label" data-sv="manuskript" data-en="manuscripts">manuskript</span>
-          </div>
-          <div class="method-stat">
-            <span class="method-stat-num">600+</span>
-            <span class="method-stat-label" data-sv="poäng utveckling" data-en="points development">poäng utveckling</span>
           </div>
         </div>
       </div>
@@ -785,18 +807,24 @@ footer {
       </div>
     </div>
 
+    <!-- External validation placeholder -->
+    <div class="card full-width reveal" style="margin-top: 1.5rem;">
+      <h3 class="card-title" data-sv="Extern validering" data-en="External validation">Extern validering</h3>
+      <!-- TODO: extern citat -->
+    </div>
+
     <!-- CTA: Buy / Book -->
     <div class="method-cta reveal" style="margin-top: 2.5rem;">
       <div class="cards">
         <div class="card reveal" style="border-color: var(--accent);">
-          <span class="card-icon">🎤</span>
+          <span class="card-icon">01</span>
           <h3 class="card-title" data-sv="Föreläsning" data-en="Speaking">Föreläsning</h3>
           <p class="card-text" data-sv="60–90 minuter. Metoden i sin helhet, med live-demonstrationer av feedback-loopen. Anpassad för er bransch — produktutveckling, skrivande, ledarskap, socialt arbete." data-en="60–90 minutes. The full method, with live demonstrations of the feedback loop. Adapted for your industry — product development, writing, leadership, social work.">60–90 minuter. Metoden i sin helhet, med live-demonstrationer av feedback-loopen. Anpassad för er bransch — produktutveckling, skrivande, ledarskap, socialt arbete.</p>
           <a href="mailto:pan@hardfeldtmoberg.se?subject=Föreläsning" class="card-link" data-sv="Boka föreläsning" data-en="Book a talk">Boka föreläsning</a>
         </div>
 
         <div class="card reveal" style="border-color: var(--accent);">
-          <span class="card-icon">🧭</span>
+          <span class="card-icon">02</span>
           <h3 class="card-title" data-sv="Workshop & implementering" data-en="Workshop & implementation">Workshop & implementering</h3>
           <p class="card-text" data-sv="Halvdag eller heldag. Ert team tillämpar metodiken på era egna projekt med handledning. Ni går hem med en fungerande feedback-loop och de fem principerna anpassade för er domän." data-en="Half or full day. Your team applies the methodology to your own projects with guidance. You leave with a working feedback loop and the five principles adapted for your domain.">Halvdag eller heldag. Ert team tillämpar metodiken på era egna projekt med handledning. Ni går hem med en fungerande feedback-loop och de fem principerna anpassade för er domän.</p>
           <a href="mailto:pan@hardfeldtmoberg.se?subject=Workshop" class="card-link" data-sv="Boka workshop" data-en="Book workshop">Boka workshop</a>
@@ -817,9 +845,11 @@ footer {
 
     <div class="contact-links reveal">
       <a href="mailto:pan@hardfeldtmoberg.se" class="contact-btn primary" data-sv="✉ Mejla mig" data-en="✉ Email me">✉ Mejla mig</a>
-      <a href="https://linkedin.com/in/panhardfeldt" class="contact-btn" target="_blank">LinkedIn</a>
-      <a href="https://getnextool.com" class="contact-btn" target="_blank">NexTool</a>
-      <a href="https://lupino.se" class="contact-btn" target="_blank">Lupino</a>
+    </div>
+    <div class="contact-secondary reveal">
+      <a href="https://linkedin.com/in/panhardfeldt" target="_blank">LinkedIn</a>
+      <a href="https://getnextool.com" target="_blank">NexTool</a>
+      <a href="https://lupino.se" target="_blank">Lupino</a>
     </div>
   </div>
 </section>
