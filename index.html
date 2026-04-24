@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pan Hardfeldt</title>
 <meta name="description" content="Pan Hardfeldt — AI architect, author, social work expert. Building tools that reveal how minds make decisions. Founder of AI-GameFriend and co-founder of Lupino.">
+<meta name="theme-color" content="#0c0b0f">
+<link rel="canonical" href="https://panhardfeldt.com/">
 <meta property="og:title" content="Pan Hardfeldt — AI Architect, Author, Social Work Expert">
 <meta property="og:description" content="Building tools that reveal how minds make decisions. AI-GameFriend, Lupino, literary fiction, and a methodology that compressed 5 years into 4 months.">
 <meta property="og:type" content="website">
@@ -68,6 +70,26 @@ a {
   transition: color 0.3s ease;
 }
 a:hover { color: var(--accent-bright); }
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 1rem;
+  z-index: 10000;
+  background: var(--accent);
+  color: var(--bg);
+  padding: 0.65rem 0.9rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+}
+.skip-link:focus {
+  top: 1rem;
+}
 
 /* ─── LANGUAGE TOGGLE ─── */
 .lang-toggle {
@@ -622,24 +644,39 @@ footer {
   }
   .card { padding: 1.8rem; }
 }
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
 </style>
 </head>
 <body>
 
+<a href="#main-content" class="skip-link">Hoppa till innehåll</a>
+
 <!-- Language Toggle -->
-<div class="lang-toggle">
-  <button class="lang-btn active" onclick="setLang('sv')">SV</button>
-  <button class="lang-btn" onclick="setLang('en')">EN</button>
+<div class="lang-toggle" role="group" aria-label="Language selector">
+  <button class="lang-btn active" type="button" aria-pressed="true" onclick="setLang('sv')">SV</button>
+  <button class="lang-btn" type="button" aria-pressed="false" onclick="setLang('en')">EN</button>
 </div>
 
 <!-- Nav -->
-<nav>
+<nav aria-label="Primär navigering">
   <a href="#work" data-sv="Arbete" data-en="Work">Arbete</a>
   <a href="#literature" data-sv="Litteratur" data-en="Literature">Litteratur</a>
   <a href="#method" data-sv="Metodologi" data-en="Methodology">Metodologi</a>
   <a href="#contact" data-sv="Kontakt" data-en="Contact">Kontakt</a>
 </nav>
 
+<main id="main-content">
 <!-- Hero -->
 <section class="hero">
   <div class="container hero-split">
@@ -680,9 +717,9 @@ footer {
       <div class="card reveal" id="ai-gamefriend">
         <span class="card-icon">01</span>
         <h3 class="card-title">AI-GameFriend</h3>
-        <p class="card-subtitle" data-sv="Grundare · Beteendepsykologi genom strategispel" data-en="Founder · Behavioral psychology through strategy games">Grundare · Beteendepsykologi genom strategispel</p>
-        <p class="card-text" data-sv="Spela strategispel mot Claude, GPT, Gemini eller Grok — AI som faktiskt resonerar, anpassar sig och minns dina drag. 460+ tester, 8 500+ rader kod, 10 psykologiska experiment, 6 strategirådgivare, interaktiv fiktion. Varje val du gör mäts och profileras. Byggt av en person, noll anställda." data-en="Play strategy games against Claude, GPT, Gemini, or Grok — AI that actually reasons, adapts, and remembers your moves. 460+ tests, 8,500+ lines of code, 10 psychological experiments, 6 strategy advisors, interactive fiction. Every choice you make is measured and profiled. Built by one person, zero employees.">Spela strategispel mot Claude, GPT, Gemini eller Grok — AI som faktiskt resonerar, anpassar sig och minns dina drag. 460+ tester, 8 500+ rader kod, 10 psykologiska experiment, 6 strategirådgivare, interaktiv fiktion. Varje val du gör mäts och profileras. Byggt av en person, noll anställda.</p>
-        <a href="https://getnextool.com/ai-gamefriend" class="card-link" target="_blank" data-sv="Prova gratis" data-en="Try free">Prova gratis</a>
+        <p class="card-subtitle" data-sv="Grundare · AI-BridgeConnector (AI-BC) i AI-GameFriend" data-en="Founder · AI-BridgeConnector (AI-BC) inside AI-GameFriend">Grundare · AI-BridgeConnector (AI-BC) i AI-GameFriend</p>
+        <p class="card-text" data-sv="AI-GameFriend via NexTool: 28 moduler (22 april 2026), 6 strategirådgivare, 6 AI-motståndare, 4 AI-personligheter, AI-vs-AI spectator mode, debate/predictions, 10 MindGames, interaktiv fiktion, Research API och desktop-app (Tauri). AI-BC är bryggan som kopplar samman funktionerna, minne mellan spel och beslutsspårning. 544+ tester, 0 TypeScript-fel." data-en="AI-GameFriend on NexTool: 28 modules (April 22, 2026), 6 strategy advisors, 6 AI opponents, 4 AI personalities, AI-vs-AI spectator mode, debate/predictions, 10 MindGames, interactive fiction, Research API, and a desktop app (Tauri). AI-BC is the bridge layer connecting features, cross-game memory, and decision tracking. 544+ tests, 0 TypeScript errors.">AI-GameFriend via NexTool: 28 moduler (22 april 2026), 6 strategirådgivare, 6 AI-motståndare, 4 AI-personligheter, AI-vs-AI spectator mode, debate/predictions, 10 MindGames, interaktiv fiktion, Research API och desktop-app (Tauri). AI-BC är bryggan som kopplar samman funktionerna, minne mellan spel och beslutsspårning. 544+ tester, 0 TypeScript-fel.</p>
+        <a href="https://getnextool.com/ai-gamefriend" class="card-link" target="_blank" rel="noopener noreferrer" data-sv="Prova gratis" data-en="Try free">Prova gratis</a>
       </div>
 
       <!-- Lupino -->
@@ -691,7 +728,7 @@ footer {
         <h3 class="card-title">Lupino</h3>
         <p class="card-subtitle" data-sv="Medgrundare · Digital plattform för barn- och ungdomsvård" data-en="Co-founder · Digital platform for child welfare services">Medgrundare · Digital plattform för barn- och ungdomsvård</p>
         <p class="card-text" data-sv="Kompetenstestning, utredningsstöd och handläggarträning för socialtjänsten — i ett verktyg. Bygger på svensk lagstiftning (SoL, LVU) och BBIC-ramverket. 150 utredningsfrågor per missförhållande, genererade på minuter istället för timmar. Certifiering av handläggare inom fem kompetensområden. Internationell modul (LCWAF) för barnavårdsbedömningar i utvecklingsländer." data-en="Competency testing, investigation support, and caseworker training for child welfare services — in one tool. Built on Swedish legislation (SoL, LVU) and the BBIC framework. 150 investigation questions per case type, generated in minutes instead of hours. Caseworker certification across five competency areas. International module (LCWAF) for child welfare assessment in developing countries.">Kompetenstestning, utredningsstöd och handläggarträning för socialtjänsten — i ett verktyg. Bygger på svensk lagstiftning (SoL, LVU) och BBIC-ramverket. 150 utredningsfrågor per missförhållande, genererade på minuter istället för timmar. Certifiering av handläggare inom fem kompetensområden. Internationell modul (LCWAF) för barnavårdsbedömningar i utvecklingsländer.</p>
-        <a href="https://lupino.se" class="card-link" target="_blank" data-sv="Besök Lupino" data-en="Visit Lupino">Besök Lupino</a>
+        <a href="https://lupino.se" class="card-link" target="_blank" rel="noopener noreferrer" data-sv="Besök Lupino" data-en="Visit Lupino">Besök Lupino</a>
       </div>
 
       <!-- Consulting -->
@@ -709,7 +746,7 @@ footer {
         <h3 class="card-title">NexTool</h3>
         <p class="card-subtitle" data-sv="Grundare · 333 finansiella verktyg · 50 000+ besökare/vecka" data-en="Founder · 333 financial tools · 50,000+ visitors/week">Grundare · 333 finansiella verktyg · 50 000+ besökare/vecka</p>
         <p class="card-text" data-sv="Gratis verktygsplattform med kalkylatorer för bolån, investeringar, skatt, pension, budget och företagsanalys. 1 350+ indexerade sidor. Plattformen som bär AI-GameFriend." data-en="Free tool platform with calculators for mortgages, investments, tax, retirement, budgeting, and business analysis. 1,350+ indexed pages. The platform that hosts AI-GameFriend.">Gratis verktygsplattform med kalkylatorer för bolån, investeringar, skatt, pension, budget och företagsanalys. 1 350+ indexerade sidor. Plattformen som bär AI-GameFriend.</p>
-        <a href="https://getnextool.com" class="card-link" target="_blank" data-sv="Öppna NexTool" data-en="Open NexTool">Öppna NexTool</a>
+        <a href="https://getnextool.com" class="card-link" target="_blank" rel="noopener noreferrer" data-sv="Öppna NexTool" data-en="Open NexTool">Öppna NexTool</a>
       </div>
     </div>
   </div>
@@ -779,7 +816,7 @@ footer {
     <div class="card full-width reveal" style="margin-top: 1.5rem;">
       <h3 class="card-title" data-sv="Kärninsikten" data-en="The core insight">Kärninsikten</h3>
       <p class="card-text" style="color: var(--text); font-size: 1rem; line-height: 1.8;" data-sv="AI ersätter inte talang. AI ersätter inte erfarenhet. AI komprimerar tiden mellan potential och realisering. Det som normalt tar år — att hitta rätt mentor, få konsekvent feedback, iterera tillräckligt många gånger — sker på veckor. Förutsättningen är att potentialen finns. Metoden gräver fram den. Den planterar den inte." data-en="AI doesn't replace talent. AI doesn't replace experience. AI compresses the time between potential and realization. What normally takes years — finding the right mentor, getting consistent feedback, iterating enough times — happens in weeks. The prerequisite is that potential exists. The method excavates it. It doesn't plant it.">AI ersätter inte talang. AI ersätter inte erfarenhet. AI komprimerar tiden mellan potential och realisering. Det som normalt tar år — att hitta rätt mentor, få konsekvent feedback, iterera tillräckligt många gånger — sker på veckor. Förutsättningen är att potentialen finns. Metoden gräver fram den. Den planterar den inte.</p>
-      <p class="card-text" style="margin-top: 1rem;" data-sv="Metoden är inte begränsad till skrivande. Den är tillämpbar på varje domän där en människa har latent kompetens som behöver kanaliseras. Samma principer använde jag för att bygga AI-GameFriend: 8 500 rader kod, 1 400+ tester, noll anställda, noll programmeringsutbildning." data-en="The method isn't limited to writing. It applies to any domain where a human has latent competence that needs channeling. The same principles built AI-GameFriend: 8,500 lines of code, 1,400+ tests, zero employees, zero programming education.">Metoden är inte begränsad till skrivande. Den är tillämpbar på varje domän där en människa har latent kompetens som behöver kanaliseras. Samma principer använde jag för att bygga AI-GameFriend: 8 500 rader kod, 1 400+ tester, noll anställda, noll programmeringsutbildning.</p>
+      <p class="card-text" style="margin-top: 1rem;" data-sv="Metoden är inte begränsad till skrivande. Den är tillämpbar på varje domän där en människa har latent kompetens som behöver kanaliseras. Samma principer använde jag för att bygga AI-GameFriend och AI-BC: 8 500+ rader kod, 544+ tester, noll anställda, noll programmeringsutbildning." data-en="The method isn't limited to writing. It applies to any domain where a human has latent competence that needs channeling. The same principles built AI-GameFriend and AI-BC: 8,500+ lines of code, 544+ tests, zero employees, zero formal programming education.">Metoden är inte begränsad till skrivande. Den är tillämpbar på varje domän där en människa har latent kompetens som behöver kanaliseras. Samma principer använde jag för att bygga AI-GameFriend och AI-BC: 8 500+ rader kod, 544+ tester, noll anställda, noll programmeringsutbildning.</p>
     </div>
 
     <!-- The 5 principles — expanded -->
@@ -869,12 +906,13 @@ footer {
       <a href="mailto:pan@hardfeldtmoberg.se" class="contact-btn primary" data-sv="✉ Mejla mig" data-en="✉ Email me">✉ Mejla mig</a>
     </div>
     <div class="contact-secondary reveal">
-      <a href="https://linkedin.com/in/panhardfeldt" target="_blank">LinkedIn</a>
-      <a href="https://getnextool.com" target="_blank">NexTool</a>
-      <a href="https://lupino.se" target="_blank">Lupino</a>
+      <a href="https://linkedin.com/in/panhardfeldt" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://getnextool.com" target="_blank" rel="noopener noreferrer">NexTool</a>
+      <a href="https://lupino.se" target="_blank" rel="noopener noreferrer">Lupino</a>
     </div>
   </div>
 </section>
+</main>
 
 <footer>
   <p>© 2026 Pan Hardfeldt · Kista, Stockholm</p>
@@ -886,13 +924,21 @@ let currentLang = 'sv';
 
 function setLang(lang) {
   currentLang = lang;
+  localStorage.setItem('preferredLang', lang);
   document.querySelectorAll('.lang-btn').forEach(btn => {
-    btn.classList.toggle('active', btn.textContent.trim() === lang.toUpperCase());
+    const isActive = btn.textContent.trim() === lang.toUpperCase();
+    btn.classList.toggle('active', isActive);
+    btn.setAttribute('aria-pressed', String(isActive));
   });
   document.documentElement.lang = lang;
   document.querySelectorAll('[data-sv]').forEach(el => {
     el.textContent = el.getAttribute(`data-${lang}`);
   });
+}
+
+const storedLang = localStorage.getItem('preferredLang');
+if (storedLang === 'sv' || storedLang === 'en') {
+  setLang(storedLang);
 }
 
 // Scroll reveal
