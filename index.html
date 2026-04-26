@@ -483,6 +483,27 @@ section {
 }
 .method-requirements p:last-child { margin-bottom: 0; }
 
+.method-contact {
+  margin-top: 3rem;
+  text-align: center;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+.method-contact a {
+  color: var(--accent);
+  border-bottom: 1px solid transparent;
+  padding-bottom: 1px;
+  margin-left: 0.4rem;
+  transition: border-color 0.3s ease, color 0.3s ease;
+}
+.method-contact a:hover {
+  color: var(--accent-bright);
+  border-bottom-color: var(--accent);
+}
+
 @media (max-width: 768px) {
   .method-stats {
     justify-content: center;
@@ -813,24 +834,10 @@ footer {
       <!-- TODO: extern citat -->
     </div>
 
-    <!-- CTA: Buy / Book -->
-    <div class="method-cta reveal" style="margin-top: 2.5rem;">
-      <div class="cards">
-        <div class="card reveal" style="border-color: var(--accent);">
-          <span class="principle-num">01</span>
-          <h3 class="card-title" data-sv="Föreläsning" data-en="Speaking">Föreläsning</h3>
-          <p class="card-text" data-sv="60–90 minuter. Metoden i sin helhet, med live-demonstrationer av feedback-loopen. Anpassad för er bransch — produktutveckling, skrivande, ledarskap, socialt arbete." data-en="60–90 minutes. The full method, with live demonstrations of the feedback loop. Adapted for your industry — product development, writing, leadership, social work.">60–90 minuter. Metoden i sin helhet, med live-demonstrationer av feedback-loopen. Anpassad för er bransch — produktutveckling, skrivande, ledarskap, socialt arbete.</p>
-          <a href="mailto:pan@hardfeldtmoberg.se?subject=Föreläsning" class="card-link" data-sv="Boka föreläsning" data-en="Book a talk">Boka föreläsning</a>
-        </div>
-
-        <div class="card reveal" style="border-color: var(--accent);">
-          <span class="principle-num">02</span>
-          <h3 class="card-title" data-sv="Workshop & implementering" data-en="Workshop & implementation">Workshop & implementering</h3>
-          <p class="card-text" data-sv="Halvdag eller heldag. Ert team tillämpar metodiken på era egna projekt med handledning. Ni går hem med en fungerande feedback-loop och de fem principerna anpassade för er domän." data-en="Half or full day. Your team applies the methodology to your own projects with guidance. You leave with a working feedback loop and the five principles adapted for your domain.">Halvdag eller heldag. Ert team tillämpar metodiken på era egna projekt med handledning. Ni går hem med en fungerande feedback-loop och de fem principerna anpassade för er domän.</p>
-          <a href="mailto:pan@hardfeldtmoberg.se?subject=Workshop" class="card-link" data-sv="Boka workshop" data-en="Book workshop">Boka workshop</a>
-        </div>
-      </div>
-    </div>
+    <p class="method-contact reveal">
+      <span data-sv="För föreläsningar och workshops —" data-en="For talks and workshops —">För föreläsningar och workshops —</span>
+      <a href="mailto:pan@hardfeldtmoberg.se?subject=Föreläsning eller workshop" data-sv="kontakta direkt." data-en="get in touch.">kontakta direkt.</a>
+    </p>
   </div>
 </section>
 
