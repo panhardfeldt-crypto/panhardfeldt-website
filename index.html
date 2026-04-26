@@ -522,32 +522,26 @@ section {
 }
 
 .contact-btn {
-  padding: 0.8rem 1.8rem;
-  border: 1px solid var(--border);
+  padding: 0.65rem 1.45rem;
+  border: 1px solid var(--accent);
   border-radius: 6px;
   font-family: var(--sans);
   font-size: 0.85rem;
   font-weight: 500;
-  color: var(--text);
+  letter-spacing: 0.04em;
+  color: var(--accent);
   background: transparent;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
   text-decoration: none;
   display: inline-flex;
   align-items: center;
   gap: 0.6rem;
 }
 .contact-btn:hover {
-  border-color: var(--accent);
-  color: var(--accent);
-}
-.contact-btn.primary {
-  background: var(--accent);
-  color: var(--bg);
-  border-color: var(--accent);
-}
-.contact-btn.primary:hover {
-  background: var(--accent-bright);
+  background: var(--accent-glow);
+  color: var(--accent-bright);
+  border-color: var(--accent-bright);
 }
 
 .contact-secondary {
@@ -851,7 +845,7 @@ footer {
     </div>
 
     <div class="contact-links reveal">
-      <a href="mailto:pan@hardfeldtmoberg.se" class="contact-btn primary" data-sv="✉ Mejla mig" data-en="✉ Email me">✉ Mejla mig</a>
+      <a href="mailto:pan@hardfeldtmoberg.se" class="contact-btn" data-sv="Mejla mig" data-en="Email me">Mejla mig</a>
     </div>
     <div class="contact-secondary reveal">
       <a href="https://linkedin.com/in/panhardfeldt" target="_blank">LinkedIn</a>
