@@ -153,6 +153,7 @@ section {
 
 .hero-text {
   order: 1;
+  max-width: 520px;
 }
 
 .hero-portrait {
@@ -163,6 +164,10 @@ section {
   opacity: 0;
   transform: translateX(30px);
   animation: fadeLeft 1s ease 0.6s forwards;
+}
+
+@media (min-width: 1024px) and (max-width: 1280px) {
+  .hero-portrait { padding-left: 2rem; }
 }
 
 .portrait-frame {
@@ -223,7 +228,7 @@ section {
   line-height: 1.05;
   letter-spacing: -0.02em;
   color: var(--text);
-  margin-bottom: 1.5rem;
+  margin-bottom: 2.25rem;
   opacity: 0;
   transform: translateY(30px);
   animation: fadeUp 1s ease 0.3s forwards;
@@ -233,7 +238,7 @@ section {
   width: 80px;
   height: 1px;
   background: var(--accent);
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   opacity: 0;
   transform: scaleX(0);
   transform-origin: left;
@@ -270,27 +275,6 @@ section {
 .hero-audience a:hover {
   color: var(--accent);
   border-bottom-color: var(--accent);
-}
-
-.scroll-hint {
-  position: absolute;
-  bottom: 3rem;
-  left: 2rem;
-  font-size: 0.7rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--text-dim);
-  opacity: 0;
-  animation: fadeUp 1s ease 1.8s forwards;
-}
-.scroll-hint::after {
-  content: '';
-  display: block;
-  width: 1px;
-  height: 40px;
-  background: linear-gradient(to bottom, var(--accent), transparent);
-  margin-top: 0.8rem;
-  animation: pulse 2s ease infinite;
 }
 
 /* ─── CARDS GRID ─── */
@@ -583,11 +567,6 @@ footer {
 @keyframes lineIn {
   to { opacity: 1; transform: scaleX(1); }
 }
-@keyframes pulse {
-  0%, 100% { opacity: 0.3; }
-  50% { opacity: 1; }
-}
-
 .reveal {
   opacity: 0;
   transform: translateY(40px);
@@ -663,7 +642,6 @@ footer {
       </div>
     </div>
   </div>
-  <div class="scroll-hint" data-sv="Scrolla" data-en="Scroll">Scrolla</div>
 </section>
 
 <!-- Work -->
