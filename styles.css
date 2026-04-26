@@ -98,12 +98,6 @@ h2.first { margin-top: 0; }
 
 .work + .work { margin-top: 1rem; }
 
-.work-close {
-  font-style: italic;
-  color: var(--text-muted);
-  margin-top: 1.5rem;
-}
-
 .wip {
   font-family: var(--sans);
   font-size: 0.7rem;
