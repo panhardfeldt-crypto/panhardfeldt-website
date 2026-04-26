@@ -9,9 +9,25 @@
 <meta property="og:description" content="Building tools that reveal how minds make decisions. AI-GameFriend, Lupino, literary fiction, and a methodology that compressed 5 years into 4 months.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://panhardfeldt.com">
+<meta property="og:image" content="https://panhardfeldt.com/portrait.jpg">
+<meta property="og:image:width" content="768">
+<meta property="og:image:height" content="1024">
+<meta property="og:image:alt" content="Pan Hardfeldt — graphite portrait">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Pan Hardfeldt — AI Architect, Author, Social Work Expert">
 <meta name="twitter:description" content="Building tools that reveal how minds make decisions.">
+<meta name="twitter:image" content="https://panhardfeldt.com/portrait.jpg">
+<meta name="twitter:image:alt" content="Pan Hardfeldt — graphite portrait">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Pan Hardfeldt",
+  "url": "https://panhardfeldt.com",
+  "image": "https://panhardfeldt.com/portrait.jpg",
+  "description": "AI architect, author, and social work expert. Founder of AI-GameFriend and co-founder of Lupino."
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
@@ -179,12 +195,12 @@ section {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: grayscale(30%) contrast(1.05);
-  transition: filter 0.5s ease;
+  object-position: center top;
+  transition: transform 0.6s ease;
 }
 
 .portrait-frame:hover img {
-  filter: grayscale(0%) contrast(1);
+  transform: scale(1.02);
 }
 
 .portrait-placeholder {
@@ -203,17 +219,6 @@ section {
 
 .portrait-frame:not(.no-photo) .portrait-placeholder {
   display: none;
-}
-
-.portrait-frame::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 40%;
-  background: linear-gradient(to top, var(--bg), transparent);
-  pointer-events: none;
 }
 
 .hero-name {
@@ -657,9 +662,8 @@ footer {
     </div>
     <div class="hero-portrait">
       <div class="portrait-frame">
-        <!-- Replace src with your photo: portrait.jpg -->
-        <img src="portrait.jpg" alt="Pan Hardfeldt" onerror="this.style.display='none'; this.parentElement.classList.add('no-photo');">
-        <div class="portrait-placeholder">PH</div>
+        <img src="portrait.jpg" alt="Pan Hardfeldt — graphite portrait" width="768" height="1024" loading="eager" decoding="async" onerror="this.style.display='none'; this.parentElement.classList.add('no-photo');">
+        <div class="portrait-placeholder" aria-hidden="true">PH</div>
       </div>
     </div>
   </div>
