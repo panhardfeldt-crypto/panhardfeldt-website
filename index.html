@@ -566,11 +566,77 @@ section {
 
 /* ─── FOOTER ─── */
 footer {
-  padding: 4rem 2rem;
+  padding: 4rem 2rem 3rem;
   text-align: center;
   color: var(--text-dim);
   font-size: 0.8rem;
   border-top: 1px solid var(--border);
+}
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.footer-links a {
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 1px;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+.footer-links a:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+/* ─── ABOUT (Om mig) ─── */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+.about-lead {
+  font-family: var(--serif);
+  font-size: clamp(1.15rem, 2vw, 1.4rem);
+  font-style: italic;
+  color: var(--text);
+  line-height: 1.6;
+  border-left: 2px solid var(--accent);
+  padding-left: 1.5rem;
+}
+.about-body p {
+  color: var(--text-muted);
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+.about-body p:last-child { margin-bottom: 0; }
+
+/* ─── AXIOM eyebrow ─── */
+.imprint-mark {
+  display: inline-block;
+  font-family: var(--serif);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  padding: 0.35rem 0.9rem;
+  border-radius: 2px;
+  margin-bottom: 1.5rem;
+}
+.imprint-tagline {
+  display: block;
+  font-family: var(--serif);
+  font-style: italic;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-top: -0.5rem;
+  margin-bottom: 1.5rem;
 }
 
 /* ─── ANIMATIONS ─── */
@@ -634,9 +700,10 @@ footer {
 
 <!-- Nav -->
 <nav>
+  <a href="#om-mig" data-sv="Om mig" data-en="About">Om mig</a>
   <a href="#work" data-sv="Arbete" data-en="Work">Arbete</a>
   <a href="#literature" data-sv="Litteratur" data-en="Literature">Litteratur</a>
-  <a href="#method" data-sv="Metodologi" data-en="Methodology">Metodologi</a>
+  <a href="#method" data-sv="LATENT" data-en="LATENT">LATENT</a>
   <a href="#contact" data-sv="Kontakt" data-en="Contact">Kontakt</a>
 </nav>
 
@@ -664,6 +731,28 @@ footer {
     </div>
   </div>
   <div class="scroll-hint" data-sv="Scrolla" data-en="Scroll">Scrolla</div>
+</section>
+
+<!-- Om mig -->
+<section id="om-mig">
+  <div class="container">
+    <div class="reveal">
+      <span class="section-label" data-sv="Om mig" data-en="About">Om mig</span>
+      <h2 class="section-title" data-sv="En kort orientering — vem som står bakom det här." data-en="A short orientation — who's behind this.">En kort orientering — vem som står bakom det här.</h2>
+    </div>
+
+    <div class="about-grid reveal">
+      <p class="about-lead" data-sv="Fjorton år inom myndighetsutövning för barn och unga. Fyra parallella projekt sedan 2024. Två manuskript på fyra månader. Samma fråga genomgående: hur fattar människor beslut under press, och hur gör man den insikten användbar?" data-en="Fourteen years in child and youth welfare case management. Four parallel projects since 2024. Two manuscripts in four months. The same question throughout: how do people make decisions under pressure, and how do you make that insight useful?">Fjorton år inom myndighetsutövning för barn och unga. Fyra parallella projekt sedan 2024. Två manuskript på fyra månader. Samma fråga genomgående: hur fattar människor beslut under press, och hur gör man den insikten användbar?</p>
+
+      <div class="about-body">
+        <p data-sv="Bakgrunden är socialt arbete — handläggning, behandling och processföring vid förvaltningsrätt och kammarrätt. Den erfarenheten ligger som grund i allt övrigt: konsultverksamheten som tar de juridiskt komplexa ärendena, Lupino som översätter myndighetsarbete till en plattform, och AI-GameFriend som mäter beslutsmönster genom strategispel." data-en="The background is social work — case management, treatment, and legal representation in administrative and appellate courts. That experience underlies everything else: the consulting practice that takes the legally complex cases, Lupino which translates municipal casework into a platform, and AI-GameFriend which measures decision patterns through strategy games.">Bakgrunden är socialt arbete — handläggning, behandling och processföring vid förvaltningsrätt och kammarrätt. Den erfarenheten ligger som grund i allt övrigt: konsultverksamheten som tar de juridiskt komplexa ärendena, Lupino som översätter myndighetsarbete till en plattform, och AI-GameFriend som mäter beslutsmönster genom strategispel.</p>
+
+        <p data-sv="I december 2025 öppnade jag ett tomt dokument och började skriva skönlitteratur för första gången. Fyra månader senare två manuskript i förlagskvalitet — utgivna under min egen litterära signatur, AXIOM. Den utvecklingen är inte talang. Den är metod. Samma metod som byggde NexTool och AI-GameFriend ligger på LATENT — att den går att överföra är hela poängen." data-en="In December 2025 I opened a blank document and started writing fiction for the first time. Four months later: two manuscripts at publication quality — issued under my own literary signature, AXIOM. That development isn't talent. It's method. The same method that built NexTool and AI-GameFriend is documented in LATENT — that it transfers is the whole point.">I december 2025 öppnade jag ett tomt dokument och började skriva skönlitteratur för första gången. Fyra månader senare två manuskript i förlagskvalitet — utgivna under min egen litterära signatur, AXIOM. Den utvecklingen är inte talang. Den är metod. Samma metod som byggde NexTool och AI-GameFriend ligger på LATENT — att den går att överföra är hela poängen.</p>
+
+        <p data-sv="Bor i Kista, Stockholm. Skriver, kodar, processför. Svarar på mejl samma dag." data-en="Lives in Kista, Stockholm. Writes, codes, litigates. Responds to email the same day.">Bor i Kista, Stockholm. Skriver, kodar, processför. Svarar på mejl samma dag.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- Work -->
@@ -719,9 +808,11 @@ footer {
 <section id="literature">
   <div class="container">
     <div class="reveal">
+      <span class="imprint-mark">AXIOM</span>
       <span class="section-label" data-sv="Litteratur" data-en="Literature">Litteratur</span>
       <h2 class="section-title" data-sv="Två manuskript. Fyra månader. Noll erfarenhet dessförinnan." data-en="Two manuscripts. Four months. Zero prior experience.">Två manuskript. Fyra månader. Noll erfarenhet dessförinnan.</h2>
-      <p class="section-desc" data-sv="Folkloristisk gotik, moralpsykologisk skräck och klinisk science fiction. Manuskripten söker förlag." data-en="Folkloristic gothic, moral-psychological horror, and clinical science fiction. The manuscripts are seeking a publisher.">Folkloristisk gotik, moralpsykologisk skräck och klinisk science fiction. Manuskripten söker förlag.</p>
+      <p class="imprint-tagline" data-sv="Min litterära signatur. Folkloristisk gotik, moralpsykologisk skräck och klinisk science fiction." data-en="My literary signature. Folkloristic gothic, moral-psychological horror, and clinical science fiction.">Min litterära signatur. Folkloristisk gotik, moralpsykologisk skräck och klinisk science fiction.</p>
+      <p class="section-desc" data-sv="Manuskripten söker förlag. Förlagsintresse välkomnas via kontaktformuläret." data-en="The manuscripts are seeking a publisher. Publishing inquiries welcome via the contact form.">Manuskripten söker förlag. Förlagsintresse välkomnas via kontaktformuläret.</p>
     </div>
 
     <div class="cards">
@@ -749,12 +840,13 @@ footer {
   </div>
 </section>
 
-<!-- Method / Speaking -->
+<!-- Method / Speaking — public name: LATENT (id stays #method for inbound link compat) -->
 <section id="method">
   <div class="container">
     <div class="reveal">
-      <span class="section-label" data-sv="Metodologi" data-en="Methodology">Metodologi</span>
+      <span class="section-label" data-sv="LATENT" data-en="LATENT">LATENT</span>
       <h2 class="section-title" data-sv="Accelererad kompetensutveckling med AI" data-en="AI-Accelerated Skill Development">Accelererad kompetensutveckling med AI</h2>
+      <p class="section-desc" data-sv="Latent kompetens är material som redan finns men saknar kanal. Den här metoden är hur den kanalen byggs — i fyra månader istället för fem år." data-en="Latent competence is material that already exists but lacks a channel. This is the method that builds the channel — in four months instead of five years.">Latent kompetens är material som redan finns men saknar kanal. Den här metoden är hur den kanalen byggs — i fyra månader istället för fem år.</p>
     </div>
 
     <!-- The proof -->
@@ -877,6 +969,16 @@ footer {
 </section>
 
 <footer>
+  <div class="footer-links">
+    <a href="#om-mig" data-sv="Om mig" data-en="About">Om mig</a>
+    <a href="#work" data-sv="Arbete" data-en="Work">Arbete</a>
+    <a href="#literature">AXIOM</a>
+    <a href="#method">LATENT</a>
+    <a href="mailto:pan@hardfeldtmoberg.se" data-sv="Mejl" data-en="Email">Mejl</a>
+    <a href="https://linkedin.com/in/panhardfeldt" target="_blank">LinkedIn</a>
+    <a href="https://getnextool.com" target="_blank">NexTool</a>
+    <a href="https://lupino.se" target="_blank">Lupino</a>
+  </div>
   <p>© 2026 Pan Hardfeldt · Kista, Stockholm</p>
 </footer>
 
