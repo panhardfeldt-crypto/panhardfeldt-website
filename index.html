@@ -121,6 +121,79 @@ nav a {
 }
 nav a:hover { color: var(--accent); }
 
+/* ─── MOBILE NAV ─── */
+.menu-toggle {
+  display: none;
+  position: fixed;
+  top: 1.2rem;
+  left: 1.2rem;
+  z-index: 101;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg-card);
+  color: var(--text);
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(20px);
+}
+.menu-toggle span {
+  display: block;
+  width: 18px;
+  height: 1px;
+  background: currentColor;
+  position: relative;
+}
+.menu-toggle span::before,
+.menu-toggle span::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 18px;
+  height: 1px;
+  background: currentColor;
+  transition: transform 0.3s ease, top 0.3s ease;
+}
+.menu-toggle span::before { top: -6px; }
+.menu-toggle span::after { top: 6px; }
+.menu-toggle[aria-expanded="true"] span { background: transparent; }
+.menu-toggle[aria-expanded="true"] span::before { top: 0; transform: rotate(45deg); }
+.menu-toggle[aria-expanded="true"] span::after { top: 0; transform: rotate(-45deg); }
+
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  padding: 5rem 1.5rem 2rem;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  flex-direction: column;
+  gap: 0.4rem;
+  transform: translateY(-100%);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.mobile-menu.open {
+  display: flex;
+  transform: translateY(0);
+}
+.mobile-menu a {
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--text);
+  padding: 0.7rem 0.4rem;
+  border-bottom: 1px solid var(--border);
+}
+.mobile-menu a:last-child { border-bottom: none; }
+.mobile-menu a:hover { color: var(--accent); }
+
 /* ─── SECTIONS ─── */
 section {
   min-height: 100vh;
@@ -686,6 +759,7 @@ footer {
 
 @media (max-width: 768px) {
   nav { display: none; }
+  .menu-toggle { display: flex; }
   .lang-toggle { top: 1.2rem; right: 1.2rem; }
   section { padding: 4rem 1.5rem; }
   .hero { padding: 4rem 1.5rem; }
@@ -711,7 +785,10 @@ footer {
   <button class="lang-btn" onclick="setLang('en')">EN</button>
 </div>
 
-<!-- Nav -->
+<!-- Mobile menu toggle -->
+<button class="menu-toggle" aria-label="Meny" aria-expanded="false" aria-controls="mobile-menu" onclick="toggleMenu()"><span></span></button>
+
+<!-- Nav (desktop) -->
 <nav>
   <a href="#work" data-sv="Arbete" data-en="Work">Arbete</a>
   <a href="#method" data-sv="Metoder" data-en="Methods">Metoder</a>
@@ -721,6 +798,17 @@ footer {
   <a href="#om-mig" data-sv="Om" data-en="About">Om</a>
   <a href="#contact" data-sv="Kontakt" data-en="Contact">Kontakt</a>
 </nav>
+
+<!-- Nav (mobile) -->
+<div class="mobile-menu" id="mobile-menu">
+  <a href="#work" data-sv="Arbete" data-en="Work">Arbete</a>
+  <a href="#method" data-sv="Metoder" data-en="Methods">Metoder</a>
+  <a href="#ai-gamefriend" data-sv="AI &amp; verktyg" data-en="AI &amp; tools">AI &amp; verktyg</a>
+  <a href="#literature" data-sv="Litteratur" data-en="Literature">Litteratur</a>
+  <a href="#consulting" data-sv="Konsulting" data-en="Consulting">Konsulting</a>
+  <a href="#om-mig" data-sv="Om" data-en="About">Om</a>
+  <a href="#contact" data-sv="Kontakt" data-en="Contact">Kontakt</a>
+</div>
 
 <!-- Hero -->
 <section class="hero">
@@ -783,7 +871,7 @@ footer {
       <div class="card reveal" id="ai-gamefriend">
         <span class="card-icon">01</span>
         <h3 class="card-title">AI-GameFriend</h3>
-        <p class="card-subtitle" data-sv="AI &amp; verktyg · Experimentellt strategiverktyg" data-en="AI &amp; tools · Experimental strategy tool">AI & verktyg · Experimentellt strategiverktyg</p>
+        <p class="card-subtitle" data-sv="Grundare · Experimentellt strategiverktyg" data-en="Founder · Experimental strategy tool">Grundare · Experimentellt strategiverktyg</p>
         <p class="card-text" data-sv="AI-GameFriend är ett experimentellt strategiverktyg för seriösa strategispelare: ett sätt att få AI-baserade andra perspektiv på beslut, mönster och möjliga vägval i komplexa spel. Verktyget utforskar hur spelval kan användas för reflektion kring strategi, beslut och mönster — med tydliga gränser mellan analys, experiment och användarens eget omdöme. Experimentella funktioner är tydligt markerade." data-en="AI-GameFriend is an experimental strategy tool for serious strategy gamers: a way to get AI-based second opinions on decisions, patterns, and possible paths in complex games. The tool explores how game choices can be used for reflection on strategy, decisions, and patterns — with clear boundaries between analysis, experiments, and the user's own judgement. Experimental features are clearly marked.">AI-GameFriend är ett experimentellt strategiverktyg för seriösa strategispelare: ett sätt att få AI-baserade andra perspektiv på beslut, mönster och möjliga vägval i komplexa spel. Verktyget utforskar hur spelval kan användas för reflektion kring strategi, beslut och mönster — med tydliga gränser mellan analys, experiment och användarens eget omdöme. Experimentella funktioner är tydligt markerade.</p>
         <a href="https://getnextool.com/ai-gamefriend" class="card-link" target="_blank" data-sv="Läs mer" data-en="Learn more">Läs mer</a>
       </div>
@@ -1000,14 +1088,32 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-// Smooth scroll for nav
-document.querySelectorAll('nav a').forEach(link => {
+// Smooth scroll for nav (desktop + mobile)
+document.querySelectorAll('nav a, .mobile-menu a').forEach(link => {
   link.addEventListener('click', (e) => {
     e.preventDefault();
     const target = document.querySelector(link.getAttribute('href'));
     if (target) target.scrollIntoView({ behavior: 'smooth' });
+    closeMenu();
   });
 });
+
+// Mobile menu
+function toggleMenu() {
+  const btn = document.querySelector('.menu-toggle');
+  const menu = document.getElementById('mobile-menu');
+  const open = btn.getAttribute('aria-expanded') === 'true';
+  btn.setAttribute('aria-expanded', String(!open));
+  menu.classList.toggle('open', !open);
+}
+function closeMenu() {
+  const btn = document.querySelector('.menu-toggle');
+  const menu = document.getElementById('mobile-menu');
+  if (!btn || !menu) return;
+  btn.setAttribute('aria-expanded', 'false');
+  menu.classList.remove('open');
+}
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMenu(); });
 </script>
 
 </body>
