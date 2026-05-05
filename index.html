@@ -5,31 +5,88 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pan Härdfeldt — Metoder, verktyg och berättelser för bättre omdöme</title>
 <meta name="description" content="Pan Härdfeldt arbetar i skärningspunkten mellan socialt arbete, AI, strategi, litteratur och mänskligt beslutsfattande — med metoder, verktyg och texter för bättre omdöme i komplexa system.">
+<meta name="theme-color" content="#0c0b0f">
+<meta name="color-scheme" content="dark">
 <link rel="canonical" href="https://panhardfeldt.com">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230c0b0f'/%3E%3Ctext x='16' y='23' font-family='Georgia, serif' font-size='22' font-weight='600' text-anchor='middle' fill='%23c8a46e'%3EP%3C/text%3E%3C/svg%3E">
 <meta property="og:title" content="Pan Härdfeldt — Metoder, verktyg och berättelser för bättre omdöme">
 <meta property="og:description" content="Metoder, verktyg och berättelser för bättre omdöme i komplexa mänskliga system.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://panhardfeldt.com">
+<meta property="og:locale" content="sv_SE">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:image" content="https://panhardfeldt.com/portrait.jpg">
+<meta property="og:image:alt" content="Pan Härdfeldt">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Pan Härdfeldt — Metoder, verktyg och berättelser för bättre omdöme">
 <meta name="twitter:description" content="Metoder, verktyg och berättelser för bättre omdöme i komplexa mänskliga system.">
+<meta name="twitter:image" content="https://panhardfeldt.com/portrait.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Pan Härdfeldt",
+  "alternateName": "Pan Hardfeldt",
+  "url": "https://panhardfeldt.com",
+  "email": "mailto:pan@hardfeldtmoberg.se",
+  "image": "https://panhardfeldt.com/portrait.jpg",
+  "jobTitle": "Konsult, founder och författare",
+  "description": "Pan Härdfeldt arbetar i skärningspunkten mellan socialt arbete, AI, strategi, litteratur och mänskligt beslutsfattande — med metoder, verktyg och texter för bättre omdöme i komplexa system.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Stockholm",
+    "addressRegion": "Kista",
+    "addressCountry": "SE"
+  },
+  "sameAs": [
+    "https://linkedin.com/in/panhardfeldt",
+    "https://getnextool.com",
+    "https://lupino.se"
+  ],
+  "knowsAbout": [
+    "Socialt arbete",
+    "Myndighetsutövning barn och unga",
+    "AI-stöd för beslutsfattande",
+    "Metodutveckling",
+    "Skönlitteratur"
+  ]
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
 <style>
 :root {
   --bg: #0c0b0f;
+  --bg-soft: #100e14;
   --bg-card: #14131a;
   --bg-card-hover: #1a1924;
   --text: #e8e4de;
+  --text-bright: #f5f1ea;
   --text-muted: #8a857d;
   --text-dim: #5a564f;
   --accent: #c8a46e;
+  --accent-deep: #a18250;
   --accent-glow: #c8a46e22;
   --accent-bright: #ddb978;
   --border: #2a2832;
+  --border-strong: #3a3842;
+  --status-active: #84a98c;
+  --status-pre: #8aa2c2;
+  --status-experiment: #c8a46e;
+  --status-wip: #b78f7a;
   --serif: 'Cormorant Garamond', Georgia, serif;
   --sans: 'DM Sans', -apple-system, sans-serif;
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -522,78 +579,6 @@ section {
   top: -0.25em;
 }
 
-/* ─── SPEAKING / METHODOLOGY ─── */
-.method-principles {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem;
-  margin-top: 1.5rem;
-}
-
-.principle {
-  padding: 1.2rem;
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  font-size: 0.85rem;
-  color: var(--text-muted);
-  transition: border-color 0.3s ease;
-}
-.principle:hover { border-color: var(--accent); }
-
-.principle-num {
-  font-family: var(--serif);
-  font-size: 1.4rem;
-  color: var(--accent);
-  display: block;
-  margin-bottom: 0.4rem;
-}
-
-.method-stats {
-  display: flex;
-  justify-content: center;
-  gap: 3rem;
-  margin-top: 2rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid var(--border);
-}
-
-.method-stat {
-  display: flex;
-  flex-direction: column;
-}
-
-.method-stat-num {
-  font-family: var(--serif);
-  font-size: 3rem;
-  font-weight: 700;
-  color: var(--accent);
-  line-height: 1;
-}
-
-.method-stat-label {
-  font-size: 0.78rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--text-muted);
-  margin-top: 0.3rem;
-}
-
-.method-requirements p {
-  padding-left: 1rem;
-  border-left: 2px solid var(--border);
-  margin-bottom: 1rem;
-}
-.method-requirements p:last-child { margin-bottom: 0; }
-
-@media (max-width: 768px) {
-  .method-stats {
-    justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 2rem;
-  }
-}
-
 /* ─── CONTACT ─── */
 .contact-links {
   display: flex;
@@ -702,26 +687,13 @@ footer {
 .about-body p:last-child { margin-bottom: 0; }
 
 /* ─── AXIOM eyebrow ─── */
-.imprint-mark {
-  display: inline-block;
-  font-family: var(--serif);
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.32em;
-  text-transform: uppercase;
-  color: var(--accent);
-  border: 1px solid var(--accent);
-  padding: 0.35rem 0.9rem;
-  border-radius: 2px;
-  margin-bottom: 1.5rem;
-}
 .imprint-tagline {
   display: block;
   font-family: var(--serif);
   font-style: italic;
   color: var(--text-muted);
-  font-size: 0.95rem;
-  margin-top: -0.5rem;
+  font-size: 1rem;
+  margin-top: 0.4rem;
   margin-bottom: 1.5rem;
 }
 
@@ -750,11 +722,303 @@ footer {
   transform: translateY(0);
 }
 
+/* ─── ACCESSIBILITY ─── */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 8px;
+  z-index: 1000;
+  padding: 0.6rem 1rem;
+  background: var(--accent);
+  color: var(--bg);
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: top 0.2s ease;
+}
+.skip-link:focus {
+  top: 8px;
+  color: var(--bg);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent-bright);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+button:focus-visible,
+a:focus-visible { outline-offset: 4px; }
+
+/* Active nav state */
+nav a.is-active {
+  color: var(--accent);
+}
+nav a.is-active::after {
+  content: '';
+  display: block;
+  height: 1px;
+  width: 100%;
+  margin-top: 4px;
+  background: var(--accent);
+  opacity: 0.6;
+}
+
+/* ─── STATUS PILLS ─── */
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.28rem 0.7rem;
+  font-family: var(--sans);
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  border-radius: 999px;
+  border: 1px solid currentColor;
+  background: transparent;
+  white-space: nowrap;
+}
+.status::before {
+  content: '';
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: currentColor;
+}
+.status-active { color: var(--status-active); }
+.status-pre { color: var(--status-pre); }
+.status-experiment { color: var(--status-experiment); }
+.status-wip { color: var(--status-wip); }
+
+.card-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+}
+.card-head .card-icon { margin-bottom: 0; }
+
+/* ─── SECTION ORNAMENTATION ─── */
+section {
+  position: relative;
+}
+section + section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 1px;
+  background: var(--border);
+}
+
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+.section-label::before {
+  content: '';
+  display: inline-block;
+  width: 18px;
+  height: 1px;
+  background: var(--accent);
+  opacity: 0.7;
+}
+
+/* ─── AXIOM IMPRINT (refined) ─── */
+.imprint-mark {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  width: fit-content;
+  font-family: var(--serif);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.42em;
+  text-transform: uppercase;
+  color: var(--accent);
+  border: none;
+  padding: 0;
+  margin-bottom: 1.2rem;
+  background: none;
+  border-radius: 0;
+}
+.imprint-mark::before,
+.imprint-mark::after {
+  content: '';
+  width: 16px;
+  height: 1px;
+  background: var(--accent);
+  opacity: 0.5;
+}
+
+/* ─── SURFACING MANIFESTO ─── */
+.manifesto-statement {
+  margin-top: 2rem;
+  padding: 2rem 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.manifesto-statement p {
+  font-family: var(--serif);
+  font-size: clamp(1.2rem, 2.2vw, 1.55rem);
+  font-style: italic;
+  line-height: 1.55;
+  color: var(--text-bright);
+  max-width: 760px;
+}
+
+.principles {
+  list-style: none;
+  margin-top: 3.5rem;
+}
+.principles > li {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: 2rem;
+  padding: 2.2rem 0;
+  border-bottom: 1px solid var(--border);
+  align-items: baseline;
+}
+.principles > li:first-child { border-top: 1px solid var(--border); }
+.principles .p-num {
+  font-family: var(--serif);
+  font-size: 2.4rem;
+  font-weight: 400;
+  line-height: 1;
+  color: var(--accent);
+  letter-spacing: -0.02em;
+}
+.principles h3 {
+  font-family: var(--serif);
+  font-size: 1.55rem;
+  font-weight: 600;
+  margin-bottom: 0.55rem;
+  color: var(--text-bright);
+  line-height: 1.25;
+}
+.principles p {
+  color: var(--text-muted);
+  font-size: 1rem;
+  line-height: 1.75;
+  max-width: 640px;
+}
+
+.surface-aside {
+  margin-top: 3rem;
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+}
+.surface-aside-block {
+  padding: 2rem;
+  background: var(--bg-soft);
+  border-left: 2px solid var(--accent);
+  border-radius: 2px;
+}
+.surface-aside-block .aside-label {
+  display: block;
+  font-family: var(--sans);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.8rem;
+}
+.surface-aside-block p {
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  line-height: 1.65;
+  color: var(--text);
+  font-style: italic;
+}
+.surface-aside-block.caveat p {
+  font-style: normal;
+  font-family: var(--sans);
+  font-size: 0.96rem;
+  color: var(--text-muted);
+}
+
+.surface-cta {
+  margin-top: 3rem;
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+}
+.cta-card {
+  display: block;
+  padding: 2rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: inherit;
+  transition: border-color 0.3s var(--ease), background 0.3s var(--ease), transform 0.3s var(--ease);
+}
+.cta-card:hover {
+  border-color: var(--accent);
+  background: var(--bg-card-hover);
+  transform: translateY(-2px);
+}
+.cta-card .cta-eyebrow {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.8rem;
+}
+.cta-card h3 {
+  font-family: var(--serif);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+  color: var(--text-bright);
+}
+.cta-card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: 1.2rem;
+}
+.cta-card .cta-link {
+  font-family: var(--sans);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: gap 0.3s var(--ease);
+}
+.cta-card .cta-link::after { content: '→'; }
+.cta-card:hover .cta-link { gap: 0.8rem; }
+
 /* ─── RESPONSIVE ─── */
 @media (min-width: 768px) {
   .cards { grid-template-columns: repeat(2, 1fr); }
   .card.full-width { grid-column: 1 / -1; }
-  nav { gap: 2rem; }
+  nav { gap: 1.6rem; }
+  .surface-aside { grid-template-columns: 1fr 1fr; }
+  .surface-cta { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 600px) {
+  .principles > li {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+    padding: 1.8rem 0;
+  }
+  .principles .p-num { font-size: 1.8rem; }
+  .principles h3 { font-size: 1.35rem; }
 }
 
 @media (max-width: 768px) {
@@ -778,6 +1042,9 @@ footer {
 </style>
 </head>
 <body>
+
+<!-- Skip link -->
+<a href="#main" class="skip-link" data-sv="Hoppa till innehåll" data-en="Skip to content">Hoppa till innehåll</a>
 
 <!-- Language Toggle -->
 <div class="lang-toggle">
@@ -809,6 +1076,8 @@ footer {
   <a href="#om-mig" data-sv="Om" data-en="About">Om</a>
   <a href="#contact" data-sv="Kontakt" data-en="Contact">Kontakt</a>
 </div>
+
+<main id="main">
 
 <!-- Hero -->
 <section class="hero">
@@ -869,7 +1138,10 @@ footer {
     <div class="cards">
       <!-- AI-GameFriend -->
       <div class="card reveal" id="ai-gamefriend">
-        <span class="card-icon">01</span>
+        <div class="card-head">
+          <span class="card-icon">01</span>
+          <span class="status status-experiment" data-sv="Experiment" data-en="Experiment">Experiment</span>
+        </div>
         <h3 class="card-title">AI-GameFriend</h3>
         <p class="card-subtitle" data-sv="Grundare · Experimentellt strategiverktyg" data-en="Founder · Experimental strategy tool">Grundare · Experimentellt strategiverktyg</p>
         <p class="card-text" data-sv="AI-GameFriend är ett experimentellt strategiverktyg för seriösa strategispelare: ett sätt att få AI-baserade andra perspektiv på beslut, mönster och möjliga vägval i komplexa spel. Verktyget utforskar hur spelval kan användas för reflektion kring strategi, beslut och mönster — med tydliga gränser mellan analys, experiment och användarens eget omdöme. Experimentella funktioner är tydligt markerade." data-en="AI-GameFriend is an experimental strategy tool for serious strategy gamers: a way to get AI-based second opinions on decisions, patterns, and possible paths in complex games. The tool explores how game choices can be used for reflection on strategy, decisions, and patterns — with clear boundaries between analysis, experiments, and the user's own judgement. Experimental features are clearly marked.">AI-GameFriend är ett experimentellt strategiverktyg för seriösa strategispelare: ett sätt att få AI-baserade andra perspektiv på beslut, mönster och möjliga vägval i komplexa spel. Verktyget utforskar hur spelval kan användas för reflektion kring strategi, beslut och mönster — med tydliga gränser mellan analys, experiment och användarens eget omdöme. Experimentella funktioner är tydligt markerade.</p>
@@ -878,7 +1150,10 @@ footer {
 
       <!-- Lupino -->
       <div class="card reveal" id="lupino">
-        <span class="card-icon">02</span>
+        <div class="card-head">
+          <span class="card-icon">02</span>
+          <span class="status status-pre" data-sv="Pre-pilot" data-en="Pre-pilot">Pre-pilot</span>
+        </div>
         <h3 class="card-title">Lupino</h3>
         <p class="card-subtitle" data-sv="Medgrundare · Strukturerat praktikstöd för socialtjänst och barnavård" data-en="Co-founder · Structured practice support for social services and child welfare">Medgrundare · Strukturerat praktikstöd för socialtjänst och barnavård</p>
         <p class="card-text" data-sv="Lupino utvecklar strukturerat professionellt stöd för socialtjänst och barnavård: kompetensträning, praktikstöd och kvalitetssäkring som stödjer professionellt omdöme utan att ersätta det. Bygger på strukturerade arbetssätt, svensk socialrättslig praktik och tydlig ansvarsfördelning — verktyget ska stödja kvalitet i professionella bedömningar, inte ersätta ansvariga yrkespersoner." data-en="Lupino is developing structured professional support for social services and child welfare: competence training, practice support, and quality assurance that supports professional judgement without replacing it. Built on structured working methods, Swedish social-legal practice, and clear lines of responsibility — the tool is meant to support quality in professional assessments, not replace responsible practitioners.">Lupino utvecklar strukturerat professionellt stöd för socialtjänst och barnavård: kompetensträning, praktikstöd och kvalitetssäkring som stödjer professionellt omdöme utan att ersätta det. Bygger på strukturerade arbetssätt, svensk socialrättslig praktik och tydlig ansvarsfördelning — verktyget ska stödja kvalitet i professionella bedömningar, inte ersätta ansvariga yrkespersoner.</p>
@@ -887,7 +1162,10 @@ footer {
 
       <!-- Consulting -->
       <div class="card reveal" id="consulting">
-        <span class="card-icon">03</span>
+        <div class="card-head">
+          <span class="card-icon">03</span>
+          <span class="status status-active" data-sv="Aktiv" data-en="Active">Aktiv</span>
+        </div>
         <h3 class="card-title">Hardfeldt Moberg Consulting AB</h3>
         <p class="card-subtitle" data-sv="Grundare · Konsulting · Socialt arbete" data-en="Founder · Consulting · Social work">Grundare · Konsulting · Socialt arbete</p>
         <p class="card-text" data-sv="Kvalificerade konsulttjänster inom socialt arbete, med fokus på komplexa ärenden, rättssäker handläggning och stöd i situationer där kvalitet inte får gå förlorad under press. Erfarenhet från myndighetsutövning, barn och unga, behandlingsarbete och processföring vid förvaltningsrätt och kammarrätt." data-en="Qualified social work consulting, with a focus on complex cases, legally sound case management, and support in situations where quality cannot be lost under pressure. Experience from public-authority case management, child and youth services, treatment work, and legal representation in administrative and appellate courts.">Kvalificerade konsulttjänster inom socialt arbete, med fokus på komplexa ärenden, rättssäker handläggning och stöd i situationer där kvalitet inte får gå förlorad under press. Erfarenhet från myndighetsutövning, barn och unga, behandlingsarbete och processföring vid förvaltningsrätt och kammarrätt.</p>
@@ -896,7 +1174,10 @@ footer {
 
       <!-- NexTool -->
       <div class="card reveal" id="nextool">
-        <span class="card-icon">04</span>
+        <div class="card-head">
+          <span class="card-icon">04</span>
+          <span class="status status-active" data-sv="Aktiv" data-en="Active">Aktiv</span>
+        </div>
         <h3 class="card-title">NexTool</h3>
         <p class="card-subtitle" data-sv="Grundare · Verktygsplattform" data-en="Founder · Tool platform">Grundare · Verktygsplattform</p>
         <p class="card-text" data-sv="NexTool är en verktygsplattform med kalkylatorer och beslutsstöd för privatekonomi, investeringar, företagande och analys. Plattformen rymmer också AI-GameFriend." data-en="NexTool is a tool platform with calculators and decision support for personal finance, investing, entrepreneurship, and analysis. The platform also hosts AI-GameFriend.">NexTool är en verktygsplattform med kalkylatorer och beslutsstöd för privatekonomi, investeringar, företagande och analys. Plattformen rymmer också AI-GameFriend.</p>
@@ -945,84 +1226,78 @@ footer {
 <!-- Methods — public name: Surfacing (id stays #method for inbound link compat) -->
 <section id="method">
   <div class="container">
-    <div class="reveal">
+    <header class="reveal">
       <span class="section-label" data-sv="Surfacing" data-en="Surfacing">Surfacing</span>
       <h2 class="section-title" data-sv="Kalibrerad friktion för bättre omdöme" data-en="Calibrated friction for better judgement">Kalibrerad friktion för bättre omdöme</h2>
       <p class="section-desc" data-sv="Surfacing bygger på en enkel princip: människor bär mer kapacitet än de använder. När ett eget försök möter rätt sorts motstånd — sant, smalt och bärbart — börjar den kapaciteten komma upp till ytan." data-en="Surfacing rests on a simple principle: people carry more capacity than they use. When an honest attempt meets the right kind of resistance — true, narrow, and bearable — that capacity starts to surface.">Surfacing bygger på en enkel princip: människor bär mer kapacitet än de använder. När ett eget försök möter rätt sorts motstånd — sant, smalt och bärbart — börjar den kapaciteten komma upp till ytan.</p>
+    </header>
+
+    <div class="manifesto-statement reveal">
+      <p data-sv="AI används inte som ersättare för människans omdöme, utan som spegel, motståndsyta och kalibreringsinstrument. Målet är inte bara bättre output, utan bättre seende, bättre självdiagnos och större självständighet." data-en="AI is used not as a replacement for human judgement, but as a mirror, a surface of resistance, and an instrument of calibration. The goal isn't only better output, but better seeing, better self-diagnosis, and greater independence.">AI används inte som ersättare för människans omdöme, utan som spegel, motståndsyta och kalibreringsinstrument. Målet är inte bara bättre output, utan bättre seende, bättre självdiagnos och större självständighet.</p>
     </div>
 
-    <!-- Core principle -->
-    <div class="card full-width reveal">
-      <h3 class="card-title" data-sv="Vad Surfacing är" data-en="What Surfacing is">Vad Surfacing är</h3>
-      <p class="card-text" style="color: var(--text); font-size: 1rem; line-height: 1.8;" data-sv="AI används inte som ersättare för människans omdöme, utan som spegel, motståndsyta och kalibreringsinstrument. Målet är inte bara bättre output, utan bättre seende, bättre självdiagnos och större självständighet." data-en="AI is used not as a replacement for human judgement, but as a mirror, a surface of resistance, and an instrument of calibration. The goal isn't only better output, but better seeing, better self-diagnosis, and greater independence.">AI används inte som ersättare för människans omdöme, utan som spegel, motståndsyta och kalibreringsinstrument. Målet är inte bara bättre output, utan bättre seende, bättre självdiagnos och större självständighet.</p>
-    </div>
-
-    <!-- The 5 principles -->
-    <div class="reveal" style="margin-top: 3rem;">
-      <h3 class="card-title" style="margin-bottom: 1.5rem;" data-sv="Fem principer" data-en="Five principles">Fem principer</h3>
-    </div>
-
-    <div class="cards" style="grid-template-columns: 1fr;">
-      <div class="card reveal">
-        <span class="principle-num">01</span>
-        <h4 class="card-title" style="font-size: 1.3rem;" data-sv="Börja i befintlig kapacitet" data-en="Start from existing capacity">Börja i befintlig kapacitet</h4>
-        <p class="card-text" data-sv="De flesta utvecklingsmodeller antar att användaren börjar från noll. Det stämmer sällan. Människor bär erfarenhet, intuition och mönster som saknar kanal. Surfacing börjar därför med att kartlägga och namnge det som redan finns, snarare än att lära ut grunderna i något främmande." data-en="Most development models assume the user starts from zero. That's rarely the case. People carry experience, intuition, and patterns that lack a channel. Surfacing therefore begins by mapping and naming what is already there, rather than teaching the basics of something foreign.">De flesta utvecklingsmodeller antar att användaren börjar från noll. Det stämmer sällan. Människor bär erfarenhet, intuition och mönster som saknar kanal. Surfacing börjar därför med att kartlägga och namnge det som redan finns, snarare än att lära ut grunderna i något främmande.</p>
-      </div>
-
-      <div class="card reveal">
-        <span class="principle-num">02</span>
-        <h4 class="card-title" style="font-size: 1.3rem;" data-sv="Ge kalibrerad friktion" data-en="Provide calibrated friction">Ge kalibrerad friktion</h4>
-        <p class="card-text" data-sv="Motståndet ska vara sant, smalt och bärbart — tillräckligt för att utmana, inte så mycket att det förlamar. AI:n fungerar som en stabil referenspunkt utan social kalibrering: ingen anpassning efter humör, status eller förväntan. Återkopplingen pekar på något specifikt, inte vagt beröm eller generellt missnöje." data-en="The resistance should be true, narrow, and bearable — enough to challenge, not so much that it paralyses. AI functions as a stable reference point without social calibration: no adjustment for mood, status, or expectation. Feedback points to something specific, not vague praise or general dissatisfaction.">Motståndet ska vara sant, smalt och bärbart — tillräckligt för att utmana, inte så mycket att det förlamar. AI:n fungerar som en stabil referenspunkt utan social kalibrering: ingen anpassning efter humör, status eller förväntan. Återkopplingen pekar på något specifikt, inte vagt beröm eller generellt missnöje.</p>
-      </div>
-
-      <div class="card reveal">
-        <span class="principle-num">03</span>
-        <h4 class="card-title" style="font-size: 1.3rem;" data-sv="Korta återkopplingsloopen" data-en="Shorten the feedback loop">Korta återkopplingsloopen</h4>
-        <p class="card-text" data-sv="Cykeltiden mellan utförande, återkoppling och korrigering krymper från dagar eller veckor till minuter. Det egna omdömet får möjlighet att kalibreras under en sammanhängande session, innan principen hinner glömmas eller förvridas. Det är friktionens täthet — inte dess hårdhet — som gör arbetet." data-en="The cycle time between execution, feedback, and correction shrinks from days or weeks to minutes. Your own judgement gets a chance to calibrate within a single session, before the principle can be forgotten or distorted. It's the density of the friction — not its harshness — that does the work.">Cykeltiden mellan utförande, återkoppling och korrigering krymper från dagar eller veckor till minuter. Det egna omdömet får möjlighet att kalibreras under en sammanhängande session, innan principen hinner glömmas eller förvridas. Det är friktionens täthet — inte dess hårdhet — som gör arbetet.</p>
-      </div>
-
-      <div class="card reveal">
-        <span class="principle-num">04</span>
-        <h4 class="card-title" style="font-size: 1.3rem;" data-sv="Arbeta med principer, inte regler" data-en="Work with principles, not rules">Arbeta med principer, inte regler</h4>
-        <p class="card-text" data-sv="Regler följs mekaniskt och producerar mekanisk output. Principer internaliseras och måste vägas mot situationen. Surfacing levererar inte instruktioner som 'gör aldrig X', utan principer som användaren får tillämpa med eget omdöme — och som kan ifrågasättas där situationen kräver det." data-en="Rules are followed mechanically and produce mechanical output. Principles must be internalised and weighed against the situation. Surfacing doesn't deliver instructions like 'never do X', but principles that the user applies with their own judgement — and which can be questioned where the situation calls for it.">Regler följs mekaniskt och producerar mekanisk output. Principer internaliseras och måste vägas mot situationen. Surfacing levererar inte instruktioner som "gör aldrig X", utan principer som användaren får tillämpa med eget omdöme — och som kan ifrågasättas där situationen kräver det.</p>
-      </div>
-
-      <div class="card reveal">
-        <span class="principle-num">05</span>
-        <h4 class="card-title" style="font-size: 1.3rem;" data-sv="Överför bedömningsförmåga till människan" data-en="Transfer judgement to the human">Överför bedömningsförmåga till människan</h4>
-        <p class="card-text" data-sv="Målet är inte beroende, utan självständighet. Processen ska gradvis gå från AI-ledd till användarledd, med AI som bekräftare snarare än domare. Det tydligaste tecknet på att kompetensen har internaliserats är att användaren själv identifierar och åtgärdar svagheter innan AI:n hinner namnge dem." data-en="The goal isn't dependence, but independence. The process should gradually shift from AI-led to user-led, with AI as confirmer rather than judge. The clearest sign that competence has been internalised is that the user identifies and addresses weaknesses before the AI names them.">Målet är inte beroende, utan självständighet. Processen ska gradvis gå från AI-ledd till användarledd, med AI som bekräftare snarare än domare. Det tydligaste tecknet på att kompetensen har internaliserats är att användaren själv identifierar och åtgärdar svagheter innan AI:n hinner namnge dem.</p>
-      </div>
-    </div>
-
-    <!-- A concrete example -->
-    <div class="card full-width reveal" style="margin-top: 1.5rem;">
-      <h3 class="card-title" data-sv="Ett konkret exempel" data-en="A concrete example">Ett konkret exempel</h3>
-      <p class="card-text" data-sv="Ett konkret exempel är den litterära processen: från första seriösa skönlitterära försök i december 2025 till två färdigställda manuskript våren 2026. Poängen är inte att AI ersatte omdömet, utan att återkopplingsloopen blev tät nog för att omdömet skulle tränas snabbare." data-en="One concrete example is the literary process: from the first serious attempt at fiction in December 2025 to two completed manuscripts in spring 2026. The point isn't that AI replaced judgement, but that the feedback loop became tight enough for judgement to be trained more quickly.">Ett konkret exempel är den litterära processen: från första seriösa skönlitterära försök i december 2025 till två färdigställda manuskript våren 2026. Poängen är inte att AI ersatte omdömet, utan att återkopplingsloopen blev tät nog för att omdömet skulle tränas snabbare.</p>
-    </div>
-
-    <!-- Caveat -->
-    <div class="card full-width reveal" style="margin-top: 1.5rem;">
-      <h3 class="card-title" data-sv="Vad Surfacing inte är" data-en="What Surfacing is not">Vad Surfacing inte är</h3>
-      <p class="card-text" data-sv="Surfacing är inte en garanti och inte en metod som skapar kompetens ur tomma intet. Den är ett sätt att göra befintlig kapacitet synlig, prövbar och mer självständig genom tät återkoppling och tydligare motstånd. Resultatet beror på personen, domänen och situationen — och på vad som redan finns att synliggöra." data-en="Surfacing is not a guarantee, and not a method that creates competence from nothing. It is a way of making existing capacity visible, testable, and more independent through tight feedback and clearer resistance. The outcome depends on the person, the domain, and the situation — and on what is already there to surface.">Surfacing är inte en garanti och inte en metod som skapar kompetens ur tomma intet. Den är ett sätt att göra befintlig kapacitet synlig, prövbar och mer självständig genom tät återkoppling och tydligare motstånd. Resultatet beror på personen, domänen och situationen — och på vad som redan finns att synliggöra.</p>
-    </div>
-
-    <!-- CTA: Speaking & Workshop -->
-    <div class="method-cta reveal" style="margin-top: 2.5rem;">
-      <div class="cards">
-        <div class="card reveal" style="border-color: var(--accent);">
-          <span class="principle-num">01</span>
-          <h3 class="card-title" data-sv="Föreläsning" data-en="Talk">Föreläsning</h3>
-          <p class="card-text" data-sv="60–90 minuter om Surfacing: principerna, hur kalibrerad friktion kan se ut i praktiken, och hur metoden överförs mellan domäner. Anpassas efter publik — produktutveckling, skrivande, ledarskap eller socialt arbete." data-en="A 60–90 minute talk on Surfacing: the principles, what calibrated friction can look like in practice, and how the method transfers between domains. Adapted to the audience — product development, writing, leadership, or social work.">60–90 minuter om Surfacing: principerna, hur kalibrerad friktion kan se ut i praktiken, och hur metoden överförs mellan domäner. Anpassas efter publik — produktutveckling, skrivande, ledarskap eller socialt arbete.</p>
-          <a href="mailto:pan@hardfeldtmoberg.se?subject=Föreläsning" class="card-link" data-sv="Boka föreläsning" data-en="Book a talk">Boka föreläsning</a>
+    <ol class="principles">
+      <li class="reveal">
+        <span class="p-num">01</span>
+        <div>
+          <h3 data-sv="Börja i befintlig kapacitet" data-en="Start from existing capacity">Börja i befintlig kapacitet</h3>
+          <p data-sv="De flesta utvecklingsmodeller antar att användaren börjar från noll. Det stämmer sällan. Människor bär erfarenhet, intuition och mönster som saknar kanal. Surfacing börjar därför med att kartlägga och namnge det som redan finns, snarare än att lära ut grunderna i något främmande." data-en="Most development models assume the user starts from zero. That's rarely the case. People carry experience, intuition, and patterns that lack a channel. Surfacing therefore begins by mapping and naming what is already there, rather than teaching the basics of something foreign.">De flesta utvecklingsmodeller antar att användaren börjar från noll. Det stämmer sällan. Människor bär erfarenhet, intuition och mönster som saknar kanal. Surfacing börjar därför med att kartlägga och namnge det som redan finns, snarare än att lära ut grunderna i något främmande.</p>
         </div>
-
-        <div class="card reveal" style="border-color: var(--accent);">
-          <span class="principle-num">02</span>
-          <h3 class="card-title" data-sv="Workshop" data-en="Workshop">Workshop</h3>
-          <p class="card-text" data-sv="Halvdag eller heldag där teamet tillämpar principerna på sina egna frågor. Fokus ligger på att hitta rätt sorts friktion för domänen, korta loopen och bygga ett arbetssätt som fungerar efter att workshopen är slut." data-en="Half or full day where the team applies the principles to their own questions. The focus is on finding the right kind of friction for the domain, shortening the loop, and building a way of working that holds after the workshop ends.">Halvdag eller heldag där teamet tillämpar principerna på sina egna frågor. Fokus ligger på att hitta rätt sorts friktion för domänen, korta loopen och bygga ett arbetssätt som fungerar efter att workshopen är slut.</p>
-          <a href="mailto:pan@hardfeldtmoberg.se?subject=Workshop" class="card-link" data-sv="Boka workshop" data-en="Book workshop">Boka workshop</a>
+      </li>
+      <li class="reveal">
+        <span class="p-num">02</span>
+        <div>
+          <h3 data-sv="Ge kalibrerad friktion" data-en="Provide calibrated friction">Ge kalibrerad friktion</h3>
+          <p data-sv="Motståndet ska vara sant, smalt och bärbart — tillräckligt för att utmana, inte så mycket att det förlamar. AI:n fungerar som en stabil referenspunkt utan social kalibrering: ingen anpassning efter humör, status eller förväntan. Återkopplingen pekar på något specifikt, inte vagt beröm eller generellt missnöje." data-en="The resistance should be true, narrow, and bearable — enough to challenge, not so much that it paralyses. AI functions as a stable reference point without social calibration: no adjustment for mood, status, or expectation. Feedback points to something specific, not vague praise or general dissatisfaction.">Motståndet ska vara sant, smalt och bärbart — tillräckligt för att utmana, inte så mycket att det förlamar. AI:n fungerar som en stabil referenspunkt utan social kalibrering: ingen anpassning efter humör, status eller förväntan. Återkopplingen pekar på något specifikt, inte vagt beröm eller generellt missnöje.</p>
         </div>
+      </li>
+      <li class="reveal">
+        <span class="p-num">03</span>
+        <div>
+          <h3 data-sv="Korta återkopplingsloopen" data-en="Shorten the feedback loop">Korta återkopplingsloopen</h3>
+          <p data-sv="Cykeltiden mellan utförande, återkoppling och korrigering krymper från dagar eller veckor till minuter. Det egna omdömet får möjlighet att kalibreras under en sammanhängande session, innan principen hinner glömmas eller förvridas. Det är friktionens täthet — inte dess hårdhet — som gör arbetet." data-en="The cycle time between execution, feedback, and correction shrinks from days or weeks to minutes. Your own judgement gets a chance to calibrate within a single session, before the principle can be forgotten or distorted. It's the density of the friction — not its harshness — that does the work.">Cykeltiden mellan utförande, återkoppling och korrigering krymper från dagar eller veckor till minuter. Det egna omdömet får möjlighet att kalibreras under en sammanhängande session, innan principen hinner glömmas eller förvridas. Det är friktionens täthet — inte dess hårdhet — som gör arbetet.</p>
+        </div>
+      </li>
+      <li class="reveal">
+        <span class="p-num">04</span>
+        <div>
+          <h3 data-sv="Arbeta med principer, inte regler" data-en="Work with principles, not rules">Arbeta med principer, inte regler</h3>
+          <p data-sv="Regler följs mekaniskt och producerar mekanisk output. Principer internaliseras och måste vägas mot situationen. Surfacing levererar inte instruktioner som 'gör aldrig X', utan principer som användaren får tillämpa med eget omdöme — och som kan ifrågasättas där situationen kräver det." data-en="Rules are followed mechanically and produce mechanical output. Principles must be internalised and weighed against the situation. Surfacing doesn't deliver instructions like 'never do X', but principles that the user applies with their own judgement — and which can be questioned where the situation calls for it.">Regler följs mekaniskt och producerar mekanisk output. Principer internaliseras och måste vägas mot situationen. Surfacing levererar inte instruktioner som "gör aldrig X", utan principer som användaren får tillämpa med eget omdöme — och som kan ifrågasättas där situationen kräver det.</p>
+        </div>
+      </li>
+      <li class="reveal">
+        <span class="p-num">05</span>
+        <div>
+          <h3 data-sv="Överför bedömningsförmåga till människan" data-en="Transfer judgement to the human">Överför bedömningsförmåga till människan</h3>
+          <p data-sv="Målet är inte beroende, utan självständighet. Processen ska gradvis gå från AI-ledd till användarledd, med AI som bekräftare snarare än domare. Det tydligaste tecknet på att kompetensen har internaliserats är att användaren själv identifierar och åtgärdar svagheter innan AI:n hinner namnge dem." data-en="The goal isn't dependence, but independence. The process should gradually shift from AI-led to user-led, with AI as confirmer rather than judge. The clearest sign that competence has been internalised is that the user identifies and addresses weaknesses before the AI names them.">Målet är inte beroende, utan självständighet. Processen ska gradvis gå från AI-ledd till användarledd, med AI som bekräftare snarare än domare. Det tydligaste tecknet på att kompetensen har internaliserats är att användaren själv identifierar och åtgärdar svagheter innan AI:n hinner namnge dem.</p>
+        </div>
+      </li>
+    </ol>
+
+    <div class="surface-aside reveal">
+      <div class="surface-aside-block">
+        <span class="aside-label" data-sv="Ett konkret exempel" data-en="A concrete example">Ett konkret exempel</span>
+        <p data-sv="Från första seriösa skönlitterära försök i december 2025 till två färdigställda manuskript våren 2026. Poängen är inte att AI ersatte omdömet, utan att återkopplingsloopen blev tät nog för att omdömet skulle tränas snabbare." data-en="From the first serious attempt at fiction in December 2025 to two completed manuscripts in spring 2026. The point isn't that AI replaced judgement, but that the feedback loop became tight enough for judgement to be trained more quickly.">Från första seriösa skönlitterära försök i december 2025 till två färdigställda manuskript våren 2026. Poängen är inte att AI ersatte omdömet, utan att återkopplingsloopen blev tät nog för att omdömet skulle tränas snabbare.</p>
       </div>
+      <div class="surface-aside-block caveat">
+        <span class="aside-label" data-sv="Vad Surfacing inte är" data-en="What Surfacing is not">Vad Surfacing inte är</span>
+        <p data-sv="Surfacing är inte en garanti och inte en metod som skapar kompetens ur tomma intet. Den är ett sätt att göra befintlig kapacitet synlig, prövbar och mer självständig genom tät återkoppling och tydligare motstånd. Resultatet beror på personen, domänen och situationen — och på vad som redan finns att synliggöra." data-en="Surfacing is not a guarantee, and not a method that creates competence from nothing. It is a way of making existing capacity visible, testable, and more independent through tight feedback and clearer resistance. The outcome depends on the person, the domain, and the situation — and on what is already there to surface.">Surfacing är inte en garanti och inte en metod som skapar kompetens ur tomma intet. Den är ett sätt att göra befintlig kapacitet synlig, prövbar och mer självständig genom tät återkoppling och tydligare motstånd. Resultatet beror på personen, domänen och situationen — och på vad som redan finns att synliggöra.</p>
+      </div>
+    </div>
+
+    <div class="surface-cta">
+      <a href="mailto:pan@hardfeldtmoberg.se?subject=Föreläsning" class="cta-card reveal">
+        <span class="cta-eyebrow" data-sv="Föreläsning" data-en="Talk">Föreläsning</span>
+        <h3 data-sv="Surfacing — i praktiken" data-en="Surfacing — in practice">Surfacing — i praktiken</h3>
+        <p data-sv="60–90 minuter om principerna, hur kalibrerad friktion kan se ut i praktiken, och hur metoden överförs mellan domäner. Anpassas efter publik — produktutveckling, skrivande, ledarskap eller socialt arbete." data-en="A 60–90 minute talk on the principles, what calibrated friction can look like in practice, and how the method transfers between domains. Adapted to the audience — product development, writing, leadership, or social work.">60–90 minuter om principerna, hur kalibrerad friktion kan se ut i praktiken, och hur metoden överförs mellan domäner. Anpassas efter publik — produktutveckling, skrivande, ledarskap eller socialt arbete.</p>
+        <span class="cta-link" data-sv="Boka föreläsning" data-en="Book a talk">Boka föreläsning</span>
+      </a>
+      <a href="mailto:pan@hardfeldtmoberg.se?subject=Workshop" class="cta-card reveal">
+        <span class="cta-eyebrow" data-sv="Workshop" data-en="Workshop">Workshop</span>
+        <h3 data-sv="Halv- eller heldag med teamet" data-en="Half- or full-day with the team">Halv- eller heldag med teamet</h3>
+        <p data-sv="Teamet tillämpar principerna på sina egna frågor. Fokus ligger på att hitta rätt sorts friktion för domänen, korta loopen och bygga ett arbetssätt som fungerar efter att workshopen är slut." data-en="The team applies the principles to their own questions. The focus is on finding the right kind of friction for the domain, shortening the loop, and building a way of working that holds after the workshop ends.">Teamet tillämpar principerna på sina egna frågor. Fokus ligger på att hitta rätt sorts friktion för domänen, korta loopen och bygga ett arbetssätt som fungerar efter att workshopen är slut.</p>
+        <span class="cta-link" data-sv="Boka workshop" data-en="Book workshop">Boka workshop</span>
+      </a>
     </div>
   </div>
 </section>
@@ -1046,6 +1321,8 @@ footer {
     </div>
   </div>
 </section>
+
+</main>
 
 <footer>
   <div class="footer-links">
@@ -1114,6 +1391,34 @@ function closeMenu() {
   menu.classList.remove('open');
 }
 document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMenu(); });
+
+// Scroll-spy: highlight current section in nav
+(function () {
+  const navLinks = Array.from(document.querySelectorAll('nav a[href^="#"]'));
+  const targets = navLinks
+    .map(a => ({ a, id: a.getAttribute('href').slice(1) }))
+    .map(t => ({ ...t, el: document.getElementById(t.id) }))
+    .filter(t => t.el);
+  if (!targets.length) return;
+
+  const setActive = (id) => {
+    navLinks.forEach(a => {
+      const match = a.getAttribute('href') === '#' + id;
+      a.classList.toggle('is-active', match);
+      if (match) a.setAttribute('aria-current', 'true');
+      else a.removeAttribute('aria-current');
+    });
+  };
+
+  const spy = new IntersectionObserver((entries) => {
+    const visible = entries
+      .filter(e => e.isIntersecting)
+      .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+    if (visible[0]) setActive(visible[0].target.id);
+  }, { rootMargin: '-40% 0px -50% 0px', threshold: [0, 0.25, 0.5, 0.75, 1] });
+
+  targets.forEach(t => spy.observe(t.el));
+})();
 </script>
 
 </body>
