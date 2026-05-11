@@ -48,6 +48,7 @@
     "Myndighetsutövning barn och unga",
     "AI-stöd för beslutsfattande",
     "Metodutveckling",
+    "Surfacing",
     "Skönlitteratur"
   ]
 }
@@ -909,48 +910,6 @@ section + section::before {
   max-width: 640px;
 }
 
-.surface-aside {
-  margin-top: 3rem;
-  display: grid;
-  gap: 1.5rem;
-  grid-template-columns: 1fr;
-}
-.surface-aside-block {
-  padding: 2rem;
-  background: var(--bg-soft);
-  border-left: 2px solid var(--accent);
-  border-radius: 2px;
-}
-.surface-aside-block .aside-label {
-  display: block;
-  font-family: var(--sans);
-  font-size: 0.68rem;
-  font-weight: 600;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--accent);
-  margin-bottom: 0.8rem;
-}
-.surface-aside-block p {
-  font-family: var(--serif);
-  font-size: 1.1rem;
-  line-height: 1.65;
-  color: var(--text);
-  font-style: italic;
-}
-.surface-aside-block.caveat p {
-  font-style: normal;
-  font-family: var(--sans);
-  font-size: 0.96rem;
-  color: var(--text-muted);
-}
-
-.surface-cta {
-  margin-top: 3rem;
-  display: grid;
-  gap: 1.5rem;
-  grid-template-columns: 1fr;
-}
 .cta-card {
   display: block;
   padding: 2rem;
@@ -1002,13 +961,163 @@ section + section::before {
 .cta-card .cta-link::after { content: '→'; }
 .cta-card:hover .cta-link { gap: 0.8rem; }
 
+/* ─── SURFACING UPGRADE ─── */
+.surfacing-hero {
+  max-width: 780px;
+  letter-spacing: -0.015em;
+}
+.surfacing-lead {
+  max-width: 680px;
+  margin-bottom: 0;
+}
+
+.surface-block {
+  margin-top: 3.5rem;
+  max-width: 760px;
+}
+.surface-block + .surface-block { margin-top: 2.6rem; }
+.surface-h3 {
+  font-family: var(--serif);
+  font-size: clamp(1.55rem, 2.6vw, 2rem);
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--text-bright);
+  margin-bottom: 1.2rem;
+  letter-spacing: -0.005em;
+}
+.surface-block p {
+  color: var(--text-muted);
+  font-size: 1.02rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+.surface-block p:last-child { margin-bottom: 0; }
+.surface-block p.closing-line {
+  font-family: var(--serif);
+  font-style: italic;
+  color: var(--text);
+  font-size: 1.1rem;
+  margin-top: 0.4rem;
+}
+
+.not-grid,
+.apply-grid {
+  margin-top: 1.8rem;
+  display: grid;
+  gap: 1.2rem;
+  grid-template-columns: 1fr;
+}
+
+.not-card,
+.apply-card {
+  padding: 1.6rem 1.8rem;
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  transition: border-color 0.3s var(--ease), background 0.3s var(--ease), transform 0.3s var(--ease);
+}
+.not-card:hover {
+  border-color: var(--border-strong);
+  background: var(--bg-card);
+}
+.apply-card:hover {
+  border-color: var(--accent);
+  background: var(--bg-card-hover);
+  transform: translateY(-2px);
+}
+.not-card h4,
+.apply-card h4 {
+  font-family: var(--serif);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-bright);
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+.not-card p,
+.apply-card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.products-grid {
+  margin-top: 1.8rem;
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+}
+
+.value-block {
+  margin-top: 3.5rem;
+  padding: 2.2rem 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  max-width: 760px;
+}
+.value-block .aside-label {
+  display: block;
+  font-family: var(--sans);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1.1rem;
+}
+.value-block p {
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--text);
+  margin-bottom: 1rem;
+}
+.value-block p:last-child {
+  margin-bottom: 0;
+  color: var(--text-muted);
+  font-style: italic;
+  font-size: 1.02rem;
+}
+
+.surface-final-cta {
+  margin-top: 3rem;
+  padding: 2.4rem;
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+.surface-final-cta h3 {
+  font-family: var(--serif);
+  font-size: clamp(1.4rem, 2.4vw, 1.85rem);
+  font-weight: 600;
+  color: var(--text-bright);
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+.surface-final-cta p {
+  color: var(--text-muted);
+  font-size: 1rem;
+  line-height: 1.75;
+  margin-bottom: 1.6rem;
+  max-width: 640px;
+}
+.surface-final-cta .closing-line {
+  display: block;
+  margin-top: 1.6rem;
+  font-family: var(--serif);
+  font-style: italic;
+  color: var(--text-muted);
+  font-size: 1.05rem;
+}
+
 /* ─── RESPONSIVE ─── */
 @media (min-width: 768px) {
   .cards { grid-template-columns: repeat(2, 1fr); }
   .card.full-width { grid-column: 1 / -1; }
   nav { gap: 1.6rem; }
-  .surface-aside { grid-template-columns: 1fr 1fr; }
-  .surface-cta { grid-template-columns: 1fr 1fr; }
+  .not-grid { grid-template-columns: repeat(2, 1fr); }
+  .apply-grid { grid-template-columns: repeat(2, 1fr); }
+  .products-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 600px) {
@@ -1228,9 +1337,23 @@ section + section::before {
   <div class="container">
     <header class="reveal">
       <span class="section-label" data-sv="Surfacing" data-en="Surfacing">Surfacing</span>
-      <h2 class="section-title" data-sv="Surfacing — bättre omdöme genom kalibrerad friktion" data-en="Surfacing — better judgement through calibrated friction">Surfacing — bättre omdöme genom kalibrerad friktion</h2>
-      <p class="section-desc" data-sv="Surfacing bygger på en enkel princip: människor bär mer kapacitet än de använder. När ett eget försök möter rätt sorts motstånd — sant, smalt och bärbart — börjar den kapaciteten komma upp till ytan." data-en="Surfacing rests on a simple principle: people carry more capacity than they use. When an honest attempt meets the right kind of resistance — true, narrow, and bearable — that capacity starts to surface.">Surfacing bygger på en enkel princip: människor bär mer kapacitet än de använder. När ett eget försök möter rätt sorts motstånd — sant, smalt och bärbart — börjar den kapaciteten komma upp till ytan.</p>
+      <h2 class="section-title surfacing-hero" data-sv="Du bär mer kapacitet än du använder." data-en="You carry more capacity than you use.">Du bär mer kapacitet än du använder.</h2>
+      <p class="section-desc surfacing-lead" data-sv="De flesta utvecklingsmetoder utgår från att du börjar från noll. Det stämmer sällan. Du har decenniers erfarenhet, intuition och omdöme — men ingen kanal för det. Surfacing gör den kapaciteten synlig och operativ." data-en="Most development methods assume you start from zero. That's rarely the case. You carry decades of experience, intuition, and judgement — but no channel for it. Surfacing makes that capacity visible and operative.">De flesta utvecklingsmetoder utgår från att du börjar från noll. Det stämmer sällan. Du har decenniers erfarenhet, intuition och omdöme — men ingen kanal för det. Surfacing gör den kapaciteten synlig och operativ.</p>
     </header>
+
+    <!-- Vad Surfacing är -->
+    <div class="surface-block reveal">
+      <h3 class="surface-h3" data-sv="Vad Surfacing är" data-en="What Surfacing is">Vad Surfacing är</h3>
+      <p data-sv="Surfacing är en metod för att frigöra latent mänsklig kapacitet med hjälp av AI som kalibrerad spegel. Metoden bygger på en enkel observation: människor bär mer kompetens, perception och omdöme än de använder. Rätt struktur kan göra den kapaciteten tillgänglig på veckor istället för år." data-en="Surfacing is a method for releasing latent human capacity using AI as a calibrated mirror. The method rests on a simple observation: people carry more competence, perception, and judgement than they use. The right structure can make that capacity accessible in weeks rather than years.">Surfacing är en metod för att frigöra latent mänsklig kapacitet med hjälp av AI som kalibrerad spegel. Metoden bygger på en enkel observation: människor bär mer kompetens, perception och omdöme än de använder. Rätt struktur kan göra den kapaciteten tillgänglig på veckor istället för år.</p>
+      <p data-sv="Surfacing ersätter inte terapi eller coaching. Den ersätter inte heller utbildning — men den kan göra utbildning snabbare genom att synliggöra den inlärningsförmåga som redan finns och korta återkopplingsloopen från veckor till minuter. Surfacing löser det specifika problem som ingen av dessa löser: att göra det redan befintliga synligt, prövbart och självständigt." data-en="Surfacing does not replace therapy or coaching. Nor does it replace education — but it can make education faster by surfacing the learning capacity that is already there and shortening the feedback loop from weeks to minutes. Surfacing solves the specific problem none of these solve: making what already exists visible, testable, and independent.">Surfacing ersätter inte terapi eller coaching. Den ersätter inte heller utbildning — men den kan göra utbildning snabbare genom att synliggöra den inlärningsförmåga som redan finns och korta återkopplingsloopen från veckor till minuter. Surfacing löser det specifika problem som ingen av dessa löser: att göra det redan befintliga synligt, prövbart och självständigt.</p>
+      <p class="closing-line" data-sv="Metodens namn: det som var under ytan bryter igenom." data-en="The method's name: what was below the surface breaks through.">Metodens namn: det som var under ytan bryter igenom.</p>
+    </div>
+
+    <!-- Mekanismen -->
+    <div class="surface-block reveal">
+      <h3 class="surface-h3" data-sv="Mekanismen" data-en="The mechanism">Mekanismen</h3>
+      <p data-sv="Surfacing fungerar genom att göra det redan befintliga synligt, utsätta det för kalibrerad friktion och korta loopen mellan försök, återkoppling och korrigering. Målet är inte beroende av AI, utan att bedömningsförmågan gradvis flyttas tillbaka till människan." data-en="Surfacing works by making what is already there visible, exposing it to calibrated friction, and shortening the loop between attempt, feedback, and correction. The goal is not dependence on AI, but for judgement to be gradually moved back to the human.">Surfacing fungerar genom att göra det redan befintliga synligt, utsätta det för kalibrerad friktion och korta loopen mellan försök, återkoppling och korrigering. Målet är inte beroende av AI, utan att bedömningsförmågan gradvis flyttas tillbaka till människan.</p>
+    </div>
 
     <div class="manifesto-statement reveal">
       <p data-sv="AI används inte som ersättare för människans omdöme, utan som spegel, motståndsyta och kalibreringsinstrument. Målet är inte bara bättre output, utan bättre seende, bättre självdiagnos och större självständighet." data-en="AI is used not as a replacement for human judgement, but as a mirror, a surface of resistance, and an instrument of calibration. The goal isn't only better output, but better seeing, better self-diagnosis, and greater independence.">AI används inte som ersättare för människans omdöme, utan som spegel, motståndsyta och kalibreringsinstrument. Målet är inte bara bättre output, utan bättre seende, bättre självdiagnos och större självständighet.</p>
@@ -1274,30 +1397,116 @@ section + section::before {
       </li>
     </ol>
 
-    <div class="surface-aside reveal">
-      <div class="surface-aside-block">
-        <span class="aside-label" data-sv="Ett konkret exempel" data-en="A concrete example">Ett konkret exempel</span>
-        <p data-sv="Från första seriösa skönlitterära försök i december 2025 till två färdigställda manuskript våren 2026. Poängen är inte att AI ersatte omdömet, utan att återkopplingsloopen blev tät nog för att omdömet skulle tränas snabbare." data-en="From the first serious attempt at fiction in December 2025 to two completed manuscripts in spring 2026. The point isn't that AI replaced judgement, but that the feedback loop became tight enough for judgement to be trained more quickly.">Från första seriösa skönlitterära försök i december 2025 till två färdigställda manuskript våren 2026. Poängen är inte att AI ersatte omdömet, utan att återkopplingsloopen blev tät nog för att omdömet skulle tränas snabbare.</p>
+    <!-- Vad Surfacing inte är -->
+    <div class="surface-block reveal">
+      <h3 class="surface-h3" data-sv="Vad Surfacing inte är" data-en="What Surfacing is not">Vad Surfacing inte är</h3>
+      <p data-sv="Tydliga gränser gör metoden trovärdig. Surfacing är ett specifikt verktyg för en specifik sak — inte en ersättning för andra praktiker." data-en="Clear boundaries make the method trustworthy. Surfacing is a specific tool for a specific thing — not a replacement for other practices.">Tydliga gränser gör metoden trovärdig. Surfacing är ett specifikt verktyg för en specifik sak — inte en ersättning för andra praktiker.</p>
+    </div>
+    <div class="not-grid reveal">
+      <div class="not-card">
+        <h4 data-sv="Inte coaching." data-en="Not coaching.">Inte coaching.</h4>
+        <p data-sv="Coaching ställer frågor för att du ska hitta egna svar. Surfacing speglar — den visar vad som finns, specifikt och mätbart." data-en="Coaching asks questions so that you find your own answers. Surfacing mirrors — it shows what is there, specifically and measurably.">Coaching ställer frågor för att du ska hitta egna svar. Surfacing speglar — den visar vad som finns, specifikt och mätbart.</p>
       </div>
-      <div class="surface-aside-block caveat">
-        <span class="aside-label" data-sv="Vad Surfacing inte är" data-en="What Surfacing is not">Vad Surfacing inte är</span>
-        <p data-sv="Surfacing är inte en garanti och inte en metod som skapar kompetens ur tomma intet. Den är ett sätt att göra befintlig kapacitet synlig, prövbar och mer självständig genom tät återkoppling och tydligare motstånd. Resultatet beror på personen, domänen och situationen — och på vad som redan finns att synliggöra." data-en="Surfacing is not a guarantee, and not a method that creates competence from nothing. It is a way of making existing capacity visible, testable, and more independent through tight feedback and clearer resistance. The outcome depends on the person, the domain, and the situation — and on what is already there to surface.">Surfacing är inte en garanti och inte en metod som skapar kompetens ur tomma intet. Den är ett sätt att göra befintlig kapacitet synlig, prövbar och mer självständig genom tät återkoppling och tydligare motstånd. Resultatet beror på personen, domänen och situationen — och på vad som redan finns att synliggöra.</p>
+      <div class="not-card">
+        <h4 data-sv="Inte utbildning." data-en="Not education.">Inte utbildning.</h4>
+        <p data-sv="Utbildning fyller på kunskap. Surfacing synliggör det du redan har." data-en="Education adds knowledge. Surfacing makes visible what you already carry.">Utbildning fyller på kunskap. Surfacing synliggör det du redan har.</p>
+      </div>
+      <div class="not-card">
+        <h4 data-sv="Inte terapi." data-en="Not therapy.">Inte terapi.</h4>
+        <p data-sv="Surfacing bearbetar inte trauma och diagnostiserar inte. Den frigör kapacitet." data-en="Surfacing does not process trauma and does not diagnose. It releases capacity.">Surfacing bearbetar inte trauma och diagnostiserar inte. Den frigör kapacitet.</p>
+      </div>
+      <div class="not-card">
+        <h4 data-sv="Inte ett AI-verktyg." data-en="Not an AI tool.">Inte ett AI-verktyg.</h4>
+        <p data-sv="AI:n skapar ingenting. Den speglar, kalibrerar och dokumenterar. All kompetens och kreativitet tillhör dig." data-en="The AI creates nothing. It mirrors, calibrates, and documents. All competence and creativity belong to you.">AI:n skapar ingenting. Den speglar, kalibrerar och dokumenterar. All kompetens och kreativitet tillhör dig.</p>
+      </div>
+      <div class="not-card">
+        <h4 data-sv="Inte en garanti." data-en="Not a guarantee.">Inte en garanti.</h4>
+        <p data-sv="Surfacing kräver att det finns latent kapacitet att synliggöra. Den skapar inte kompetens ur tomma intet. Resultatet beror på dig, din domän och vad som redan finns under ytan." data-en="Surfacing requires there to be latent capacity to surface. It does not create competence from nothing. The outcome depends on you, your domain, and what is already below the surface.">Surfacing kräver att det finns latent kapacitet att synliggöra. Den skapar inte kompetens ur tomma intet. Resultatet beror på dig, din domän och vad som redan finns under ytan.</p>
       </div>
     </div>
 
-    <div class="surface-cta">
-      <a href="mailto:pan.hardfeldt@gmail.com?subject=Föreläsning" class="cta-card reveal">
-        <span class="cta-eyebrow" data-sv="Föreläsning" data-en="Talk">Föreläsning</span>
-        <h3 data-sv="Surfacing — i praktiken" data-en="Surfacing — in practice">Surfacing — i praktiken</h3>
-        <p data-sv="60–90 minuter om principerna, hur kalibrerad friktion kan se ut i praktiken, och hur metoden överförs mellan domäner. Anpassas efter publik — produktutveckling, skrivande, ledarskap eller socialt arbete." data-en="A 60–90 minute talk on the principles, what calibrated friction can look like in practice, and how the method transfers between domains. Adapted to the audience — product development, writing, leadership, or social work.">60–90 minuter om principerna, hur kalibrerad friktion kan se ut i praktiken, och hur metoden överförs mellan domäner. Anpassas efter publik — produktutveckling, skrivande, ledarskap eller socialt arbete.</p>
-        <span class="cta-link" data-sv="Boka föreläsning" data-en="Book a talk">Boka föreläsning</span>
+    <!-- Dokumenterat case -->
+    <div class="surface-block reveal">
+      <h3 class="surface-h3" data-sv="Ett dokumenterat case" data-en="A documented case">Ett dokumenterat case</h3>
+      <p data-sv="Surfacing utvecklades först genom Pan Härdfeldts egen litterära process. I december 2025 gjordes de första seriösa skönlitterära försöken. Under de följande fem månaderna producerades fyra större litterära arbeten, varav två färdigställda manuskript för förlagskontakt, och ungefär 360 boksidor publicerbar text." data-en="Surfacing was first developed through Pan Härdfeldt's own literary process. In December 2025 the first serious attempts at fiction were made. Over the following five months, four major literary works were produced — two of them completed manuscripts ready for publishing contact — and roughly 360 book pages of publishable text.">Surfacing utvecklades först genom Pan Härdfeldts egen litterära process. I december 2025 gjordes de första seriösa skönlitterära försöken. Under de följande fem månaderna producerades fyra större litterära arbeten, varav två färdigställda manuskript för förlagskontakt, och ungefär 360 boksidor publicerbar text.</p>
+      <p data-sv="Poängen är inte att AI ersatte omdömet. Poängen är att återkopplingsloopen blev tillräckligt tät för att omdömet skulle tränas snabbare. Processen dokumenterades löpande: steg, tekniker, kvalitetshöjningar och återkommande mönster kunde följas medan arbetet pågick." data-en="The point is not that AI replaced judgement. The point is that the feedback loop became tight enough for judgement to be trained more quickly. The process was documented as it went: steps, techniques, quality improvements, and recurring patterns could be followed while the work was in progress.">Poängen är inte att AI ersatte omdömet. Poängen är att återkopplingsloopen blev tillräckligt tät för att omdömet skulle tränas snabbare. Processen dokumenterades löpande: steg, tekniker, kvalitetshöjningar och återkommande mönster kunde följas medan arbetet pågick.</p>
+      <p data-sv="Surfacing presenteras därför inte som en universell garanti, utan som en observerad mekanism: när befintlig kapacitet möter rätt sorts friktion kan utvecklingstakten förändras kraftigt." data-en="Surfacing is therefore not presented as a universal guarantee, but as an observed mechanism: when existing capacity meets the right kind of friction, the pace of development can change significantly.">Surfacing presenteras därför inte som en universell garanti, utan som en observerad mekanism: när befintlig kapacitet möter rätt sorts friktion kan utvecklingstakten förändras kraftigt.</p>
+    </div>
+
+    <!-- Tillämpningsområden -->
+    <div class="surface-block reveal">
+      <h3 class="surface-h3" data-sv="Tillämpningsområden" data-en="Areas of application">Tillämpningsområden</h3>
+      <p data-sv="Surfacing utvecklades genom skönlitterärt skrivande men principerna är domänoberoende. Metoden kan tillämpas i områden där mänskligt omdöme, perception och erfarenhetsbaserad kompetens är kärnan." data-en="Surfacing was developed through literary writing, but the principles are domain-independent. The method can be applied in areas where human judgement, perception, and experience-based competence are at the core.">Surfacing utvecklades genom skönlitterärt skrivande men principerna är domänoberoende. Metoden kan tillämpas i områden där mänskligt omdöme, perception och erfarenhetsbaserad kompetens är kärnan.</p>
+    </div>
+    <div class="apply-grid reveal">
+      <div class="apply-card">
+        <h4 data-sv="Kreativa yrken" data-en="Creative work">Kreativa yrken</h4>
+        <p data-sv="Författare, musiker, formgivare, arkitekter. Konstnärlig röst och estetiskt omdöme som väntar på kanal." data-en="Writers, musicians, designers, architects. Artistic voice and aesthetic judgement waiting for a channel.">Författare, musiker, formgivare, arkitekter. Konstnärlig röst och estetiskt omdöme som väntar på kanal.</p>
+      </div>
+      <div class="apply-card">
+        <h4 data-sv="Ledarskap" data-en="Leadership">Ledarskap</h4>
+        <p data-sv="Chefer, projektledare, entreprenörer. Situationsläsning och beslutsfattande som redan finns men inte används fullt ut." data-en="Managers, project leaders, entrepreneurs. Situation-reading and decision-making that's already there but not fully used.">Chefer, projektledare, entreprenörer. Situationsläsning och beslutsfattande som redan finns men inte används fullt ut.</p>
+      </div>
+      <div class="apply-card">
+        <h4 data-sv="Vård och socialt arbete" data-en="Healthcare and social work">Vård och socialt arbete</h4>
+        <p data-sv="Sjuksköterskor, läkare, socialarbetare. Klinisk blick och bedömningsförmåga som finslipar sig själv med rätt spegel." data-en="Nurses, doctors, social workers. Clinical perception and assessment that sharpens itself with the right mirror.">Sjuksköterskor, läkare, socialarbetare. Klinisk blick och bedömningsförmåga som finslipar sig själv med rätt spegel.</p>
+      </div>
+      <div class="apply-card">
+        <h4 data-sv="Utbildning" data-en="Education">Utbildning</h4>
+        <p data-sv="Lärare, handledare, forskare. Pedagogisk perception som mognar snabbare med kalibrerad återkoppling." data-en="Teachers, supervisors, researchers. Pedagogical perception that matures more quickly with calibrated feedback.">Lärare, handledare, forskare. Pedagogisk perception som mognar snabbare med kalibrerad återkoppling.</p>
+      </div>
+      <div class="apply-card">
+        <h4 data-sv="Juridik och bedömning" data-en="Law and assessment">Juridik och bedömning</h4>
+        <p data-sv="Domare, utredare, analytiker. Mönsterigenkänning och etisk intuition som skärps." data-en="Judges, investigators, analysts. Pattern recognition and ethical intuition that sharpens.">Domare, utredare, analytiker. Mönsterigenkänning och etisk intuition som skärps.</p>
+      </div>
+    </div>
+
+    <!-- Produkter -->
+    <div class="surface-block reveal">
+      <h3 class="surface-h3" data-sv="Produkter" data-en="Offerings">Produkter</h3>
+      <p data-sv="Fyra format som följer samma metod, kalibrerade efter vad situationen kräver." data-en="Four formats that follow the same method, calibrated to what the situation calls for.">Fyra format som följer samma metod, kalibrerade efter vad situationen kräver.</p>
+    </div>
+    <div class="products-grid">
+      <a href="mailto:pan.hardfeldt@gmail.com?subject=Surfacing Sprint" class="cta-card reveal">
+        <span class="cta-eyebrow" data-sv="Sprint · 6 veckor" data-en="Sprint · 6 weeks">Sprint · 6 veckor</span>
+        <h3 data-sv="Surfacing Sprint" data-en="Surfacing Sprint">Surfacing Sprint</h3>
+        <p data-sv="Individuellt program med AI-spegel och mänsklig facilitator. Dokumenterad progression med mätpunkter. Målet: identifiera och frigöra specifik latent kapacitet inom din domän — och att du inte ska behöva oss efteråt." data-en="An individual programme with AI mirror and human facilitator. Documented progression with measurement points. The goal: identify and release specific latent capacity within your domain — and so you won't need us afterwards.">Individuellt program med AI-spegel och mänsklig facilitator. Dokumenterad progression med mätpunkter. Målet: identifiera och frigöra specifik latent kapacitet inom din domän — och att du inte ska behöva oss efteråt.</p>
+        <span class="cta-link" data-sv="Prata om en Sprint" data-en="Discuss a Sprint">Prata om en Sprint</span>
       </a>
-      <a href="mailto:pan.hardfeldt@gmail.com?subject=Workshop" class="cta-card reveal">
-        <span class="cta-eyebrow" data-sv="Workshop" data-en="Workshop">Workshop</span>
-        <h3 data-sv="Surfacing Workshop — halv- eller heldag med teamet" data-en="Surfacing Workshop — half- or full-day with the team">Surfacing Workshop — halv- eller heldag med teamet</h3>
-        <p data-sv="Teamet tillämpar principerna på sina egna frågor. Fokus ligger på att hitta rätt sorts friktion för domänen, korta loopen och bygga ett arbetssätt som fungerar efter att workshopen är slut." data-en="The team applies the principles to their own questions. The focus is on finding the right kind of friction for the domain, shortening the loop, and building a way of working that holds after the workshop ends.">Teamet tillämpar principerna på sina egna frågor. Fokus ligger på att hitta rätt sorts friktion för domänen, korta loopen och bygga ett arbetssätt som fungerar efter att workshopen är slut.</p>
+      <a href="mailto:pan.hardfeldt@gmail.com?subject=Surfacing Workshop" class="cta-card reveal">
+        <span class="cta-eyebrow" data-sv="Workshop · halv- eller heldag" data-en="Workshop · half- or full-day">Workshop · halv- eller heldag</span>
+        <h3 data-sv="Surfacing Workshop" data-en="Surfacing Workshop">Surfacing Workshop</h3>
+        <p data-sv="Ditt team tillämpar principerna på era egna frågor. Fokus ligger på att hitta rätt sorts friktion för domänen, korta loopen och bygga ett arbetssätt som fungerar efter att workshopen är slut." data-en="Your team applies the principles to your own questions. The focus is on finding the right kind of friction for the domain, shortening the loop, and building a way of working that holds after the workshop ends.">Ditt team tillämpar principerna på era egna frågor. Fokus ligger på att hitta rätt sorts friktion för domänen, korta loopen och bygga ett arbetssätt som fungerar efter att workshopen är slut.</p>
         <span class="cta-link" data-sv="Boka workshop" data-en="Book workshop">Boka workshop</span>
       </a>
+      <a href="mailto:pan.hardfeldt@gmail.com?subject=Surfacing Föreläsning" class="cta-card reveal">
+        <span class="cta-eyebrow" data-sv="Föreläsning · 60–90 minuter" data-en="Talk · 60–90 minutes">Föreläsning · 60–90 minuter</span>
+        <h3 data-sv="Surfacing Föreläsning" data-en="Surfacing Talk">Surfacing Föreläsning</h3>
+        <p data-sv="Principerna, mekanismen och det dokumenterade caset. Anpassas efter publik — produktutveckling, skrivande, ledarskap eller socialt arbete." data-en="The principles, the mechanism, and the documented case. Adapted to the audience — product development, writing, leadership, or social work.">Principerna, mekanismen och det dokumenterade caset. Anpassas efter publik — produktutveckling, skrivande, ledarskap eller socialt arbete.</p>
+        <span class="cta-link" data-sv="Boka föreläsning" data-en="Book a talk">Boka föreläsning</span>
+      </a>
+      <a href="mailto:pan.hardfeldt@gmail.com?subject=Surfacing Advisory" class="cta-card reveal">
+        <span class="cta-eyebrow" data-sv="Advisory · löpande" data-en="Advisory · ongoing">Advisory · löpande</span>
+        <h3 data-sv="Surfacing Advisory" data-en="Surfacing Advisory">Surfacing Advisory</h3>
+        <p data-sv="Rådgivning för organisationer som vill implementera Surfacing-principer i sin egen verksamhet — bättre återkopplingsloopar, skarpare omdöme, mer självständiga arbetssätt." data-en="Advisory for organisations that want to implement Surfacing principles in their own operations — better feedback loops, sharper judgement, more independent ways of working.">Rådgivning för organisationer som vill implementera Surfacing-principer i sin egen verksamhet — bättre återkopplingsloopar, skarpare omdöme, mer självständiga arbetssätt.</p>
+        <span class="cta-link" data-sv="Prata om Advisory" data-en="Discuss Advisory">Prata om Advisory</span>
+      </a>
+    </div>
+
+    <!-- Vad vi säljer -->
+    <div class="value-block reveal">
+      <span class="aside-label" data-sv="Vad vi säljer" data-en="What we sell">Vad vi säljer</span>
+      <p data-sv="Komprimerad tid. Utveckling som normalt tar år kan i vissa fall komprimeras till veckor — inte genom att hoppa över steg, utan genom att göra varje steg synligt, mätbart och omedelbart." data-en="Compressed time. Development that normally takes years can in some cases be compressed to weeks — not by skipping steps, but by making every step visible, measurable, and immediate.">Komprimerad tid. Utveckling som normalt tar år kan i vissa fall komprimeras till veckor — inte genom att hoppa över steg, utan genom att göra varje steg synligt, mätbart och omedelbart.</p>
+      <p data-sv="Surfacing är precision, inte volym. Varje tillämpning kalibreras per person och domän. Målet är inte att skapa beroende, utan att göra kapacitet synlig, prövbar och självständig." data-en="Surfacing is precision, not volume. Each application is calibrated to person and domain. The goal is not to create dependence, but to make capacity visible, testable, and independent.">Surfacing är precision, inte volym. Varje tillämpning kalibreras per person och domän. Målet är inte att skapa beroende, utan att göra kapacitet synlig, prövbar och självständig.</p>
+      <p data-sv="Surfacing är ett premiumformat för situationer där precision, tid och omdöme spelar stor roll." data-en="Surfacing is a premium format for situations where precision, time, and judgement matter most.">Surfacing är ett premiumformat för situationer där precision, tid och omdöme spelar stor roll.</p>
+    </div>
+
+    <!-- Final CTA -->
+    <div class="surface-final-cta reveal">
+      <h3 data-sv="Vill du använda Surfacing?" data-en="Want to use Surfacing?">Vill du använda Surfacing?</h3>
+      <p data-sv="Hör av dig om det gäller föreläsning, workshop, individuell Sprint eller rådgivning för organisationer som vill bygga bättre återkopplingsloopar, skarpare omdöme och mer självständiga arbetssätt." data-en="Get in touch about a talk, workshop, individual Sprint, or advisory for organisations that want to build better feedback loops, sharper judgement, and more independent ways of working.">Hör av dig om det gäller föreläsning, workshop, individuell Sprint eller rådgivning för organisationer som vill bygga bättre återkopplingsloopar, skarpare omdöme och mer självständiga arbetssätt.</p>
+      <a href="#contact" class="contact-btn primary" data-sv="Kontakta Pan" data-en="Contact Pan">Kontakta Pan</a>
+      <span class="closing-line" data-sv="Surfacing. Det som redan finns — synliggjort." data-en="Surfacing. What is already there — made visible.">Surfacing. Det som redan finns — synliggjort.</span>
     </div>
   </div>
 </section>
