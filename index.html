@@ -549,6 +549,61 @@ section {
 }
 .card-link::after { content: '→'; }
 
+/* ─── FOUR PURSUITS ─── */
+.pursuits {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+}
+.pursuit {
+  position: relative;
+  display: block;
+  padding: 1.9rem 2.6rem 1.9rem 1.9rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-left: 2px solid var(--border);
+  border-radius: 8px;
+  transition: background 0.4s var(--ease), border-color 0.4s var(--ease), transform 0.4s var(--ease);
+}
+.pursuit:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--border-strong);
+  border-left-color: var(--accent);
+  transform: translateY(-2px);
+}
+.pursuit::after {
+  content: '→';
+  position: absolute;
+  top: 1.9rem;
+  right: 1.9rem;
+  color: var(--accent);
+  opacity: 0.35;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.pursuit:hover::after { opacity: 1; transform: translateX(3px); }
+.pursuit-num {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 0.95rem;
+  letter-spacing: 0.1em;
+  color: var(--accent-deep);
+  display: block;
+  margin-bottom: 0.55rem;
+}
+.pursuit-title {
+  font-family: var(--serif);
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 0.55rem;
+}
+.pursuit-text {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
 /* ─── LITERATURE SPECIAL ─── */
 .book-card {
   display: grid;
@@ -1147,6 +1202,8 @@ section + section::before {
     height: 280px;
   }
   .card { padding: 1.8rem; }
+  .pursuits { grid-template-columns: 1fr; }
+  .pursuit { padding: 1.6rem 2.4rem 1.6rem 1.6rem; }
 }
 </style>
 </head>
@@ -1211,6 +1268,43 @@ section + section::before {
     </div>
   </div>
   <div class="scroll-hint" data-sv="Scrolla" data-en="Scroll">Scrolla</div>
+</section>
+
+<!-- Fyra spår -->
+<section id="pursuits">
+  <div class="container">
+    <div class="reveal">
+      <span class="section-label" data-sv="Fyra spår" data-en="Four pursuits">Fyra spår</span>
+      <h2 class="section-title" data-sv="Samma blick, fyra fält." data-en="One gaze, four fields.">Samma blick, fyra fält.</h2>
+      <p class="section-desc" data-sv="Metod, verktyg, prosa och praktik — olika ytor, men samma fråga: hur synliggör man det som redan finns och stödjer omdömet utan att ta över det?" data-en="Method, tool, prose, and practice — different surfaces, but the same question: how do you make visible what is already there and support judgement without taking it over?">Metod, verktyg, prosa och praktik — olika ytor, men samma fråga: hur synliggör man det som redan finns och stödjer omdömet utan att ta över det?</p>
+    </div>
+
+    <div class="pursuits reveal">
+      <a class="pursuit" href="#method">
+        <span class="pursuit-num">01</span>
+        <h3 class="pursuit-title" data-sv="Surfacing" data-en="Surfacing">Surfacing</h3>
+        <p class="pursuit-text" data-sv="En metod där människa och AI tänker tillsammans: tät återkoppling och kalibrerad friktion som synliggör kapacitet du redan bär — utan att ersätta omdömet." data-en="A method where human and AI think together: tight feedback and calibrated friction that surface capacity you already carry — without replacing judgement.">En metod där människa och AI tänker tillsammans: tät återkoppling och kalibrerad friktion som synliggör kapacitet du redan bär — utan att ersätta omdömet.</p>
+      </a>
+
+      <a class="pursuit" href="#ai-gamefriend">
+        <span class="pursuit-num">02</span>
+        <h3 class="pursuit-title" data-sv="AI-GameFriend" data-en="AI-GameFriend">AI-GameFriend</h3>
+        <p class="pursuit-text" data-sv="Ett experimentellt strategiverktyg för seriösa spelare: AI-baserade andra perspektiv på beslut, mönster och vägval. Experimentella funktioner är tydligt markerade." data-en="An experimental strategy tool for serious gamers: AI-based second opinions on decisions, patterns, and choices. Experimental features are clearly marked.">Ett experimentellt strategiverktyg för seriösa spelare: AI-baserade andra perspektiv på beslut, mönster och vägval. Experimentella funktioner är tydligt markerade.</p>
+      </a>
+
+      <a class="pursuit" href="#literature">
+        <span class="pursuit-num">03</span>
+        <h3 class="pursuit-title" data-sv="Litteratur" data-en="Literature">Litteratur</h3>
+        <p class="pursuit-text" data-sv="Komprimerad prosa om glappet mellan yta och djup — folkloristisk gotik, moralpsykologisk skräck och klinisk science fiction. Tre verk söker förlag." data-en="Compressed prose about the gap between surface and depth — folkloristic gothic, moral-psychological horror, and clinical science fiction. Three works seeking a publisher.">Komprimerad prosa om glappet mellan yta och djup — folkloristisk gotik, moralpsykologisk skräck och klinisk science fiction. Tre verk söker förlag.</p>
+      </a>
+
+      <a class="pursuit" href="#lupino">
+        <span class="pursuit-num">04</span>
+        <h3 class="pursuit-title" data-sv="AI i socialt arbete" data-en="AI in social work">AI i socialt arbete</h3>
+        <p class="pursuit-text" data-sv="Surfacing tillämpad på socialtjänst och barnavård genom Lupino: strukturerat stöd för professionellt omdöme — som stödjer ansvaret, inte ersätter det." data-en="Surfacing applied to social services and child welfare through Lupino: structured support for professional judgement — supporting responsibility, not replacing it.">Surfacing tillämpad på socialtjänst och barnavård genom Lupino: strukturerat stöd för professionellt omdöme — som stödjer ansvaret, inte ersätter det.</p>
+      </a>
+    </div>
+  </div>
 </section>
 
 <!-- Om -->
@@ -1302,7 +1396,7 @@ section + section::before {
     <div class="reveal">
       <span class="imprint-mark">AXIOM</span>
       <span class="section-label" data-sv="Litteratur" data-en="Literature">Litteratur</span>
-      <h2 class="section-title" data-sv="Två färdigställda manuskript söker förlag." data-en="Two completed manuscripts seeking a publisher.">Två färdigställda manuskript söker förlag.</h2>
+      <h2 class="section-title" data-sv="Tre verk söker förlag." data-en="Three works seeking a publisher.">Tre verk söker förlag.</h2>
       <p class="imprint-tagline" data-sv="AXIOM är Pan Härdfeldts litterära signatur för folkloristisk gotik, moralpsykologisk skräck och klinisk science fiction." data-en="AXIOM is Pan Härdfeldt's literary signature for folkloristic gothic, moral-psychological horror, and clinical science fiction.">AXIOM är Pan Härdfeldts litterära signatur för folkloristisk gotik, moralpsykologisk skräck och klinisk science fiction.</p>
       <p class="section-desc" data-sv="Förlagsintresse välkomnas via kontakt." data-en="Publishing inquiries welcome via contact.">Förlagsintresse välkomnas via kontakt.</p>
     </div>
@@ -1310,22 +1404,22 @@ section + section::before {
     <div class="cards">
       <div class="card reveal">
         <h3 class="card-title" data-sv="Mörkret vissa bär" data-en="Mörkret vissa bär">Mörkret vissa bär</h3>
-        <p class="card-subtitle" data-sv="Novellsamling" data-en="Short story collection">Novellsamling</p>
+        <p class="card-subtitle" data-sv="Novellsamling · inskickad till förlag" data-en="Short story collection · submitted to publishers">Novellsamling · inskickad till förlag</p>
         <p class="card-text" data-sv="En psykolog böjer sig fram och suger på sin patients ärr. Ur ärret stiger femton berättelser — och varje berättelse bär på ett mörker som inte kan förklaras bort." data-en="A psychologist leans forward and sucks on her patient's scar. From the scar rise fifteen stories — and each story carries a darkness that cannot be explained away.">En psykolog böjer sig fram och suger på sin patients ärr. Ur ärret stiger femton berättelser — och varje berättelse bär på ett mörker som inte kan förklaras bort.</p>
         <p class="book-quote" data-sv="Novellerna rör sig mellan folkloristisk gotik, moralpsykologisk skräck och klinisk science fiction. De delar en gemensam fråga som aldrig ställs högt: vad händer med den som ser allt men inte känner något?" data-en="The stories move between folkloristic gothic, moral-psychological horror, and clinical science fiction. They share a common question never asked aloud: what happens to the one who sees everything but feels nothing?">Novellerna rör sig mellan folkloristisk gotik, moralpsykologisk skräck och klinisk science fiction. De delar en gemensam fråga som aldrig ställs högt: vad händer med den som ser allt men inte känner något?</p>
       </div>
 
       <div class="card reveal">
-        <h3 class="card-title" data-sv="Att födas och dö tom" data-en="Att födas och dö tom">Att födas och dö tom</h3>
-        <p class="card-subtitle" data-sv="Roman" data-en="Novel">Roman</p>
-        <p class="card-text" data-sv="Fredric är charmerande, kvick och farlig. Griphus observerar. Skriver krönika. Röker sin pipa. Säger nästan ingenting. Ändå är det Griphus som bär verkets enda handling. Och den handlingen förändrar allt." data-en="Fredric is charming, quick-witted, and dangerous. Griphus observes. Writes chronicle. Smokes his pipe. Says almost nothing. Yet it is Griphus who carries the work's only action. And that action changes everything.">Fredric är charmerande, kvick och farlig. Griphus observerar. Skriver krönika. Röker sin pipa. Säger nästan ingenting. Ändå är det Griphus som bär verkets enda handling. Och den handlingen förändrar allt.</p>
-        <p class="book-quote" data-sv="En berättelse om att se utan att nå. Om att bli sedd utan att kunna ta emot det. Och om vad det kostar — för båda." data-en="A story about seeing without reaching. About being seen without being able to receive it. And about what it costs — for both.">En berättelse om att se utan att nå. Om att bli sedd utan att kunna ta emot det. Och om vad det kostar — för båda.</p>
+        <h3 class="card-title" data-sv="Arior av bot och plikt" data-en="Arior av bot och plikt">Arior av bot och plikt</h3>
+        <p class="card-subtitle" data-sv="Medeltida fantasy · under revision" data-en="Medieval fantasy · in revision">Medeltida fantasy · under revision</p>
+        <p class="card-text" data-sv="Krönikören Griphus läser berättelser för prins Fredric — en man vars grandiositet döljer en tomhet han inte kan namnge. Fredric är charmerande, kvick och farlig; Griphus observerar, skriver krönika, röker sin pipa och säger nästan ingenting. Ändå är det Griphus som bär verkets enda handling." data-en="The chronicler Griphus reads stories to Prince Fredric — a man whose grandiosity conceals an emptiness he cannot name. Fredric is charming, quick-witted, and dangerous; Griphus observes, writes chronicle, smokes his pipe, and says almost nothing. Yet it is Griphus who carries the work's only action.">Krönikören Griphus läser berättelser för prins Fredric — en man vars grandiositet döljer en tomhet han inte kan namnge. Fredric är charmerande, kvick och farlig; Griphus observerar, skriver krönika, röker sin pipa och säger nästan ingenting. Ändå är det Griphus som bär verkets enda handling.</p>
+        <p class="book-quote" data-sv="Satirisk dialog, moralpsykologisk blick — och en slutrad som bär hela verket: ”En sista pipstopp bara.”" data-en="Satirical dialogue, a moral-psychological eye — and a final line that carries the whole work: ”En sista pipstopp bara.”">Satirisk dialog, moralpsykologisk blick — och en slutrad som bär hela verket: ”En sista pipstopp bara.”</p>
       </div>
 
       <div class="card full-width reveal">
-        <h3 class="card-title">Hortus Gratia<span class="wip-tag" data-sv="Pågår" data-en="WIP">Pågår</span></h3>
-        <p class="card-subtitle" data-sv="Roman · under arbete" data-en="Novel · in progress">Roman · under arbete</p>
-        <p class="card-text" data-sv="Kejsarinna Renatha Domina har utropat det heliga korståget: allt levande ska ha en plats i Faderns hägn. Konsulerna muttrar i tystnad. Under Hortus Gratias byrå arbetar Vladimir Mikhailovic som utredare — varje beslut ska vägas juridiskt och gudomligt, varje akt underskrivas i två ämbeten." data-en="Kejsarinna Renatha Domina har utropat det heliga korståget: allt levande ska ha en plats i Faderns hägn. Konsulerna muttrar i tystnad. Under Hortus Gratias byrå arbetar Vladimir Mikhailovic som utredare — varje beslut ska vägas juridiskt och gudomligt, varje akt underskrivas i två ämbeten.">Kejsarinna Renatha Domina har utropat det heliga korståget: allt levande ska ha en plats i Faderns hägn. Konsulerna muttrar i tystnad. Under Hortus Gratias byrå arbetar Vladimir Mikhailovic som utredare — varje beslut ska vägas juridiskt och gudomligt, varje akt underskrivas i två ämbeten.</p>
+        <h3 class="card-title"><span data-sv="Ett gudomligt maskineri" data-en="Ett gudomligt maskineri">Ett gudomligt maskineri</span><span class="wip-tag" data-sv="Slutredigering" data-en="Final edit">Slutredigering</span></h3>
+        <p class="card-subtitle" data-sv="Science fiction-roman i tre delar" data-en="Science-fiction novel in three parts">Science fiction-roman i tre delar</p>
+        <p class="card-text" data-sv="Ett sönderfallande imperium där gudar skapas av byråkrater och byråkrater förgörs av gudar. Del I, Hortus Gratia: kejsarinnan har utropat det heliga korståget, och utredaren Vladimir väger varje beslut juridiskt och gudomligt. Del II, Purgatorio in machina: en familj ombord på dödens ark. Del III, Notas et silentium: barnets sista anteckningar. Tystnad och fall." data-en="A crumbling empire where gods are made by bureaucrats and bureaucrats are undone by gods. Part I, Hortus Gratia: the empress has declared the holy crusade, and the investigator Vladimir weighs every decision legally and divinely. Part II, Purgatorio in machina: a family aboard death's ark. Part III, Notas et silentium: the child's last notes. Silence and fall.">Ett sönderfallande imperium där gudar skapas av byråkrater och byråkrater förgörs av gudar. Del I, Hortus Gratia: kejsarinnan har utropat det heliga korståget, och utredaren Vladimir väger varje beslut juridiskt och gudomligt. Del II, Purgatorio in machina: en familj ombord på dödens ark. Del III, Notas et silentium: barnets sista anteckningar. Tystnad och fall.</p>
         <p class="book-quote" data-sv="Han ser och hör. Inom honom uppstår sprickor som blir revor. När världen sätts i brand brinner även han. En berättelse om vad lydnaden kostar den som fortfarande kan se." data-en="Han ser och hör. Inom honom uppstår sprickor som blir revor. När världen sätts i brand brinner även han. En berättelse om vad lydnaden kostar den som fortfarande kan se.">Han ser och hör. Inom honom uppstår sprickor som blir revor. När världen sätts i brand brinner även han. En berättelse om vad lydnaden kostar den som fortfarande kan se.</p>
       </div>
     </div>
