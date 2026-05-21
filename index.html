@@ -549,6 +549,61 @@ section {
 }
 .card-link::after { content: '→'; }
 
+/* ─── FOUR PURSUITS ─── */
+.pursuits {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+}
+.pursuit {
+  position: relative;
+  display: block;
+  padding: 1.9rem 2.6rem 1.9rem 1.9rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-left: 2px solid var(--border);
+  border-radius: 8px;
+  transition: background 0.4s var(--ease), border-color 0.4s var(--ease), transform 0.4s var(--ease);
+}
+.pursuit:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--border-strong);
+  border-left-color: var(--accent);
+  transform: translateY(-2px);
+}
+.pursuit::after {
+  content: '→';
+  position: absolute;
+  top: 1.9rem;
+  right: 1.9rem;
+  color: var(--accent);
+  opacity: 0.35;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.pursuit:hover::after { opacity: 1; transform: translateX(3px); }
+.pursuit-num {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 0.95rem;
+  letter-spacing: 0.1em;
+  color: var(--accent-deep);
+  display: block;
+  margin-bottom: 0.55rem;
+}
+.pursuit-title {
+  font-family: var(--serif);
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 0.55rem;
+}
+.pursuit-text {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
 /* ─── LITERATURE SPECIAL ─── */
 .book-card {
   display: grid;
@@ -1147,6 +1202,8 @@ section + section::before {
     height: 280px;
   }
   .card { padding: 1.8rem; }
+  .pursuits { grid-template-columns: 1fr; }
+  .pursuit { padding: 1.6rem 2.4rem 1.6rem 1.6rem; }
 }
 </style>
 </head>
@@ -1211,6 +1268,43 @@ section + section::before {
     </div>
   </div>
   <div class="scroll-hint" data-sv="Scrolla" data-en="Scroll">Scrolla</div>
+</section>
+
+<!-- Fyra spår -->
+<section id="pursuits">
+  <div class="container">
+    <div class="reveal">
+      <span class="section-label" data-sv="Fyra spår" data-en="Four pursuits">Fyra spår</span>
+      <h2 class="section-title" data-sv="Samma blick, fyra fält." data-en="One gaze, four fields.">Samma blick, fyra fält.</h2>
+      <p class="section-desc" data-sv="Metod, verktyg, prosa och praktik — olika ytor, men samma fråga: hur synliggör man det som redan finns och stödjer omdömet utan att ta över det?" data-en="Method, tool, prose, and practice — different surfaces, but the same question: how do you make visible what is already there and support judgement without taking it over?">Metod, verktyg, prosa och praktik — olika ytor, men samma fråga: hur synliggör man det som redan finns och stödjer omdömet utan att ta över det?</p>
+    </div>
+
+    <div class="pursuits reveal">
+      <a class="pursuit" href="#method">
+        <span class="pursuit-num">01</span>
+        <h3 class="pursuit-title" data-sv="Surfacing" data-en="Surfacing">Surfacing</h3>
+        <p class="pursuit-text" data-sv="En metod där människa och AI tänker tillsammans: tät återkoppling och kalibrerad friktion som synliggör kapacitet du redan bär — utan att ersätta omdömet." data-en="A method where human and AI think together: tight feedback and calibrated friction that surface capacity you already carry — without replacing judgement.">En metod där människa och AI tänker tillsammans: tät återkoppling och kalibrerad friktion som synliggör kapacitet du redan bär — utan att ersätta omdömet.</p>
+      </a>
+
+      <a class="pursuit" href="#ai-gamefriend">
+        <span class="pursuit-num">02</span>
+        <h3 class="pursuit-title" data-sv="AI-GameFriend" data-en="AI-GameFriend">AI-GameFriend</h3>
+        <p class="pursuit-text" data-sv="Ett experimentellt strategiverktyg för seriösa spelare: AI-baserade andra perspektiv på beslut, mönster och vägval. Experimentella funktioner är tydligt markerade." data-en="An experimental strategy tool for serious gamers: AI-based second opinions on decisions, patterns, and choices. Experimental features are clearly marked.">Ett experimentellt strategiverktyg för seriösa spelare: AI-baserade andra perspektiv på beslut, mönster och vägval. Experimentella funktioner är tydligt markerade.</p>
+      </a>
+
+      <a class="pursuit" href="#literature">
+        <span class="pursuit-num">03</span>
+        <h3 class="pursuit-title" data-sv="Litteratur" data-en="Literature">Litteratur</h3>
+        <p class="pursuit-text" data-sv="Komprimerad prosa om glappet mellan yta och djup — folkloristisk gotik, moralpsykologisk skräck och klinisk science fiction. Två manuskript söker förlag." data-en="Compressed prose about the gap between surface and depth — folkloristic gothic, moral-psychological horror, and clinical science fiction. Two manuscripts seeking a publisher.">Komprimerad prosa om glappet mellan yta och djup — folkloristisk gotik, moralpsykologisk skräck och klinisk science fiction. Två manuskript söker förlag.</p>
+      </a>
+
+      <a class="pursuit" href="#lupino">
+        <span class="pursuit-num">04</span>
+        <h3 class="pursuit-title" data-sv="AI i socialt arbete" data-en="AI in social work">AI i socialt arbete</h3>
+        <p class="pursuit-text" data-sv="Surfacing tillämpad på socialtjänst och barnavård genom Lupino: strukturerat stöd för professionellt omdöme — som stödjer ansvaret, inte ersätter det." data-en="Surfacing applied to social services and child welfare through Lupino: structured support for professional judgement — supporting responsibility, not replacing it.">Surfacing tillämpad på socialtjänst och barnavård genom Lupino: strukturerat stöd för professionellt omdöme — som stödjer ansvaret, inte ersätter det.</p>
+      </a>
+    </div>
+  </div>
 </section>
 
 <!-- Om -->
