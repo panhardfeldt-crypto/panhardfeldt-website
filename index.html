@@ -3,24 +3,26 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pan Härdfeldt — Metoder, verktyg och berättelser för bättre omdöme</title>
-<meta name="description" content="Pan Härdfeldt arbetar i skärningspunkten mellan socialt arbete, AI, strategi, litteratur och mänskligt beslutsfattande — med metoder, verktyg och texter för bättre omdöme i komplexa system.">
-<meta name="theme-color" content="#0c0b0f">
+<title>Pan Härdfeldt — omdöme, AI, socialt arbete och litteratur</title>
+<meta name="description" content="Pan Härdfeldt utvecklar metoder, AI-produkter, professionella verktyg och litteratur för bättre omdöme i komplexa mänskliga system.">
+<meta name="theme-color" content="#101316">
 <meta name="color-scheme" content="dark">
 <link rel="canonical" href="https://panhardfeldt.com">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230c0b0f'/%3E%3Ctext x='16' y='23' font-family='Georgia, serif' font-size='22' font-weight='600' text-anchor='middle' fill='%23c8a46e'%3EP%3C/text%3E%3C/svg%3E">
-<meta property="og:title" content="Pan Härdfeldt — Metoder, verktyg och berättelser för bättre omdöme">
-<meta property="og:description" content="Metoder, verktyg och berättelser för bättre omdöme i komplexa mänskliga system.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23101316'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='22' text-anchor='middle' fill='%23d2b77c'%3EP%3C/text%3E%3C/svg%3E">
+
+<meta property="og:title" content="Pan Härdfeldt — omdöme, AI, socialt arbete och litteratur">
+<meta property="og:description" content="Metoder, produkter och berättelser för bättre omdöme i komplexa mänskliga system.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://panhardfeldt.com">
 <meta property="og:locale" content="sv_SE">
 <meta property="og:locale:alternate" content="en_US">
 <meta property="og:image" content="https://panhardfeldt.com/portrait.jpg">
-<meta property="og:image:alt" content="Pan Härdfeldt">
+<meta property="og:image:alt" content="Blyertsporträtt av Pan Härdfeldt">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Pan Härdfeldt — Metoder, verktyg och berättelser för bättre omdöme">
-<meta name="twitter:description" content="Metoder, verktyg och berättelser för bättre omdöme i komplexa mänskliga system.">
+<meta name="twitter:title" content="Pan Härdfeldt — omdöme, AI, socialt arbete och litteratur">
+<meta name="twitter:description" content="Metoder, produkter och berättelser för bättre omdöme i komplexa mänskliga system.">
 <meta name="twitter:image" content="https://panhardfeldt.com/portrait.jpg">
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -30,12 +32,12 @@
   "url": "https://panhardfeldt.com",
   "email": "mailto:pan.hardfeldt@gmail.com",
   "image": "https://panhardfeldt.com/portrait.jpg",
-  "jobTitle": "Konsult, founder och författare",
-  "description": "Pan Härdfeldt arbetar i skärningspunkten mellan socialt arbete, AI, strategi, litteratur och mänskligt beslutsfattande — med metoder, verktyg och texter för bättre omdöme i komplexa system.",
+  "jobTitle": "Konsult, metodutvecklare, produktgrundare och författare",
+  "description": "Pan Härdfeldt utvecklar metoder, AI-produkter, professionella verktyg och litteratur för bättre omdöme i komplexa mänskliga system.",
   "address": {
     "@type": "PostalAddress",
-    "addressLocality": "Stockholm",
-    "addressRegion": "Kista",
+    "addressLocality": "Helsingborg",
+    "addressRegion": "Skåne",
     "addressCountry": "SE"
   },
   "sameAs": [
@@ -47,1726 +49,2028 @@
     "Socialt arbete",
     "Myndighetsutövning barn och unga",
     "AI-stöd för beslutsfattande",
-    "Metodutveckling",
     "Surfacing",
+    "Strategispel",
     "Skönlitteratur"
   ]
 }
 </script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet">
+
 <style>
 :root {
-  --bg: #0c0b0f;
-  --bg-soft: #100e14;
-  --bg-card: #14131a;
-  --bg-card-hover: #1a1924;
-  --text: #e8e4de;
-  --text-bright: #f5f1ea;
-  --text-muted: #8a857d;
-  --text-dim: #5a564f;
-  --accent: #c8a46e;
-  --accent-deep: #a18250;
-  --accent-glow: #c8a46e22;
-  --accent-bright: #ddb978;
-  --border: #2a2832;
-  --border-strong: #3a3842;
-  --status-active: #84a98c;
-  --status-pre: #8aa2c2;
-  --status-experiment: #c8a46e;
-  --status-wip: #b78f7a;
-  --serif: 'Cormorant Garamond', Georgia, serif;
-  --sans: 'DM Sans', -apple-system, sans-serif;
-  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --bg: #101316;
+  --bg-deep: #0b0e10;
+  --surface: #161b1f;
+  --surface-2: #1b2126;
+  --surface-warm: #211f1a;
+  --paper: #eee9df;
+  --paper-bright: #faf7f1;
+  --muted: #aaa8a1;
+  --dim: #767a7b;
+  --line: #2c3338;
+  --line-strong: #414a50;
+  --gold: #d2b77c;
+  --gold-deep: #aa8c50;
+  --sage: #8da594;
+  --blue: #8da5bb;
+  --clay: #b99482;
+  --serif: "Newsreader", Georgia, serif;
+  --sans: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --container: 1180px;
+  --radius: 16px;
+  --ease: cubic-bezier(.16, 1, .3, 1);
 }
 
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-
-* { margin: 0; padding: 0; box-sizing: border-box; }
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 84px;
   background: var(--bg);
 }
 
 body {
-  font-family: var(--sans);
-  color: var(--text);
-  background: var(--bg);
-  line-height: 1.7;
+  min-width: 320px;
   overflow-x: hidden;
+  color: var(--paper);
+  background:
+    radial-gradient(circle at 78% 5%, rgba(210,183,124,.09), transparent 28rem),
+    radial-gradient(circle at 8% 52%, rgba(141,165,148,.055), transparent 32rem),
+    var(--bg);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.7;
   -webkit-font-smoothing: antialiased;
 }
 
-/* Noise texture overlay */
 body::before {
-  content: '';
+  content: "";
   position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  inset: 0;
   pointer-events: none;
-  z-index: 9999;
+  z-index: -1;
+  opacity: .18;
+  background-image:
+    linear-gradient(rgba(255,255,255,.018) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.018) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: linear-gradient(to bottom, #000, transparent 72%);
 }
 
 ::selection {
-  background: var(--accent);
   color: var(--bg);
+  background: var(--gold);
 }
 
 a {
-  color: var(--accent);
+  color: inherit;
   text-decoration: none;
-  transition: color 0.3s ease;
 }
-a:hover { color: var(--accent-bright); }
 
-/* ─── LANGUAGE TOGGLE ─── */
-.lang-toggle {
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 4px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.skip-link {
   position: fixed;
-  top: 2rem;
-  right: 2rem;
-  z-index: 100;
-  display: flex;
-  gap: 0;
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  overflow: hidden;
-  background: var(--bg-card);
-  backdrop-filter: blur(20px);
-}
-.lang-btn {
-  padding: 0.4rem 0.9rem;
-  font-family: var(--sans);
-  font-size: 0.75rem;
-  font-weight: 500;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  border: none;
-  cursor: pointer;
-  background: transparent;
-  color: var(--text-muted);
-  transition: all 0.3s ease;
-}
-.lang-btn.active {
-  background: var(--accent);
+  z-index: 1000;
+  top: -60px;
+  left: 16px;
+  padding: .7rem 1rem;
   color: var(--bg);
+  background: var(--gold);
+  border-radius: 8px;
+  font-weight: 700;
+  transition: top .2s ease;
 }
 
-/* ─── NAV ─── */
-nav {
+.skip-link:focus {
+  top: 12px;
+}
+
+.container {
+  width: min(calc(100% - 48px), var(--container));
+  margin-inline: auto;
+}
+
+.site-header {
   position: fixed;
-  top: 2rem;
-  left: 2rem;
   z-index: 100;
-  display: flex;
-  gap: 1.5rem;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: 1px solid rgba(255,255,255,.075);
+  background: rgba(16,19,22,.86);
+  backdrop-filter: blur(18px);
 }
-nav a {
-  font-size: 0.72rem;
-  font-weight: 500;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--text-dim);
-  transition: color 0.3s ease;
-}
-nav a:hover { color: var(--accent); }
 
-/* ─── MOBILE NAV ─── */
+.header-inner {
+  min-height: 72px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 2rem;
+  align-items: center;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: .8rem;
+}
+
+.brand-mark {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line-strong);
+  border-radius: 50%;
+  color: var(--gold);
+  font-family: var(--serif);
+  font-size: 1.15rem;
+}
+
+.brand-name {
+  color: var(--paper-bright);
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.desktop-nav {
+  justify-self: center;
+  display: flex;
+  align-items: center;
+  gap: 1.7rem;
+}
+
+.desktop-nav a,
+.mobile-nav a {
+  color: var(--muted);
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  transition: color .25s ease;
+}
+
+.desktop-nav a:hover,
+.desktop-nav a.is-active,
+.mobile-nav a:hover {
+  color: var(--paper-bright);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: .7rem;
+}
+
+.language-switch {
+  display: inline-flex;
+  padding: 3px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface);
+}
+
+.lang-btn {
+  min-width: 35px;
+  padding: .35rem .45rem;
+  border: 0;
+  border-radius: 999px;
+  color: var(--dim);
+  background: transparent;
+  font: 600 .66rem/1 var(--sans);
+  letter-spacing: .08em;
+  cursor: pointer;
+}
+
+.lang-btn.active {
+  color: var(--bg);
+  background: var(--gold);
+}
+
 .menu-toggle {
   display: none;
-  position: fixed;
-  top: 1.2rem;
-  left: 1.2rem;
-  z-index: 101;
   width: 40px;
   height: 40px;
-  padding: 0;
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  background: var(--bg-card);
-  color: var(--text);
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  color: var(--paper);
+  background: var(--surface);
   cursor: pointer;
-  align-items: center;
-  justify-content: center;
-  backdrop-filter: blur(20px);
 }
-.menu-toggle span {
-  display: block;
-  width: 18px;
-  height: 1px;
-  background: currentColor;
-  position: relative;
-}
+
+.menu-toggle span,
 .menu-toggle span::before,
 .menu-toggle span::after {
-  content: '';
+  width: 16px;
+  height: 1px;
+  display: block;
+  position: relative;
+  margin: auto;
+  background: currentColor;
+  transition: transform .25s ease, top .25s ease;
+}
+
+.menu-toggle span::before,
+.menu-toggle span::after {
+  content: "";
   position: absolute;
   left: 0;
-  width: 18px;
-  height: 1px;
-  background: currentColor;
-  transition: transform 0.3s ease, top 0.3s ease;
 }
-.menu-toggle span::before { top: -6px; }
-.menu-toggle span::after { top: 6px; }
+
+.menu-toggle span::before { top: -5px; }
+.menu-toggle span::after { top: 5px; }
 .menu-toggle[aria-expanded="true"] span { background: transparent; }
 .menu-toggle[aria-expanded="true"] span::before { top: 0; transform: rotate(45deg); }
 .menu-toggle[aria-expanded="true"] span::after { top: 0; transform: rotate(-45deg); }
 
-.mobile-menu {
+.mobile-nav {
   display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 99;
-  padding: 5rem 1.5rem 2rem;
+  padding: 0 24px 20px;
+  border-top: 1px solid var(--line);
   background: var(--bg);
-  border-bottom: 1px solid var(--border);
-  flex-direction: column;
-  gap: 0.4rem;
-  transform: translateY(-100%);
-  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-}
-.mobile-menu.open {
-  display: flex;
-  transform: translateY(0);
-}
-.mobile-menu a {
-  font-family: var(--sans);
-  font-size: 0.95rem;
-  font-weight: 500;
-  letter-spacing: 0.04em;
-  color: var(--text);
-  padding: 0.7rem 0.4rem;
-  border-bottom: 1px solid var(--border);
-}
-.mobile-menu a:last-child { border-bottom: none; }
-.mobile-menu a:hover { color: var(--accent); }
-
-/* ─── SECTIONS ─── */
-section {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 6rem 2rem;
 }
 
-.container {
-  max-width: 900px;
-  width: 100%;
+.mobile-nav.open {
+  display: grid;
 }
 
-/* ─── HERO ─── */
+.mobile-nav a {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.mobile-nav a:last-child {
+  border-bottom: 0;
+}
+
+main {
+  overflow: hidden;
+}
+
 .hero {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 6rem 2rem;
+  min-height: 100svh;
+  padding: 126px 0 70px;
+  display: grid;
+  align-items: center;
   position: relative;
 }
 
-.hero-split {
+.hero::after {
+  content: "JUDGEMENT · SYSTEMS · STORIES";
+  position: absolute;
+  right: -5.5rem;
+  top: 50%;
+  color: rgba(255,255,255,.04);
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .35em;
+  transform: rotate(90deg);
+}
+
+.hero-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+  grid-template-columns: minmax(0, 1.08fr) minmax(330px, .72fr);
+  gap: clamp(3rem, 8vw, 7rem);
   align-items: center;
 }
 
-.hero-text {
-  order: 1;
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: .8rem;
+  margin-bottom: 1.3rem;
+  color: var(--gold);
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .19em;
+  text-transform: uppercase;
 }
 
-.hero-portrait {
-  order: 2;
+.eyebrow::before {
+  content: "";
+  width: 32px;
+  height: 1px;
+  background: currentColor;
+}
+
+.hero h1 {
+  max-width: 760px;
+  color: var(--paper-bright);
+  font-family: var(--serif);
+  font-size: clamp(4rem, 8vw, 7.5rem);
+  font-weight: 400;
+  letter-spacing: -.045em;
+  line-height: .91;
+}
+
+.hero h1 em {
+  display: block;
+  color: var(--gold);
+  font-style: italic;
+  font-weight: 400;
+}
+
+.hero-lead {
+  max-width: 680px;
+  margin-top: 2rem;
+  color: #c3c0b8;
+  font-size: clamp(1.04rem, 1.8vw, 1.22rem);
+  line-height: 1.75;
+}
+
+.hero-lead strong {
+  color: var(--paper-bright);
+  font-weight: 600;
+}
+
+.hero-actions {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  gap: .8rem;
+  margin-top: 2.2rem;
+}
+
+.button {
+  min-height: 48px;
+  display: inline-flex;
   align-items: center;
-  opacity: 0;
-  transform: translateX(30px);
-  animation: fadeLeft 1s ease 0.6s forwards;
+  justify-content: center;
+  gap: .7rem;
+  padding: .82rem 1.25rem;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  color: var(--paper);
+  background: transparent;
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+  transition: transform .25s var(--ease), border-color .25s ease, background .25s ease;
+}
+
+.button::after {
+  content: "↗";
+  color: var(--gold);
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  border-color: var(--gold-deep);
+  background: rgba(210,183,124,.06);
+}
+
+.button.primary {
+  border-color: var(--gold);
+  color: var(--bg);
+  background: var(--gold);
+}
+
+.button.primary::after {
+  color: var(--bg);
+}
+
+.button.primary:hover {
+  background: #dec58c;
+}
+
+.hero-audience {
+  margin-top: 1.4rem;
+  color: var(--dim);
+  font-size: .78rem;
+  letter-spacing: .035em;
+}
+
+.portrait-wrap {
+  position: relative;
+  max-width: 430px;
+  justify-self: end;
 }
 
 .portrait-frame {
-  width: 320px;
-  height: 400px;
-  border-radius: 8px;
+  aspect-ratio: 4 / 5.15;
   overflow: hidden;
   position: relative;
-  border: 1px solid var(--border);
-  background: var(--bg-card);
+  border: 1px solid var(--line-strong);
+  border-radius: 180px 180px 18px 18px;
+  background: var(--surface);
+  box-shadow: 0 40px 90px rgba(0,0,0,.35);
+}
+
+.portrait-frame::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow: inset 0 0 0 8px rgba(16,19,22,.26);
+  pointer-events: none;
 }
 
 .portrait-frame img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: grayscale(30%) contrast(1.05);
-  transition: filter 0.5s ease;
+  object-position: 51% 43%;
+  filter: contrast(1.02) brightness(.88);
 }
 
-.portrait-frame:hover img {
-  filter: grayscale(0%) contrast(1);
-}
-
-.portrait-placeholder {
+.portrait-caption {
+  width: calc(100% - 34px);
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
+  left: 17px;
+  bottom: 17px;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 1rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 11px;
+  background: rgba(11,14,16,.84);
+  backdrop-filter: blur(14px);
+}
+
+.portrait-caption strong {
+  display: block;
+  color: var(--paper-bright);
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  font-weight: 500;
+}
+
+.portrait-caption span {
+  color: var(--muted);
+  font-size: .68rem;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
+
+.portrait-caption .city {
+  color: var(--gold);
+  white-space: nowrap;
+}
+
+.hero-index {
+  position: absolute;
+  left: -34px;
+  top: 22%;
+  writing-mode: vertical-rl;
+  color: var(--dim);
+  font-size: .62rem;
+  font-weight: 700;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  transform: rotate(180deg);
+}
+
+.signal-bar {
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: rgba(255,255,255,.012);
+}
+
+.signal-grid {
+  min-height: 104px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.signal {
   display: flex;
   align-items: center;
-  justify-content: center;
+  gap: 1rem;
+  padding: 1.25rem;
+  border-right: 1px solid var(--line);
+}
+
+.signal:last-child {
+  border-right: 0;
+}
+
+.signal-num {
+  color: var(--gold);
   font-family: var(--serif);
-  font-size: 5rem;
-  font-weight: 300;
-  color: var(--accent);
-  letter-spacing: 0.05em;
-  opacity: 0.4;
+  font-size: 1.45rem;
 }
 
-.portrait-frame:not(.no-photo) .portrait-placeholder {
-  display: none;
-}
-
-.portrait-frame::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 40%;
-  background: linear-gradient(to top, var(--bg), transparent);
-  pointer-events: none;
-}
-
-.hero-name {
-  font-family: var(--serif);
-  font-size: clamp(3.5rem, 8vw, 7rem);
-  font-weight: 400;
-  line-height: 1.05;
-  letter-spacing: -0.02em;
-  color: var(--text);
-  margin-bottom: 1.5rem;
-  opacity: 0;
-  transform: translateY(30px);
-  animation: fadeUp 1s ease 0.3s forwards;
-}
-
-.hero-line {
-  width: 80px;
-  height: 1px;
-  background: var(--accent);
-  margin-bottom: 2rem;
-  opacity: 0;
-  transform: scaleX(0);
-  transform-origin: left;
-  animation: lineIn 0.8s ease 0.8s forwards;
-}
-
-.hero-tagline {
-  font-family: var(--serif);
-  font-size: clamp(1.15rem, 2.5vw, 1.5rem);
-  font-weight: 400;
-  font-style: italic;
-  color: var(--text-muted);
-  max-width: 600px;
-  line-height: 1.6;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeUp 1s ease 1.1s forwards;
-}
-
-.hero-orientation {
-  margin-top: 1.5rem;
-  font-size: 1rem;
-  line-height: 1.75;
-  color: var(--text-muted);
-  max-width: 600px;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeUp 1s ease 1.3s forwards;
-}
-
-.hero-cta {
-  margin-top: 2.25rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.9rem;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeUp 1s ease 1.5s forwards;
-}
-
-.hero-audience {
-  margin-top: 1.5rem;
-  font-size: 0.88rem;
-  line-height: 1.7;
-  color: var(--text-dim);
-  max-width: 600px;
-  opacity: 0;
-  animation: fadeUp 1s ease 1.7s forwards;
-}
-
-.scroll-hint {
-  position: absolute;
-  bottom: 3rem;
-  left: 2rem;
-  font-size: 0.7rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--text-dim);
-  opacity: 0;
-  animation: fadeUp 1s ease 1.8s forwards;
-}
-.scroll-hint::after {
-  content: '';
+.signal strong {
   display: block;
-  width: 1px;
-  height: 40px;
-  background: linear-gradient(to bottom, var(--accent), transparent);
-  margin-top: 0.8rem;
-  animation: pulse 2s ease infinite;
+  color: var(--paper-bright);
+  font-size: .77rem;
+  letter-spacing: .04em;
 }
 
-/* ─── CARDS GRID ─── */
-.section-label {
-  font-size: 0.7rem;
-  font-weight: 500;
-  letter-spacing: 0.2em;
+.signal span {
+  display: block;
+  margin-top: .15rem;
+  color: var(--dim);
+  font-size: .68rem;
+}
+
+.section {
+  padding: clamp(92px, 11vw, 150px) 0;
+  position: relative;
+}
+
+.section.alt {
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: linear-gradient(140deg, rgba(255,255,255,.018), rgba(255,255,255,0));
+}
+
+.section-heading {
+  max-width: 820px;
+  margin-bottom: 3.4rem;
+}
+
+.section-kicker {
+  display: block;
+  margin-bottom: .9rem;
+  color: var(--gold);
+  font-size: .67rem;
+  font-weight: 700;
+  letter-spacing: .19em;
   text-transform: uppercase;
-  color: var(--accent);
-  margin-bottom: 1.5rem;
 }
 
 .section-title {
+  color: var(--paper-bright);
   font-family: var(--serif);
-  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-size: clamp(2.7rem, 5vw, 5rem);
   font-weight: 400;
-  line-height: 1.2;
-  margin-bottom: 1rem;
+  letter-spacing: -.035em;
+  line-height: 1.02;
 }
 
-.section-desc {
-  color: var(--text-muted);
-  font-size: 1.05rem;
-  max-width: 600px;
-  margin-bottom: 3rem;
-  line-height: 1.8;
+.section-intro {
+  max-width: 720px;
+  margin-top: 1.25rem;
+  color: var(--muted);
+  font-size: 1.02rem;
+  line-height: 1.85;
 }
 
-.cards {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.5rem;
-}
-
-.card {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 2.5rem;
-  transition: all 0.4s ease;
-  position: relative;
-  overflow: hidden;
-}
-.card::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(90deg, var(--accent), transparent);
-  opacity: 0;
-  transition: opacity 0.4s ease;
-}
-.card:hover {
-  background: var(--bg-card-hover);
-  border-color: #3a3842;
-  transform: translateY(-2px);
-}
-.card:hover::before { opacity: 1; }
-
-.card-icon {
-  font-family: var(--serif);
-  font-size: 1.6rem;
-  font-weight: 400;
-  letter-spacing: 0.05em;
-  color: var(--accent);
-  margin-bottom: 1.2rem;
-  display: block;
-}
-
-.card-title {
-  font-family: var(--serif);
-  font-size: 1.6rem;
+.section-intro strong {
+  color: var(--paper);
   font-weight: 600;
-  margin-bottom: 0.6rem;
 }
 
-.card-subtitle {
-  font-size: 0.8rem;
-  font-weight: 500;
-  letter-spacing: 0.05em;
-  color: var(--accent);
-  margin-bottom: 1rem;
-}
-
-.card-text {
-  color: var(--text-muted);
-  font-size: 0.95rem;
-  line-height: 1.7;
-  margin-bottom: 1.5rem;
-}
-
-.card-link {
-  font-family: var(--sans);
-  font-size: 0.78rem;
-  font-weight: 500;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--accent);
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.65rem 1.2rem;
-  border: 1px solid var(--border);
-  border-radius: 4px;
-  transition: gap 0.3s ease, border-color 0.3s ease, background 0.3s ease;
-}
-.card-link:hover {
-  gap: 0.8rem;
-  border-color: var(--accent);
-  background: var(--accent-glow);
-}
-.card-link::after { content: '→'; }
-
-/* ─── FOUR PURSUITS ─── */
-.pursuits {
+.pursuit-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
-  margin-top: 0.5rem;
-}
-.pursuit {
-  position: relative;
-  display: block;
-  padding: 1.9rem 2.6rem 1.9rem 1.9rem;
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-left: 2px solid var(--border);
-  border-radius: 8px;
-  transition: background 0.4s var(--ease), border-color 0.4s var(--ease), transform 0.4s var(--ease);
-}
-.pursuit:hover {
-  background: var(--bg-card-hover);
-  border-color: var(--border-strong);
-  border-left-color: var(--accent);
-  transform: translateY(-2px);
-}
-.pursuit::after {
-  content: '→';
-  position: absolute;
-  top: 1.9rem;
-  right: 1.9rem;
-  color: var(--accent);
-  opacity: 0.35;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-.pursuit:hover::after { opacity: 1; transform: translateX(3px); }
-.pursuit-num {
-  font-family: var(--serif);
-  font-style: italic;
-  font-size: 0.95rem;
-  letter-spacing: 0.1em;
-  color: var(--accent-deep);
-  display: block;
-  margin-bottom: 0.55rem;
-}
-.pursuit-title {
-  font-family: var(--serif);
-  font-size: 1.5rem;
-  font-weight: 600;
-  line-height: 1.2;
-  margin-bottom: 0.55rem;
-}
-.pursuit-text {
-  color: var(--text-muted);
-  font-size: 0.95rem;
-  line-height: 1.7;
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
 }
 
-/* ─── LITERATURE SPECIAL ─── */
-.book-card {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
-}
-
-.book-quote {
-  font-family: var(--serif);
-  font-style: italic;
-  font-size: 1.1rem;
-  color: var(--text-muted);
-  border-left: 2px solid var(--accent);
-  padding-left: 1.5rem;
-  margin-top: 1rem;
-  line-height: 1.7;
-}
-
-.wip-tag {
-  font-family: var(--sans);
-  font-size: 0.65rem;
-  font-weight: 500;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--accent);
-  margin-left: 0.9rem;
-  vertical-align: middle;
-  position: relative;
-  top: -0.25em;
-}
-
-/* ─── CONTACT ─── */
-.contact-links {
+.pursuit-card {
+  min-height: 270px;
   display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  margin-top: 2rem;
+  flex-direction: column;
+  padding: clamp(1.7rem, 3vw, 2.5rem);
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: rgba(255,255,255,.012);
+  transition: background .3s ease;
 }
 
-.contact-btn {
-  padding: 0.8rem 1.8rem;
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  font-family: var(--sans);
-  font-size: 0.85rem;
-  font-weight: 500;
-  color: var(--text);
-  background: transparent;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-decoration: none;
-  display: inline-flex;
+.pursuit-card:hover {
+  background: rgba(255,255,255,.028);
+}
+
+.pursuit-top {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 0.6rem;
-}
-.contact-btn:hover {
-  border-color: var(--accent);
-  color: var(--accent);
-}
-.contact-btn.primary {
-  background: var(--accent);
-  color: var(--bg);
-  border-color: var(--accent);
-}
-.contact-btn.primary:hover {
-  background: var(--accent-bright);
+  gap: 1rem;
+  margin-bottom: 2.6rem;
 }
 
-.contact-secondary {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  margin-top: 1.5rem;
-}
-.contact-secondary a {
-  font-size: 0.78rem;
-  letter-spacing: 0.06em;
-  color: var(--text-muted);
-  border-bottom: 1px solid transparent;
-  padding-bottom: 1px;
-  transition: color 0.3s ease, border-color 0.3s ease;
-}
-.contact-secondary a:hover {
-  color: var(--accent);
-  border-bottom-color: var(--accent);
-}
-
-/* ─── FOOTER ─── */
-footer {
-  padding: 4rem 2rem 3rem;
-  text-align: center;
-  color: var(--text-dim);
-  font-size: 0.8rem;
-  border-top: 1px solid var(--border);
-}
-.footer-links {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-.footer-links a {
-  color: var(--text-muted);
-  font-size: 0.78rem;
-  letter-spacing: 0.06em;
-  border-bottom: 1px solid transparent;
-  padding-bottom: 1px;
-  transition: color 0.3s ease, border-color 0.3s ease;
-}
-.footer-links a:hover {
-  color: var(--accent);
-  border-bottom-color: var(--accent);
-}
-
-/* ─── ABOUT (Om mig) ─── */
-.about-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
-}
-.about-lead {
+.index-no {
+  color: var(--gold-deep);
   font-family: var(--serif);
-  font-size: clamp(1.15rem, 2vw, 1.4rem);
+  font-size: 1.1rem;
   font-style: italic;
-  color: var(--text);
-  line-height: 1.6;
-  border-left: 2px solid var(--accent);
-  padding-left: 1.5rem;
-}
-.about-body p {
-  color: var(--text-muted);
-  font-size: 1rem;
-  line-height: 1.8;
-  margin-bottom: 1rem;
-}
-.about-body p:last-child { margin-bottom: 0; }
-
-/* ─── AXIOM eyebrow ─── */
-.imprint-tagline {
-  display: block;
-  font-family: var(--serif);
-  font-style: italic;
-  color: var(--text-muted);
-  font-size: 1rem;
-  margin-top: 0.4rem;
-  margin-bottom: 1.5rem;
 }
 
-/* ─── ANIMATIONS ─── */
-@keyframes fadeUp {
-  to { opacity: 1; transform: translateY(0); }
-}
-@keyframes fadeLeft {
-  to { opacity: 1; transform: translateX(0); }
-}
-@keyframes lineIn {
-  to { opacity: 1; transform: scaleX(1); }
-}
-@keyframes pulse {
-  0%, 100% { opacity: 0.3; }
-  50% { opacity: 1; }
-}
-
-.reveal {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-}
-.reveal.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* ─── ACCESSIBILITY ─── */
-.skip-link {
-  position: absolute;
-  top: -40px;
-  left: 8px;
-  z-index: 1000;
-  padding: 0.6rem 1rem;
-  background: var(--accent);
-  color: var(--bg);
-  font-family: var(--sans);
-  font-size: 0.85rem;
-  font-weight: 600;
-  border-radius: 4px;
-  transition: top 0.2s ease;
-}
-.skip-link:focus {
-  top: 8px;
-  color: var(--bg);
-}
-
-:focus-visible {
-  outline: 2px solid var(--accent-bright);
-  outline-offset: 3px;
-  border-radius: 2px;
-}
-button:focus-visible,
-a:focus-visible { outline-offset: 4px; }
-
-/* Active nav state */
-nav a.is-active {
-  color: var(--accent);
-}
-nav a.is-active::after {
-  content: '';
-  display: block;
-  height: 1px;
-  width: 100%;
-  margin-top: 4px;
-  background: var(--accent);
-  opacity: 0.6;
-}
-
-/* ─── STATUS PILLS ─── */
 .status {
   display: inline-flex;
   align-items: center;
-  gap: 0.45rem;
-  padding: 0.28rem 0.7rem;
-  font-family: var(--sans);
-  font-size: 0.62rem;
-  font-weight: 600;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  border-radius: 999px;
+  gap: .45rem;
+  padding: .3rem .65rem;
   border: 1px solid currentColor;
-  background: transparent;
-  white-space: nowrap;
+  border-radius: 999px;
+  color: var(--muted);
+  font-size: .58rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
 }
+
 .status::before {
-  content: '';
+  content: "";
   width: 5px;
   height: 5px;
   border-radius: 50%;
   background: currentColor;
 }
-.status-active { color: var(--status-active); }
-.status-pre { color: var(--status-pre); }
-.status-experiment { color: var(--status-experiment); }
-.status-wip { color: var(--status-wip); }
 
-.card-head {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 1rem;
-  margin-bottom: 1.2rem;
-}
-.card-head .card-icon { margin-bottom: 0; }
+.status.active { color: var(--sage); }
+.status.alpha { color: var(--gold); }
+.status.manuscript { color: var(--blue); }
+.status.pre { color: var(--clay); }
 
-/* ─── SECTION ORNAMENTATION ─── */
-section {
-  position: relative;
-}
-section + section::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 40px;
-  height: 1px;
-  background: var(--border);
-}
-
-.section-label {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.7rem;
-}
-.section-label::before {
-  content: '';
-  display: inline-block;
-  width: 18px;
-  height: 1px;
-  background: var(--accent);
-  opacity: 0.7;
-}
-
-/* ─── AXIOM IMPRINT (refined) ─── */
-.imprint-mark {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  width: fit-content;
+.pursuit-card h3 {
+  color: var(--paper-bright);
   font-family: var(--serif);
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.42em;
-  text-transform: uppercase;
-  color: var(--accent);
-  border: none;
-  padding: 0;
-  margin-bottom: 1.2rem;
-  background: none;
-  border-radius: 0;
-}
-.imprint-mark::before,
-.imprint-mark::after {
-  content: '';
-  width: 16px;
-  height: 1px;
-  background: var(--accent);
-  opacity: 0.5;
-}
-
-/* ─── SURFACING MANIFESTO ─── */
-.manifesto-statement {
-  margin-top: 2rem;
-  padding: 2rem 0;
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-}
-.manifesto-statement p {
-  font-family: var(--serif);
-  font-size: clamp(1.2rem, 2.2vw, 1.55rem);
-  font-style: italic;
-  line-height: 1.55;
-  color: var(--text-bright);
-  max-width: 760px;
-}
-
-.principles {
-  list-style: none;
-  margin-top: 3.5rem;
-}
-.principles > li {
-  display: grid;
-  grid-template-columns: 90px 1fr;
-  gap: 2rem;
-  padding: 2.2rem 0;
-  border-bottom: 1px solid var(--border);
-  align-items: baseline;
-}
-.principles > li:first-child { border-top: 1px solid var(--border); }
-.principles .p-num {
-  font-family: var(--serif);
-  font-size: 2.4rem;
-  font-weight: 400;
-  line-height: 1;
-  color: var(--accent);
-  letter-spacing: -0.02em;
-}
-.principles h3 {
-  font-family: var(--serif);
-  font-size: 1.55rem;
-  font-weight: 600;
-  margin-bottom: 0.55rem;
-  color: var(--text-bright);
-  line-height: 1.25;
-}
-.principles p {
-  color: var(--text-muted);
-  font-size: 1rem;
-  line-height: 1.75;
-  max-width: 640px;
-}
-
-.cta-card {
-  display: block;
-  padding: 2rem;
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  color: inherit;
-  transition: border-color 0.3s var(--ease), background 0.3s var(--ease), transform 0.3s var(--ease);
-}
-.cta-card:hover {
-  border-color: var(--accent);
-  background: var(--bg-card-hover);
-  transform: translateY(-2px);
-}
-.cta-card .cta-eyebrow {
-  display: block;
-  font-size: 0.7rem;
-  font-weight: 600;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--accent);
-  margin-bottom: 0.8rem;
-}
-.cta-card h3 {
-  font-family: var(--serif);
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-bottom: 0.6rem;
-  color: var(--text-bright);
-}
-.cta-card p {
-  color: var(--text-muted);
-  font-size: 0.95rem;
-  line-height: 1.7;
-  margin-bottom: 1.2rem;
-}
-.cta-card .cta-link {
-  font-family: var(--sans);
-  font-size: 0.78rem;
+  font-size: clamp(1.8rem, 3vw, 2.35rem);
   font-weight: 500;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--accent);
+  line-height: 1.1;
+}
+
+.pursuit-card p {
+  max-width: 560px;
+  margin-top: .8rem;
+  color: var(--muted);
+  font-size: .91rem;
+  line-height: 1.75;
+}
+
+.text-link {
+  width: fit-content;
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  transition: gap 0.3s var(--ease);
-}
-.cta-card .cta-link::after { content: '→'; }
-.cta-card:hover .cta-link { gap: 0.8rem; }
-
-/* ─── SURFACING UPGRADE ─── */
-.surfacing-hero {
-  max-width: 780px;
-  letter-spacing: -0.015em;
-}
-.surfacing-lead {
-  max-width: 680px;
-  margin-bottom: 0;
+  gap: .6rem;
+  margin-top: auto;
+  padding-top: 1.7rem;
+  color: var(--paper);
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .07em;
+  text-transform: uppercase;
 }
 
-.surface-block {
-  margin-top: 3.5rem;
-  max-width: 760px;
-}
-.surface-block + .surface-block { margin-top: 2.6rem; }
-.surface-h3 {
-  font-family: var(--serif);
-  font-size: clamp(1.55rem, 2.6vw, 2rem);
-  font-weight: 600;
-  line-height: 1.25;
-  color: var(--text-bright);
-  margin-bottom: 1.2rem;
-  letter-spacing: -0.005em;
-}
-.surface-block p {
-  color: var(--text-muted);
-  font-size: 1.02rem;
-  line-height: 1.8;
-  margin-bottom: 1rem;
-}
-.surface-block p:last-child { margin-bottom: 0; }
-.surface-block p.closing-line {
-  font-family: var(--serif);
-  font-style: italic;
-  color: var(--text);
-  font-size: 1.1rem;
-  margin-top: 0.4rem;
+.text-link::after {
+  content: "→";
+  color: var(--gold);
+  transition: transform .2s ease;
 }
 
-.not-grid,
-.apply-grid {
-  margin-top: 1.8rem;
+.text-link:hover::after {
+  transform: translateX(4px);
+}
+
+.method-grid {
   display: grid;
-  gap: 1.2rem;
-  grid-template-columns: 1fr;
+  grid-template-columns: .78fr 1.22fr;
+  gap: clamp(3rem, 8vw, 8rem);
+  align-items: start;
 }
 
-.not-card,
-.apply-card {
-  padding: 1.6rem 1.8rem;
-  background: var(--bg-soft);
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  transition: border-color 0.3s var(--ease), background 0.3s var(--ease), transform 0.3s var(--ease);
+.method-statement {
+  position: sticky;
+  top: 118px;
 }
-.not-card:hover {
-  border-color: var(--border-strong);
-  background: var(--bg-card);
+
+.method-statement blockquote {
+  color: var(--paper-bright);
+  font-family: var(--serif);
+  font-size: clamp(2rem, 4vw, 3.45rem);
+  line-height: 1.08;
 }
-.apply-card:hover {
-  border-color: var(--accent);
-  background: var(--bg-card-hover);
-  transform: translateY(-2px);
+
+.method-statement blockquote em {
+  color: var(--gold);
+  font-weight: 400;
 }
-.not-card h4,
-.apply-card h4 {
+
+.method-statement p {
+  margin-top: 1.5rem;
+  color: var(--muted);
+  font-size: .92rem;
+}
+
+.method-steps {
+  border-top: 1px solid var(--line);
+}
+
+.method-step {
+  display: grid;
+  grid-template-columns: 52px 1fr;
+  gap: 1.2rem;
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.method-step > span {
+  color: var(--gold);
   font-family: var(--serif);
   font-size: 1.2rem;
-  font-weight: 600;
-  color: var(--text-bright);
-  margin-bottom: 0.5rem;
-  line-height: 1.3;
-}
-.not-card p,
-.apply-card p {
-  color: var(--text-muted);
-  font-size: 0.95rem;
-  line-height: 1.7;
+  font-style: italic;
 }
 
-.products-grid {
-  margin-top: 1.8rem;
-  display: grid;
-  gap: 1.5rem;
-  grid-template-columns: 1fr;
+.method-step h3 {
+  color: var(--paper-bright);
+  font-family: var(--serif);
+  font-size: 1.55rem;
+  font-weight: 500;
 }
 
-.value-block {
-  margin-top: 3.5rem;
-  padding: 2.2rem 0;
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-  max-width: 760px;
+.method-step p {
+  margin-top: .45rem;
+  color: var(--muted);
+  font-size: .9rem;
+  line-height: 1.8;
 }
-.value-block .aside-label {
+
+.evidence-note {
+  margin-top: 2rem;
+  padding: 1.4rem 1.5rem;
+  border-left: 2px solid var(--gold);
+  background: rgba(210,183,124,.045);
+}
+
+.evidence-note strong {
   display: block;
-  font-family: var(--sans);
-  font-size: 0.68rem;
-  font-weight: 600;
-  letter-spacing: 0.22em;
+  color: var(--paper-bright);
+  font-size: .78rem;
+  letter-spacing: .05em;
   text-transform: uppercase;
-  color: var(--accent);
-  margin-bottom: 1.1rem;
-}
-.value-block p {
-  font-family: var(--serif);
-  font-size: 1.1rem;
-  line-height: 1.7;
-  color: var(--text);
-  margin-bottom: 1rem;
-}
-.value-block p:last-child {
-  margin-bottom: 0;
-  color: var(--text-muted);
-  font-style: italic;
-  font-size: 1.02rem;
 }
 
-.surface-final-cta {
-  margin-top: 3rem;
-  padding: 2.4rem;
-  background: var(--bg-soft);
-  border: 1px solid var(--border);
-  border-radius: 8px;
+.evidence-note p {
+  margin-top: .45rem;
+  color: var(--muted);
+  font-size: .83rem;
+  line-height: 1.72;
 }
-.surface-final-cta h3 {
-  font-family: var(--serif);
-  font-size: clamp(1.4rem, 2.4vw, 1.85rem);
-  font-weight: 600;
-  color: var(--text-bright);
-  margin-bottom: 1rem;
-  line-height: 1.3;
-}
-.surface-final-cta p {
-  color: var(--text-muted);
-  font-size: 1rem;
-  line-height: 1.75;
-  margin-bottom: 1.6rem;
-  max-width: 640px;
-}
-.surface-final-cta .closing-line {
-  display: block;
+
+.offering-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .65rem;
   margin-top: 1.6rem;
+}
+
+.offering {
+  padding: .5rem .75rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--muted);
+  font-size: .68rem;
+  font-weight: 600;
+}
+
+.game-shell {
+  overflow: hidden;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  background: var(--bg-deep);
+  box-shadow: 0 40px 100px rgba(0,0,0,.22);
+}
+
+.game-topline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: .85rem 1.1rem;
+  border-bottom: 1px solid var(--line);
+  color: var(--dim);
+  font-size: .62rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.live-dot {
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  color: var(--gold);
+}
+
+.live-dot::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+  box-shadow: 0 0 0 4px rgba(210,183,124,.1);
+}
+
+.game-intro {
+  display: grid;
+  grid-template-columns: 1.08fr .92fr;
+  gap: 3rem;
+  padding: clamp(2rem, 5vw, 4rem);
+}
+
+.game-intro h3 {
+  color: var(--paper-bright);
   font-family: var(--serif);
-  font-style: italic;
-  color: var(--text-muted);
-  font-size: 1.05rem;
+  font-size: clamp(2.4rem, 5vw, 4.6rem);
+  font-weight: 400;
+  letter-spacing: -.035em;
+  line-height: .98;
 }
 
-/* ─── RESPONSIVE ─── */
-@media (min-width: 768px) {
-  .cards { grid-template-columns: repeat(2, 1fr); }
-  .card.full-width { grid-column: 1 / -1; }
-  nav { gap: 1.6rem; }
-  .not-grid { grid-template-columns: repeat(2, 1fr); }
-  .apply-grid { grid-template-columns: repeat(2, 1fr); }
-  .products-grid { grid-template-columns: repeat(2, 1fr); }
+.game-intro h3 em {
+  display: block;
+  color: var(--gold);
+  font-weight: 400;
 }
 
-@media (max-width: 600px) {
-  .principles > li {
-    grid-template-columns: 1fr;
-    gap: 0.8rem;
-    padding: 1.8rem 0;
+.game-copy p {
+  color: var(--muted);
+  font-size: .94rem;
+  line-height: 1.82;
+}
+
+.game-copy p + p {
+  margin-top: 1rem;
+}
+
+.decision-loop {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.loop-node {
+  min-height: 112px;
+  display: grid;
+  align-content: center;
+  gap: .3rem;
+  padding: 1rem;
+  border-right: 1px solid var(--line);
+  text-align: center;
+}
+
+.loop-node:last-child {
+  border-right: 0;
+}
+
+.loop-node span {
+  color: var(--gold);
+  font-family: var(--serif);
+  font-size: 1.2rem;
+}
+
+.loop-node strong {
+  color: var(--paper);
+  font-size: .66rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.game-modules {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.game-module {
+  min-height: 310px;
+  padding: 2rem;
+  border-right: 1px solid var(--line);
+}
+
+.game-module:last-child {
+  border-right: 0;
+}
+
+.module-mode {
+  display: block;
+  margin-bottom: 1.4rem;
+  color: var(--gold);
+  font-size: .6rem;
+  font-weight: 700;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+
+.game-module h4 {
+  color: var(--paper-bright);
+  font-family: var(--serif);
+  font-size: 1.65rem;
+  font-weight: 500;
+}
+
+.game-module p {
+  margin-top: .7rem;
+  color: var(--muted);
+  font-size: .84rem;
+  line-height: 1.75;
+}
+
+.module-proof {
+  display: block;
+  margin-top: 1.35rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+  color: var(--dim);
+  font-size: .7rem;
+  line-height: 1.6;
+}
+
+.guardrail-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid var(--line);
+  background: rgba(255,255,255,.012);
+}
+
+.guardrail-row span {
+  padding: 1rem;
+  border-right: 1px solid var(--line);
+  color: var(--dim);
+  font-size: .65rem;
+  font-weight: 600;
+  line-height: 1.55;
+  text-align: center;
+}
+
+.guardrail-row span:last-child {
+  border-right: 0;
+}
+
+.truth-row {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 1rem;
+  align-items: center;
+  padding: 1.4rem 2rem;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: .8rem;
+}
+
+.truth-row strong {
+  color: var(--paper);
+}
+
+.truth-row .button {
+  min-height: 42px;
+  padding: .65rem 1rem;
+}
+
+.works-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1rem;
+}
+
+.work-card {
+  min-height: 310px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  padding: 2rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.work-card:nth-child(1),
+.work-card:nth-child(2) {
+  grid-column: span 6;
+}
+
+.work-card:nth-child(3) {
+  grid-column: span 7;
+}
+
+.work-card:nth-child(4) {
+  grid-column: span 5;
+}
+
+.work-card::after {
+  content: "";
+  width: 160px;
+  height: 160px;
+  position: absolute;
+  right: -70px;
+  bottom: -70px;
+  border: 1px solid rgba(210,183,124,.14);
+  border-radius: 50%;
+  box-shadow: 0 0 0 26px rgba(210,183,124,.025), 0 0 0 52px rgba(210,183,124,.018);
+}
+
+.work-form {
+  display: block;
+  margin-bottom: 2.1rem;
+  color: var(--dim);
+  font-size: .63rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.work-card h3 {
+  max-width: 460px;
+  color: var(--paper-bright);
+  font-family: var(--serif);
+  font-size: clamp(1.85rem, 3vw, 2.5rem);
+  font-weight: 500;
+  line-height: 1.05;
+}
+
+.work-card p {
+  max-width: 560px;
+  margin-top: .85rem;
+  color: var(--muted);
+  font-size: .86rem;
+  line-height: 1.75;
+}
+
+.work-status {
+  width: fit-content;
+  margin-top: auto;
+  padding-top: 1.5rem;
+  color: var(--blue);
+  font-size: .64rem;
+  font-weight: 700;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
+
+.prose-panel {
+  display: grid;
+  grid-template-columns: 1.04fr .96fr;
+  gap: 4rem;
+  align-items: start;
+  margin-top: 1rem;
+  padding: clamp(2rem, 6vw, 5rem);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background:
+    linear-gradient(130deg, rgba(210,183,124,.07), transparent 40%),
+    var(--surface-warm);
+}
+
+.prose-quote {
+  color: var(--paper-bright);
+  font-family: var(--serif);
+  font-size: clamp(2.2rem, 4.5vw, 4.2rem);
+  letter-spacing: -.035em;
+  line-height: 1.03;
+}
+
+.prose-quote em {
+  color: var(--gold);
+  font-weight: 400;
+}
+
+.prose-copy p {
+  color: var(--muted);
+  font-size: .92rem;
+  line-height: 1.83;
+}
+
+.prose-signals {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .55rem;
+  margin-top: 1.4rem;
+  list-style: none;
+}
+
+.prose-signals li {
+  padding: .45rem .65rem;
+  border: 1px solid rgba(210,183,124,.2);
+  border-radius: 999px;
+  color: #c9bd9e;
+  font-size: .64rem;
+  font-weight: 600;
+}
+
+.business-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.business-card {
+  min-height: 345px;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgba(255,255,255,.012);
+}
+
+.business-card h3 {
+  margin-top: 2rem;
+  color: var(--paper-bright);
+  font-family: var(--serif);
+  font-size: 1.85rem;
+  font-weight: 500;
+  line-height: 1.08;
+}
+
+.business-card p {
+  margin-top: .8rem;
+  color: var(--muted);
+  font-size: .85rem;
+  line-height: 1.77;
+}
+
+.business-card .text-link {
+  margin-top: auto;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap: clamp(3rem, 8vw, 8rem);
+}
+
+.about-lead {
+  color: var(--paper-bright);
+  font-family: var(--serif);
+  font-size: clamp(2.1rem, 4vw, 3.7rem);
+  line-height: 1.08;
+}
+
+.about-copy p {
+  color: var(--muted);
+  font-size: .94rem;
+  line-height: 1.85;
+}
+
+.about-copy p + p {
+  margin-top: 1.1rem;
+}
+
+.about-facts {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.about-fact {
+  padding: 1.2rem;
+  border-top: 1px solid var(--line-strong);
+}
+
+.about-fact strong {
+  display: block;
+  color: var(--gold);
+  font-family: var(--serif);
+  font-size: 1.35rem;
+  font-weight: 500;
+}
+
+.about-fact span {
+  color: var(--dim);
+  font-size: .68rem;
+}
+
+.contact {
+  padding-bottom: 80px;
+}
+
+.contact-panel {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(2.2rem, 7vw, 5.5rem);
+  border: 1px solid var(--line-strong);
+  border-radius: 22px;
+  background:
+    radial-gradient(circle at 86% 10%, rgba(210,183,124,.16), transparent 20rem),
+    var(--surface);
+}
+
+.contact-panel::after {
+  content: "PH";
+  position: absolute;
+  right: -1rem;
+  bottom: -5.4rem;
+  color: rgba(255,255,255,.025);
+  font-family: var(--serif);
+  font-size: clamp(12rem, 25vw, 23rem);
+  line-height: 1;
+}
+
+.contact-panel > * {
+  position: relative;
+  z-index: 1;
+}
+
+.contact-panel h2 {
+  max-width: 760px;
+  color: var(--paper-bright);
+  font-family: var(--serif);
+  font-size: clamp(3rem, 6vw, 6rem);
+  font-weight: 400;
+  letter-spacing: -.04em;
+  line-height: .96;
+}
+
+.contact-panel p {
+  max-width: 650px;
+  margin-top: 1.4rem;
+  color: var(--muted);
+}
+
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .8rem;
+  margin-top: 2rem;
+}
+
+.site-footer {
+  padding: 2.5rem 0;
+  border-top: 1px solid var(--line);
+  color: var(--dim);
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+}
+
+.footer-links a {
+  color: var(--muted);
+  font-size: .7rem;
+}
+
+.footer-links a:hover {
+  color: var(--paper);
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .75s var(--ease), transform .75s var(--ease);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (max-width: 1040px) {
+  .desktop-nav {
+    gap: 1rem;
   }
-  .principles .p-num { font-size: 1.8rem; }
-  .principles h3 { font-size: 1.35rem; }
+
+  .desktop-nav a {
+    font-size: .65rem;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr minmax(300px, .68fr);
+    gap: 3rem;
+  }
+
+  .game-modules {
+    grid-template-columns: 1fr;
+  }
+
+  .game-module {
+    min-height: auto;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .game-module:last-child {
+    border-bottom: 0;
+  }
+
+  .business-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .business-card:last-child {
+    grid-column: 1 / -1;
+    min-height: 270px;
+  }
 }
 
-@media (max-width: 768px) {
-  nav { display: none; }
-  .menu-toggle { display: flex; }
-  .lang-toggle { top: 1.2rem; right: 1.2rem; }
-  section { padding: 4rem 1.5rem; }
-  .hero { padding: 4rem 1.5rem; }
-  .hero-split {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
+@media (max-width: 820px) {
+  .container {
+    width: min(calc(100% - 32px), var(--container));
   }
-  .hero-portrait { order: 1; }
-  .hero-text { order: 2; }
+
+  .header-inner {
+    grid-template-columns: 1fr auto;
+  }
+
+  .desktop-nav {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .hero {
+    min-height: auto;
+    padding-top: 118px;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: clamp(3.7rem, 16vw, 6.4rem);
+  }
+
+  .portrait-wrap {
+    width: min(100%, 430px);
+    justify-self: start;
+  }
+
+  .hero-index,
+  .hero::after {
+    display: none;
+  }
+
+  .signal-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .signal:nth-child(2) {
+    border-right: 0;
+  }
+
+  .signal:nth-child(-n+2) {
+    border-bottom: 1px solid var(--line);
+  }
+
+  .pursuit-grid,
+  .method-grid,
+  .game-intro,
+  .prose-panel,
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .method-statement {
+    position: static;
+  }
+
+  .decision-loop {
+    grid-template-columns: 1fr;
+  }
+
+  .loop-node {
+    min-height: 76px;
+    grid-template-columns: auto 1fr;
+    gap: .8rem;
+    align-items: center;
+    text-align: left;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .loop-node:last-child {
+    border-bottom: 0;
+  }
+
+  .truth-row {
+    grid-template-columns: 1fr;
+  }
+
+  .guardrail-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .guardrail-row span:nth-child(2) {
+    border-right: 0;
+  }
+
+  .guardrail-row span:nth-child(-n+2) {
+    border-bottom: 1px solid var(--line);
+  }
+
+  .works-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .work-card:nth-child(n) {
+    grid-column: auto;
+  }
+
+  .business-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .business-card:last-child {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 560px) {
+  .brand-name {
+    display: none;
+  }
+
+  .header-inner {
+    gap: .8rem;
+  }
+
+  .header-actions {
+    gap: .5rem;
+  }
+
+  .hero {
+    padding-bottom: 54px;
+  }
+
+  .hero-actions,
+  .contact-links {
+    display: grid;
+  }
+
+  .button {
+    width: 100%;
+  }
+
   .portrait-frame {
-    width: 220px;
-    height: 280px;
+    border-radius: 120px 120px 14px 14px;
   }
-  .card { padding: 1.8rem; }
-  .pursuits { grid-template-columns: 1fr; }
-  .pursuit { padding: 1.6rem 2.4rem 1.6rem 1.6rem; }
+
+  .signal-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .signal {
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .signal:last-child {
+    border-bottom: 0;
+  }
+
+  .pursuit-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pursuit-card {
+    min-height: 250px;
+  }
+
+  .game-intro,
+  .game-module,
+  .truth-row {
+    padding: 1.5rem;
+  }
+
+  .guardrail-row {
+    grid-template-columns: 1fr;
+  }
+
+  .guardrail-row span {
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .guardrail-row span:last-child {
+    border-bottom: 0;
+  }
+
+  .about-facts {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-inner {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
 }
 </style>
 </head>
+
 <body>
+<a href="#main" class="skip-link" data-sv="Hoppa till innehållet" data-en="Skip to content">Hoppa till innehållet</a>
 
-<!-- Skip link -->
-<a href="#main" class="skip-link" data-sv="Hoppa till innehåll" data-en="Skip to content">Hoppa till innehåll</a>
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="#top" class="brand" aria-label="Pan Härdfeldt — startsida">
+      <span class="brand-mark" aria-hidden="true">P</span>
+      <span class="brand-name">Pan Härdfeldt</span>
+    </a>
 
-<!-- Language Toggle -->
-<div class="lang-toggle">
-  <button class="lang-btn active" onclick="setLang('sv')">SV</button>
-  <button class="lang-btn" onclick="setLang('en')">EN</button>
-</div>
+    <nav class="desktop-nav" aria-label="Huvudnavigation">
+      <a href="#work" data-sv="Översikt" data-en="Overview">Översikt</a>
+      <a href="#surfacing">Surfacing</a>
+      <a href="#ai-gamefriend">AI-GameFriend</a>
+      <a href="#authorship" data-sv="Författarskap" data-en="Writing">Författarskap</a>
+      <a href="#professional" data-sv="Professionellt" data-en="Professional">Professionellt</a>
+      <a href="#about" data-sv="Om" data-en="About">Om</a>
+      <a href="#contact" data-sv="Kontakt" data-en="Contact">Kontakt</a>
+    </nav>
 
-<!-- Mobile menu toggle -->
-<button class="menu-toggle" aria-label="Meny" aria-expanded="false" aria-controls="mobile-menu" onclick="toggleMenu()"><span></span></button>
+    <div class="header-actions">
+      <div class="language-switch" role="group" aria-label="Språk">
+        <button class="lang-btn active" type="button" data-lang="sv" aria-pressed="true">SV</button>
+        <button class="lang-btn" type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+      <button class="menu-toggle" type="button" aria-label="Öppna meny" aria-expanded="false" aria-controls="mobile-nav">
+        <span></span>
+      </button>
+    </div>
+  </div>
 
-<!-- Nav (desktop) -->
-<nav>
-  <a href="#work" data-sv="Arbete" data-en="Work">Arbete</a>
-  <a href="#method" data-sv="Metoder" data-en="Methods">Metoder</a>
-  <a href="#ai-gamefriend" data-sv="AI &amp; verktyg" data-en="AI &amp; tools">AI &amp; verktyg</a>
-  <a href="#literature" data-sv="Litteratur" data-en="Literature">Litteratur</a>
-  <a href="/konsult/" data-sv="Konsulting" data-en="Consulting">Konsulting</a>
-  <a href="#om-mig" data-sv="Om" data-en="About">Om</a>
-  <a href="#contact" data-sv="Kontakt" data-en="Contact">Kontakt</a>
-</nav>
-
-<!-- Nav (mobile) -->
-<div class="mobile-menu" id="mobile-menu">
-  <a href="#work" data-sv="Arbete" data-en="Work">Arbete</a>
-  <a href="#method" data-sv="Metoder" data-en="Methods">Metoder</a>
-  <a href="#ai-gamefriend" data-sv="AI &amp; verktyg" data-en="AI &amp; tools">AI &amp; verktyg</a>
-  <a href="#literature" data-sv="Litteratur" data-en="Literature">Litteratur</a>
-  <a href="/konsult/" data-sv="Konsulting" data-en="Consulting">Konsulting</a>
-  <a href="#om-mig" data-sv="Om" data-en="About">Om</a>
-  <a href="#contact" data-sv="Kontakt" data-en="Contact">Kontakt</a>
-</div>
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Mobilnavigation">
+    <a href="#work" data-sv="Översikt" data-en="Overview">Översikt</a>
+    <a href="#surfacing">Surfacing</a>
+    <a href="#ai-gamefriend">AI-GameFriend</a>
+    <a href="#authorship" data-sv="Författarskap" data-en="Writing">Författarskap</a>
+    <a href="#professional" data-sv="Professionellt" data-en="Professional">Professionellt</a>
+    <a href="/konsult/" data-sv="Konsulttjänster" data-en="Consulting services">Konsulttjänster</a>
+    <a href="#contact" data-sv="Kontakt" data-en="Contact">Kontakt</a>
+  </nav>
+</header>
 
 <main id="main">
-
-<!-- Hero -->
-<section class="hero">
-  <div class="container hero-split">
-    <div class="hero-text">
-      <h1 class="hero-name">Pan Härdfeldt</h1>
-      <div class="hero-line"></div>
-      <p class="hero-tagline" data-sv="Metoder, verktyg och berättelser för bättre omdöme i komplexa mänskliga system." data-en="Methods, tools, and stories for better judgement in complex human systems.">Metoder, verktyg och berättelser för bättre omdöme i komplexa mänskliga system.</p>
-      <p class="hero-orientation" data-sv="Jag arbetar i skärningspunkten mellan socialt arbete, AI, strategi, litteratur och mänskligt beslutsfattande — med projekt som förenar praktisk nytta, ansvar och mänsklig komplexitet." data-en="I work at the intersection of social work, AI, strategy, literature, and human decision-making — with projects that combine practical use, responsibility, and human complexity.">Jag arbetar i skärningspunkten mellan socialt arbete, AI, strategi, litteratur och mänskligt beslutsfattande — med projekt som förenar praktisk nytta, ansvar och mänsklig komplexitet.</p>
-      <div class="hero-cta">
-        <a href="#work" class="contact-btn primary" data-sv="Utforska arbetet" data-en="Explore the work">Utforska arbetet</a>
-        <a href="#contact" class="contact-btn" data-sv="Kontakta mig" data-en="Get in touch">Kontakta mig</a>
-      </div>
-      <p class="hero-audience" data-sv="För kommuner, organisationer, AI-samarbeten, föreläsningar och förlagsintresse." data-en="For municipalities, organisations, AI collaborations, talks, and publishing inquiries.">För kommuner, organisationer, AI-samarbeten, föreläsningar och förlagsintresse.</p>
-    </div>
-    <div class="hero-portrait">
-      <div class="portrait-frame">
-        <!-- Replace src with your photo: portrait.jpg -->
-        <img src="portrait.jpg" alt="Pan Härdfeldt" onerror="this.style.display='none'; this.parentElement.classList.add('no-photo');">
-        <div class="portrait-placeholder">PH</div>
-      </div>
-    </div>
-  </div>
-  <div class="scroll-hint" data-sv="Scrolla" data-en="Scroll">Scrolla</div>
-</section>
-
-<!-- Fyra spår -->
-<section id="pursuits">
-  <div class="container">
-    <div class="reveal">
-      <span class="section-label" data-sv="Fyra spår" data-en="Four pursuits">Fyra spår</span>
-      <h2 class="section-title" data-sv="Samma blick, fyra fält." data-en="One gaze, four fields.">Samma blick, fyra fält.</h2>
-      <p class="section-desc" data-sv="Metod, verktyg, prosa och praktik — olika ytor, men samma fråga: hur synliggör man det som redan finns och stödjer omdömet utan att ta över det?" data-en="Method, tool, prose, and practice — different surfaces, but the same question: how do you make visible what is already there and support judgement without taking it over?">Metod, verktyg, prosa och praktik — olika ytor, men samma fråga: hur synliggör man det som redan finns och stödjer omdömet utan att ta över det?</p>
-    </div>
-
-    <div class="pursuits reveal">
-      <a class="pursuit" href="#method">
-        <span class="pursuit-num">01</span>
-        <h3 class="pursuit-title" data-sv="Surfacing" data-en="Surfacing">Surfacing</h3>
-        <p class="pursuit-text" data-sv="En metod där människa och AI tänker tillsammans: tät återkoppling och kalibrerad friktion som synliggör kapacitet du redan bär — utan att ersätta omdömet." data-en="A method where human and AI think together: tight feedback and calibrated friction that surface capacity you already carry — without replacing judgement.">En metod där människa och AI tänker tillsammans: tät återkoppling och kalibrerad friktion som synliggör kapacitet du redan bär — utan att ersätta omdömet.</p>
-      </a>
-
-      <a class="pursuit" href="#ai-gamefriend">
-        <span class="pursuit-num">02</span>
-        <h3 class="pursuit-title" data-sv="AI-GameFriend" data-en="AI-GameFriend">AI-GameFriend</h3>
-        <p class="pursuit-text" data-sv="Ett experimentellt strategiverktyg för seriösa spelare: AI-baserade andra perspektiv på beslut, mönster och vägval. Experimentella funktioner är tydligt markerade." data-en="An experimental strategy tool for serious gamers: AI-based second opinions on decisions, patterns, and choices. Experimental features are clearly marked.">Ett experimentellt strategiverktyg för seriösa spelare: AI-baserade andra perspektiv på beslut, mönster och vägval. Experimentella funktioner är tydligt markerade.</p>
-      </a>
-
-      <a class="pursuit" href="#literature">
-        <span class="pursuit-num">03</span>
-        <h3 class="pursuit-title" data-sv="Litteratur" data-en="Literature">Litteratur</h3>
-        <p class="pursuit-text" data-sv="Komprimerad prosa om glappet mellan yta och djup — folkloristisk gotik, moralpsykologisk skräck och klinisk science fiction. Tre verk söker förlag." data-en="Compressed prose about the gap between surface and depth — folkloristic gothic, moral-psychological horror, and clinical science fiction. Three works seeking a publisher.">Komprimerad prosa om glappet mellan yta och djup — folkloristisk gotik, moralpsykologisk skräck och klinisk science fiction. Tre verk söker förlag.</p>
-      </a>
-
-      <a class="pursuit" href="#lupino">
-        <span class="pursuit-num">04</span>
-        <h3 class="pursuit-title" data-sv="AI i socialt arbete" data-en="AI in social work">AI i socialt arbete</h3>
-        <p class="pursuit-text" data-sv="Surfacing tillämpad på socialtjänst och barnavård genom Lupino: strukturerat stöd för professionellt omdöme — som stödjer ansvaret, inte ersätter det." data-en="Surfacing applied to social services and child welfare through Lupino: structured support for professional judgement — supporting responsibility, not replacing it.">Surfacing tillämpad på socialtjänst och barnavård genom Lupino: strukturerat stöd för professionellt omdöme — som stödjer ansvaret, inte ersätter det.</p>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- Om -->
-<section id="om-mig">
-  <div class="container">
-    <div class="reveal">
-      <span class="section-label" data-sv="Om" data-en="About">Om</span>
-      <h2 class="section-title" data-sv="En grund i socialt arbete — och varför kombinationen hänger ihop." data-en="A grounding in social work — and why the combination makes sense.">En grund i socialt arbete — och varför kombinationen hänger ihop.</h2>
-    </div>
-
-    <div class="about-grid reveal">
-      <p class="about-lead" data-sv="Pan Härdfeldt har arbetat sexton år med myndighetsutövning, barn och unga, behandlingsarbete och juridiskt komplexa processer. Den erfarenheten präglar även arbetet med AI, metoder och litteratur: fokus ligger på omdöme under press, ansvar, tillit och beslut där enkla svar sällan räcker." data-en="Pan Härdfeldt has worked sixteen years in case management, child and youth services, treatment work, and legally complex processes. That experience also shapes the work with AI, methods, and literature: the focus is on judgement under pressure, responsibility, trust, and decisions where simple answers rarely suffice.">Pan Härdfeldt har arbetat sexton år med myndighetsutövning, barn och unga, behandlingsarbete och juridiskt komplexa processer. Den erfarenheten präglar även arbetet med AI, metoder och litteratur: fokus ligger på omdöme under press, ansvar, tillit och beslut där enkla svar sällan räcker.</p>
-
-      <div class="about-body">
-        <p data-sv="Samma grundläggande metod — tät återkoppling, kalibrerad friktion och strukturerat omdöme — ligger bakom arbetet med AI-GameFriend, NexTool, Surfacing och de litterära projekten. Att den går att överföra mellan domäner är själva poängen." data-en="The same underlying method — tight feedback, calibrated friction, and structured judgement — is behind the work on AI-GameFriend, NexTool, Surfacing, and the literary projects. That it transfers between domains is the whole point.">Samma grundläggande metod — tät återkoppling, kalibrerad friktion och strukturerat omdöme — ligger bakom arbetet med AI-GameFriend, NexTool, Surfacing och de litterära projekten. Att den går att överföra mellan domäner är själva poängen.</p>
-
-        <p data-sv="Bakgrunden i socialt arbete — handläggning, behandling och processföring vid förvaltningsrätt och kammarrätt — fungerar som referenspunkt: alla projekten kommer tillbaka till frågan om hur människor fattar beslut när situationen är komplex, pressad eller ofullständig, och hur verktyg och metoder kan stödja det utan att ta över ansvaret." data-en="The background in social work — case management, treatment, and legal representation in administrative and appellate courts — serves as a reference point: every project comes back to the question of how people make decisions when the situation is complex, pressured, or incomplete, and how tools and methods can support that without taking over the responsibility.">Bakgrunden i socialt arbete — handläggning, behandling och processföring vid förvaltningsrätt och kammarrätt — fungerar som referenspunkt: alla projekten kommer tillbaka till frågan om hur människor fattar beslut när situationen är komplex, pressad eller ofullständig, och hur verktyg och metoder kan stödja det utan att ta över ansvaret.</p>
-
-        <p data-sv="Bor i Kista, Stockholm. Skriver, kodar, processför. Jag återkommer så snart jag kan." data-en="Based in Kista, Stockholm. Writes, codes, litigates. I'll get back as soon as I can.">Bor i Kista, Stockholm. Skriver, kodar, processför. Jag återkommer så snart jag kan.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Work -->
-<section id="work">
-  <div class="container">
-    <div class="reveal">
-      <span class="section-label" data-sv="Arbete" data-en="Work">Arbete</span>
-      <h2 class="section-title" data-sv="Flera projekt, samma grundfråga." data-en="Several projects, one core question.">Flera projekt, samma grundfråga.</h2>
-      <p class="section-desc" data-sv="Hur fattar människor bättre beslut när situationen är komplex, pressad eller ofullständig? Arbetet sträcker sig över AI-stöd, strukturerat praktikstöd, konsulting, en verktygsplattform, metoder och litterära projekt — olika ytor, samma fråga." data-en="How do people make better decisions when the situation is complex, pressured, or incomplete? The work spans AI support, structured practice support, consulting, a tool platform, methods, and literary projects — different surfaces, the same question.">Hur fattar människor bättre beslut när situationen är komplex, pressad eller ofullständig? Arbetet sträcker sig över AI-stöd, strukturerat praktikstöd, konsulting, en verktygsplattform, metoder och litterära projekt — olika ytor, samma fråga.</p>
-    </div>
-
-    <div class="cards">
-      <!-- AI-GameFriend -->
-      <div class="card reveal" id="ai-gamefriend">
-        <div class="card-head">
-          <span class="card-icon">01</span>
-          <span class="status status-experiment" data-sv="Experiment" data-en="Experiment">Experiment</span>
+  <section class="hero" id="top">
+    <div class="container hero-grid">
+      <div class="hero-copy reveal">
+        <span class="eyebrow" data-sv="Konsult · metodutvecklare · grundare · författare" data-en="Consultant · method creator · founder · author">Konsult · metodutvecklare · grundare · författare</span>
+        <h1 data-sv="Omdöme under <em>komplexitet.</em>" data-en="Judgement under <em>complexity.</em>">Omdöme under <em>komplexitet.</em></h1>
+        <p class="hero-lead" data-sv="Jag bygger metoder, produkter och berättelser för situationer där enkla svar inte räcker. <strong>Gemensamt för arbetet är en tydlig princip:</strong> AI och struktur ska vidga människans perspektiv — inte ta över hennes ansvar." data-en="I build methods, products and stories for situations where simple answers are not enough. <strong>The work shares one clear principle:</strong> AI and structure should widen human perspective — not take over human responsibility.">Jag bygger metoder, produkter och berättelser för situationer där enkla svar inte räcker. <strong>Gemensamt för arbetet är en tydlig princip:</strong> AI och struktur ska vidga människans perspektiv — inte ta över hennes ansvar.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#work" data-sv="Se arbetet" data-en="Explore the work">Se arbetet</a>
+          <a class="button" href="#contact" data-sv="Inled en dialog" data-en="Start a conversation">Inled en dialog</a>
         </div>
-        <h3 class="card-title">AI-GameFriend</h3>
-        <p class="card-subtitle" data-sv="Grundare · Experimentellt strategiverktyg" data-en="Founder · Experimental strategy tool">Grundare · Experimentellt strategiverktyg</p>
-        <p class="card-text" data-sv="AI-GameFriend är ett experimentellt strategiverktyg för seriösa strategispelare: ett sätt att få AI-baserade andra perspektiv på beslut, mönster och möjliga vägval i komplexa spel. Verktyget utforskar hur spelval kan användas för reflektion kring strategi, beslut och mönster — med tydliga gränser mellan analys, experiment och användarens eget omdöme. Experimentella funktioner är tydligt markerade." data-en="AI-GameFriend is an experimental strategy tool for serious strategy gamers: a way to get AI-based second opinions on decisions, patterns, and possible paths in complex games. The tool explores how game choices can be used for reflection on strategy, decisions, and patterns — with clear boundaries between analysis, experiments, and the user's own judgement. Experimental features are clearly marked.">AI-GameFriend är ett experimentellt strategiverktyg för seriösa strategispelare: ett sätt att få AI-baserade andra perspektiv på beslut, mönster och möjliga vägval i komplexa spel. Verktyget utforskar hur spelval kan användas för reflektion kring strategi, beslut och mönster — med tydliga gränser mellan analys, experiment och användarens eget omdöme. Experimentella funktioner är tydligt markerade.</p>
-        <a href="https://getnextool.com/ai-gamefriend" class="card-link" target="_blank" data-sv="Läs mer" data-en="Learn more">Läs mer</a>
+        <p class="hero-audience" data-sv="För kommuner, organisationer, produkt- och AI-samarbeten, föreläsningar och förlagsintresse." data-en="For municipalities, organisations, product and AI collaborations, talks and publishing inquiries.">För kommuner, organisationer, produkt- och AI-samarbeten, föreläsningar och förlagsintresse.</p>
       </div>
 
-      <!-- Lupino -->
-      <div class="card reveal" id="lupino">
-        <div class="card-head">
-          <span class="card-icon">02</span>
-          <span class="status status-pre" data-sv="Pre-pilot" data-en="Pre-pilot">Pre-pilot</span>
+      <figure class="portrait-wrap reveal">
+        <span class="hero-index">Human-centred systems</span>
+        <div class="portrait-frame">
+          <img src="portrait.jpg" alt="Blyertsporträtt av Pan Härdfeldt" width="1024" height="1536">
         </div>
-        <h3 class="card-title">Lupino</h3>
-        <p class="card-subtitle" data-sv="Medgrundare · Strukturerat praktikstöd för socialtjänst och barnavård" data-en="Co-founder · Structured practice support for social services and child welfare">Medgrundare · Strukturerat praktikstöd för socialtjänst och barnavård</p>
-        <p class="card-text" data-sv="Lupino utvecklar strukturerat professionellt stöd för socialtjänst och barnavård: kompetensträning, praktikstöd och kvalitetssäkring som stödjer professionellt omdöme utan att ersätta det. Bygger på strukturerade arbetssätt, svensk socialrättslig praktik och tydlig ansvarsfördelning — verktyget ska stödja kvalitet i professionella bedömningar, inte ersätta ansvariga yrkespersoner." data-en="Lupino is developing structured professional support for social services and child welfare: competence training, practice support, and quality assurance that supports professional judgement without replacing it. Built on structured working methods, Swedish social-legal practice, and clear lines of responsibility — the tool is meant to support quality in professional assessments, not replace responsible practitioners.">Lupino utvecklar strukturerat professionellt stöd för socialtjänst och barnavård: kompetensträning, praktikstöd och kvalitetssäkring som stödjer professionellt omdöme utan att ersätta det. Bygger på strukturerade arbetssätt, svensk socialrättslig praktik och tydlig ansvarsfördelning — verktyget ska stödja kvalitet i professionella bedömningar, inte ersätta ansvariga yrkespersoner.</p>
-        <a href="https://lupino.se" class="card-link" target="_blank" data-sv="Besök Lupino" data-en="Visit Lupino">Besök Lupino</a>
+        <figcaption class="portrait-caption">
+          <span><strong>Pan Härdfeldt</strong><span data-sv="Omdöme · system · berättelser" data-en="Judgement · systems · stories">Omdöme · system · berättelser</span></span>
+          <span class="city">Helsingborg · SE</span>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="signal-bar" aria-label="Kärnområden">
+    <div class="container signal-grid">
+      <div class="signal"><span class="signal-num">16</span><span><strong data-sv="Års erfarenhet" data-en="Years of experience">Års erfarenhet</strong><span data-sv="Socialt arbete och myndighetsutövning" data-en="Social work and public authority practice">Socialt arbete och myndighetsutövning</span></span></div>
+      <div class="signal"><span class="signal-num">01</span><span><strong>Surfacing</strong><span data-sv="Metoden under arbetet" data-en="The method beneath the work">Metoden under arbetet</span></span></div>
+      <div class="signal"><span class="signal-num">03</span><span><strong data-sv="AI-GameFriend-delar" data-en="AI-GameFriend layers">AI-GameFriend-delar</strong><span data-sv="Play · Plan &amp; Learn · Labs" data-en="Play · Plan &amp; Learn · Labs">Play · Plan &amp; Learn · Labs</span></span></div>
+      <div class="signal"><span class="signal-num">04</span><span><strong data-sv="Litterära projekt" data-en="Literary projects">Litterära projekt</strong><span data-sv="Romaner, noveller och kortprosa" data-en="Novels, stories and short prose">Romaner, noveller och kortprosa</span></span></div>
+    </div>
+  </section>
+
+  <section class="section" id="work">
+    <div class="container">
+      <div class="section-heading reveal">
+        <span class="section-kicker" data-sv="Arbetets fyra uttryck" data-en="Four expressions of the work">Arbetets fyra uttryck</span>
+        <h2 class="section-title" data-sv="Olika fält. Samma grundfråga." data-en="Different fields. One underlying question.">Olika fält. Samma grundfråga.</h2>
+        <p class="section-intro" data-sv="Hur kan människor se mer, tänka klarare och behålla ansvaret när informationen är ofullständig och konsekvenserna spelar roll? Den frågan återkommer i metodutveckling, AI-produkter, socialt arbete och litteratur." data-en="How can people see more, think more clearly and retain responsibility when information is incomplete and consequences matter? That question recurs across method development, AI products, social work and literature.">Hur kan människor se mer, tänka klarare och behålla ansvaret när informationen är ofullständig och konsekvenserna spelar roll? Den frågan återkommer i metodutveckling, AI-produkter, socialt arbete och litteratur.</p>
       </div>
 
-      <!-- Consulting -->
-      <div class="card reveal" id="consulting">
-        <div class="card-head">
-          <span class="card-icon">03</span>
-          <span class="status status-active" data-sv="Aktiv" data-en="Active">Aktiv</span>
+      <div class="pursuit-grid reveal">
+        <article class="pursuit-card">
+          <div class="pursuit-top"><span class="index-no">01</span><span class="status active" data-sv="Metod i utveckling" data-en="Method in development">Metod i utveckling</span></div>
+          <h3>Surfacing</h3>
+          <p data-sv="En metod för människa–AI-samarbete som synliggör antaganden, alternativ, mönster och konsekvenser utan att flytta det slutliga omdömet från människan." data-en="A method for human–AI collaboration that surfaces assumptions, alternatives, patterns and consequences without moving final judgement away from the human.">En metod för människa–AI-samarbete som synliggör antaganden, alternativ, mönster och konsekvenser utan att flytta det slutliga omdömet från människan.</p>
+          <a class="text-link" href="#surfacing" data-sv="Utforska metoden" data-en="Explore the method">Utforska metoden</a>
+        </article>
+
+        <article class="pursuit-card">
+          <div class="pursuit-top"><span class="index-no">02</span><span class="status alpha">Private Alpha</span></div>
+          <h3>AI-GameFriend</h3>
+          <p data-sv="Strategispel, beslutsverktyg och kontrollerade AI-simuleringar byggda kring begränsad information, låsta val och lärande från konsekvenser." data-en="Strategy games, decision tools and controlled AI simulations built around limited information, sealed choices and learning from consequences.">Strategispel, beslutsverktyg och kontrollerade AI-simuleringar byggda kring begränsad information, låsta val och lärande från konsekvenser.</p>
+          <a class="text-link" href="#ai-gamefriend" data-sv="Se utvecklingsläget" data-en="See development status">Se utvecklingsläget</a>
+        </article>
+
+        <article class="pursuit-card">
+          <div class="pursuit-top"><span class="index-no">03</span><span class="status manuscript" data-sv="Flera manus" data-en="Multiple manuscripts">Flera manus</span></div>
+          <h3 data-sv="Författarskap" data-en="Writing">Författarskap</h3>
+          <p data-sv="Litterär mörkerprosa, filosofisk fantastik och spekulativ systemfiktion om makt, kropp, skuld, berättelser och människans försök att bestämma vad livet betyder." data-en="Literary dark prose, philosophical speculative fiction and systems fiction about power, the body, guilt, stories and the human attempt to decide what life means.">Litterär mörkerprosa, filosofisk fantastik och spekulativ systemfiktion om makt, kropp, skuld, berättelser och människans försök att bestämma vad livet betyder.</p>
+          <a class="text-link" href="#authorship" data-sv="Se verken" data-en="Explore the works">Se verken</a>
+        </article>
+
+        <article class="pursuit-card">
+          <div class="pursuit-top"><span class="index-no">04</span><span class="status pre" data-sv="Praktik och produkt" data-en="Practice and product">Praktik och produkt</span></div>
+          <h3 data-sv="Social infrastruktur" data-en="Social infrastructure">Social infrastruktur</h3>
+          <p data-sv="Konsultarbete och produktutveckling för socialtjänst och barnavård: rättssäker praktik, strukturerat professionellt stöd och mänskligt ansvar i centrum." data-en="Consulting and product development for social services and child welfare: legally sound practice, structured professional support and human responsibility at the centre.">Konsultarbete och produktutveckling för socialtjänst och barnavård: rättssäker praktik, strukturerat professionellt stöd och mänskligt ansvar i centrum.</p>
+          <a class="text-link" href="#professional" data-sv="Se professionellt arbete" data-en="Explore professional work">Se professionellt arbete</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt" id="surfacing">
+    <div class="container method-grid">
+      <div class="method-statement reveal">
+        <span class="section-kicker">Surfacing</span>
+        <blockquote data-sv="AI ska inte ge dig ett omdöme. Den ska hjälpa dig att se <em>vad ditt omdöme behöver omfatta.</em>" data-en="AI should not give you a judgement. It should help you see <em>what your judgement needs to include.</em>">AI ska inte ge dig ett omdöme. Den ska hjälpa dig att se <em>vad ditt omdöme behöver omfatta.</em></blockquote>
+        <p data-sv="Människan behåller mål, etik, intuition och beslut. AI bidrar med perspektiv, jämförelse, minne, motargument och konsekvensanalys." data-en="The human retains goals, ethics, intuition and the decision. AI contributes perspective, comparison, memory, counterarguments and consequence analysis.">Människan behåller mål, etik, intuition och beslut. AI bidrar med perspektiv, jämförelse, minne, motargument och konsekvensanalys.</p>
+        <div class="offering-row">
+          <span class="offering" data-sv="Föreläsning" data-en="Talks">Föreläsning</span>
+          <span class="offering">Workshop</span>
+          <span class="offering">Advisory</span>
+          <span class="offering" data-sv="Tillämpad utveckling" data-en="Applied development">Tillämpad utveckling</span>
         </div>
-        <h3 class="card-title">Hardfeldt Moberg Consulting AB</h3>
-        <p class="card-subtitle" data-sv="Grundare · Konsulting · Socialt arbete" data-en="Founder · Consulting · Social work">Grundare · Konsulting · Socialt arbete</p>
-        <p class="card-text" data-sv="Kvalificerade konsulttjänster inom socialt arbete, med fokus på komplexa ärenden, rättssäker handläggning och stöd i situationer där kvalitet inte får gå förlorad under press. Erfarenhet från myndighetsutövning, barn och unga, behandlingsarbete och processföring vid förvaltningsrätt och kammarrätt." data-en="Qualified social work consulting, with a focus on complex cases, legally sound case management, and support in situations where quality cannot be lost under pressure. Experience from public-authority case management, child and youth services, treatment work, and legal representation in administrative and appellate courts.">Kvalificerade konsulttjänster inom socialt arbete, med fokus på komplexa ärenden, rättssäker handläggning och stöd i situationer där kvalitet inte får gå förlorad under press. Erfarenhet från myndighetsutövning, barn och unga, behandlingsarbete och processföring vid förvaltningsrätt och kammarrätt.</p>
-        <a href="/konsult/" class="card-link" data-sv="Läs mer →" data-en="Read more →">Läs mer →</a>
       </div>
 
-      <!-- NexTool -->
-      <div class="card reveal" id="nextool">
-        <div class="card-head">
-          <span class="card-icon">04</span>
-          <span class="status status-active" data-sv="Aktiv" data-en="Active">Aktiv</span>
+      <div class="reveal">
+        <div class="method-steps">
+          <article class="method-step">
+            <span>01</span>
+            <div>
+              <h3 data-sv="Gör det osynliga synligt" data-en="Make the unseen visible">Gör det osynliga synligt</h3>
+              <p data-sv="Skilj mellan vad som är känt, antaget och okänt. Synliggör alternativen som aldrig jämfördes, motståndarens perspektiv och kostnaden som gömmer sig efter den kortsiktiga vinsten." data-en="Separate what is known, assumed and unknown. Surface the alternatives never compared, the opponent's perspective and the cost hidden beyond the short-term gain.">Skilj mellan vad som är känt, antaget och okänt. Synliggör alternativen som aldrig jämfördes, motståndarens perspektiv och kostnaden som gömmer sig efter den kortsiktiga vinsten.</p>
+            </div>
+          </article>
+          <article class="method-step">
+            <span>02</span>
+            <div>
+              <h3 data-sv="Skapa kalibrerad friktion" data-en="Create calibrated friction">Skapa kalibrerad friktion</h3>
+              <p data-sv="Återkopplingen ska vara tillräckligt skarp för att utmana men tillräckligt precis för att vara användbar. Poängen är inte maximal kritik, utan rätt motstånd vid rätt tidpunkt." data-en="Feedback should be sharp enough to challenge and precise enough to be useful. The point is not maximum criticism, but the right resistance at the right moment.">Återkopplingen ska vara tillräckligt skarp för att utmana men tillräckligt precis för att vara användbar. Poängen är inte maximal kritik, utan rätt motstånd vid rätt tidpunkt.</p>
+            </div>
+          </article>
+          <article class="method-step">
+            <span>03</span>
+            <div>
+              <h3 data-sv="Lås val och lär av utfallet" data-en="Commit and learn from outcomes">Lås val och lär av utfallet</h3>
+              <p data-sv="Ett beslut blir lärbart först när den egna avsikten bevaras och jämförs med det som faktiskt hände. Därför skiljer Surfacing mellan beslut, efterhandsförklaring och verifierad konsekvens." data-en="A decision becomes learnable only when the original intention is preserved and compared with what actually happened. Surfacing therefore separates the decision, the later interpretation and the verified consequence.">Ett beslut blir lärbart först när den egna avsikten bevaras och jämförs med det som faktiskt hände. Därför skiljer Surfacing mellan beslut, efterhandsförklaring och verifierad konsekvens.</p>
+            </div>
+          </article>
+          <article class="method-step">
+            <span>04</span>
+            <div>
+              <h3 data-sv="För tillbaka förmågan till människan" data-en="Return capability to the human">För tillbaka förmågan till människan</h3>
+              <p data-sv="Målet är ökad självständighet, inte ett permanent beroende av modellen. Ett välfungerande stöd ska gradvis göra användarens egen blick skarpare." data-en="The goal is greater independence, not permanent dependence on the model. Effective support should gradually sharpen the user's own perception.">Målet är ökad självständighet, inte ett permanent beroende av modellen. Ett välfungerande stöd ska gradvis göra användarens egen blick skarpare.</p>
+            </div>
+          </article>
         </div>
-        <h3 class="card-title">NexTool</h3>
-        <p class="card-subtitle" data-sv="Grundare · Verktygsplattform" data-en="Founder · Tool platform">Grundare · Verktygsplattform</p>
-        <p class="card-text" data-sv="NexTool är en verktygsplattform med kalkylatorer och beslutsstöd för privatekonomi, investeringar, företagande och analys. Plattformen rymmer också AI-GameFriend." data-en="NexTool is a tool platform with calculators and decision support for personal finance, investing, entrepreneurship, and analysis. The platform also hosts AI-GameFriend.">NexTool är en verktygsplattform med kalkylatorer och beslutsstöd för privatekonomi, investeringar, företagande och analys. Plattformen rymmer också AI-GameFriend.</p>
-        <a href="https://getnextool.com" class="card-link" target="_blank" data-sv="Öppna NexTool" data-en="Open NexTool">Öppna NexTool</a>
+
+        <aside class="evidence-note">
+          <strong data-sv="Bevisgräns" data-en="Evidence boundary">Bevisgräns</strong>
+          <p data-sv="Surfacing har vuxit fram genom dokumenterad tillämpning i skrivande, produktutveckling och strategiskt beslutsarbete. Det litterära utvecklingscaset omfattar nu tre färdigskrivna större manus under ungefär sju månader samt en pågående kortprosacykel. Det är ett utvecklingscase — inte en universellt validerad effektgaranti. Varje ny domän kräver egen prövning." data-en="Surfacing has emerged through documented application in writing, product development and strategic decision work. The literary development case now includes three completed major manuscripts across roughly seven months, as well as an ongoing short-prose cycle. It is a development case — not a universally validated guarantee of effect. Every new domain requires its own testing.">Surfacing har vuxit fram genom dokumenterad tillämpning i skrivande, produktutveckling och strategiskt beslutsarbete. Det litterära utvecklingscaset omfattar nu tre färdigskrivna större manus under ungefär sju månader samt en pågående kortprosacykel. Det är ett utvecklingscase — inte en universellt validerad effektgaranti. Varje ny domän kräver egen prövning.</p>
+        </aside>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Literature -->
-<section id="literature">
-  <div class="container">
-    <div class="reveal">
-      <span class="imprint-mark">AXIOM</span>
-      <span class="section-label" data-sv="Litteratur" data-en="Literature">Litteratur</span>
-      <h2 class="section-title" data-sv="Tre verk söker förlag." data-en="Three works seeking a publisher.">Tre verk söker förlag.</h2>
-      <p class="imprint-tagline" data-sv="AXIOM är Pan Härdfeldts litterära signatur för folkloristisk gotik, moralpsykologisk skräck och klinisk science fiction." data-en="AXIOM is Pan Härdfeldt's literary signature for folkloristic gothic, moral-psychological horror, and clinical science fiction.">AXIOM är Pan Härdfeldts litterära signatur för folkloristisk gotik, moralpsykologisk skräck och klinisk science fiction.</p>
-      <p class="section-desc" data-sv="Förlagsintresse välkomnas via kontakt." data-en="Publishing inquiries welcome via contact.">Förlagsintresse välkomnas via kontakt.</p>
-    </div>
-
-    <div class="cards">
-      <div class="card reveal">
-        <h3 class="card-title" data-sv="Mörkret vissa bär" data-en="Mörkret vissa bär">Mörkret vissa bär</h3>
-        <p class="card-subtitle" data-sv="Novellsamling · inskickad till förlag" data-en="Short story collection · submitted to publishers">Novellsamling · inskickad till förlag</p>
-        <p class="card-text" data-sv="En psykolog böjer sig fram och suger på sin patients ärr. Ur ärret stiger femton berättelser — och varje berättelse bär på ett mörker som inte kan förklaras bort." data-en="A psychologist leans forward and sucks on her patient's scar. From the scar rise fifteen stories — and each story carries a darkness that cannot be explained away.">En psykolog böjer sig fram och suger på sin patients ärr. Ur ärret stiger femton berättelser — och varje berättelse bär på ett mörker som inte kan förklaras bort.</p>
-        <p class="book-quote" data-sv="Novellerna rör sig mellan folkloristisk gotik, moralpsykologisk skräck och klinisk science fiction. De delar en gemensam fråga som aldrig ställs högt: vad händer med den som ser allt men inte känner något?" data-en="The stories move between folkloristic gothic, moral-psychological horror, and clinical science fiction. They share a common question never asked aloud: what happens to the one who sees everything but feels nothing?">Novellerna rör sig mellan folkloristisk gotik, moralpsykologisk skräck och klinisk science fiction. De delar en gemensam fråga som aldrig ställs högt: vad händer med den som ser allt men inte känner något?</p>
+  <section class="section" id="ai-gamefriend">
+    <div class="container">
+      <div class="section-heading reveal">
+        <span class="section-kicker">AI-GameFriend · Private Alpha</span>
+        <h2 class="section-title" data-sv="Tänk före draget. Lås beslutet. Möt konsekvensen." data-en="Think before the move. Seal the decision. Face the consequence.">Tänk före draget. Lås beslutet. Möt konsekvensen.</h2>
+        <p class="section-intro" data-sv="AI-GameFriend är ett strategi- och AI-projekt för människor som tycker att besluten är lika intressanta som resultaten. Det förenar ett eget fantasystrategispel, ett strukturerat beslutsverktyg och kontrollerade AI-simuleringar." data-en="AI-GameFriend is a strategy and AI project for people who find decisions as interesting as results. It combines an original fantasy strategy game, a structured decision tool and controlled AI simulations.">AI-GameFriend är ett strategi- och AI-projekt för människor som tycker att besluten är lika intressanta som resultaten. Det förenar ett eget fantasystrategispel, ett strukturerat beslutsverktyg och kontrollerade AI-simuleringar.</p>
       </div>
 
-      <div class="card reveal">
-        <h3 class="card-title" data-sv="Arior av bot och plikt" data-en="Arior av bot och plikt">Arior av bot och plikt</h3>
-        <p class="card-subtitle" data-sv="Medeltida fantasy · under revision" data-en="Medieval fantasy · in revision">Medeltida fantasy · under revision</p>
-        <p class="card-text" data-sv="Krönikören Griphus läser berättelser för prins Fredric — en man vars grandiositet döljer en tomhet han inte kan namnge. Fredric är charmerande, kvick och farlig; Griphus observerar, skriver krönika, röker sin pipa och säger nästan ingenting. Ändå är det Griphus som bär verkets enda handling." data-en="The chronicler Griphus reads stories to Prince Fredric — a man whose grandiosity conceals an emptiness he cannot name. Fredric is charming, quick-witted, and dangerous; Griphus observes, writes chronicle, smokes his pipe, and says almost nothing. Yet it is Griphus who carries the work's only action.">Krönikören Griphus läser berättelser för prins Fredric — en man vars grandiositet döljer en tomhet han inte kan namnge. Fredric är charmerande, kvick och farlig; Griphus observerar, skriver krönika, röker sin pipa och säger nästan ingenting. Ändå är det Griphus som bär verkets enda handling.</p>
-        <p class="book-quote" data-sv="Satirisk dialog, moralpsykologisk blick — och en slutrad som bär hela verket: ”En sista pipstopp bara.”" data-en="Satirical dialogue, a moral-psychological eye — and a final line that carries the whole work: ”En sista pipstopp bara.”">Satirisk dialog, moralpsykologisk blick — och en slutrad som bär hela verket: ”En sista pipstopp bara.”</p>
-      </div>
-
-      <div class="card full-width reveal">
-        <h3 class="card-title"><span data-sv="Ett gudomligt maskineri" data-en="Ett gudomligt maskineri">Ett gudomligt maskineri</span><span class="wip-tag" data-sv="Slutredigering" data-en="Final edit">Slutredigering</span></h3>
-        <p class="card-subtitle" data-sv="Science fiction-roman i tre delar" data-en="Science-fiction novel in three parts">Science fiction-roman i tre delar</p>
-        <p class="card-text" data-sv="Ett sönderfallande imperium där gudar skapas av byråkrater och byråkrater förgörs av gudar. Del I, Hortus Gratia: kejsarinnan har utropat det heliga korståget, och utredaren Vladimir väger varje beslut juridiskt och gudomligt. Del II, Purgatorio in machina: en familj ombord på dödens ark. Del III, Notas et silentium: barnets sista anteckningar. Tystnad och fall." data-en="A crumbling empire where gods are made by bureaucrats and bureaucrats are undone by gods. Part I, Hortus Gratia: the empress has declared the holy crusade, and the investigator Vladimir weighs every decision legally and divinely. Part II, Purgatorio in machina: a family aboard death's ark. Part III, Notas et silentium: the child's last notes. Silence and fall.">Ett sönderfallande imperium där gudar skapas av byråkrater och byråkrater förgörs av gudar. Del I, Hortus Gratia: kejsarinnan har utropat det heliga korståget, och utredaren Vladimir väger varje beslut juridiskt och gudomligt. Del II, Purgatorio in machina: en familj ombord på dödens ark. Del III, Notas et silentium: barnets sista anteckningar. Tystnad och fall.</p>
-        <p class="book-quote" data-sv="Han ser och hör. Inom honom uppstår sprickor som blir revor. När världen sätts i brand brinner även han. En berättelse om vad lydnaden kostar den som fortfarande kan se." data-en="Han ser och hör. Inom honom uppstår sprickor som blir revor. När världen sätts i brand brinner även han. En berättelse om vad lydnaden kostar den som fortfarande kan se.">Han ser och hör. Inom honom uppstår sprickor som blir revor. När världen sätts i brand brinner även han. En berättelse om vad lydnaden kostar den som fortfarande kan se.</p>
-      </div>
-    </div>
-
-    <!-- Fem axiom för min prosa -->
-    <div class="surface-block reveal">
-      <h3 class="surface-h3" data-sv="Fem axiom för min prosa" data-en="Five axioms for my prose">Fem axiom för min prosa</h3>
-      <p data-sv="Grundsatserna som styr arbetet — oavsett genre, form eller röst." data-en="The principles that govern the work — regardless of genre, form, or voice.">Grundsatserna som styr arbetet — oavsett genre, form eller röst.</p>
-    </div>
-
-    <ol class="principles">
-      <li class="reveal">
-        <span class="p-num">I</span>
-        <div>
-          <h3 data-sv="Repliken bär mer än talaren vet." data-en="The line carries more than the speaker knows.">Repliken bär mer än talaren vet.</h3>
-          <p data-sv="Mina karaktärer avslöjar sig genom vad de säger — och framför allt genom vad de inte säger. Dialogen är inte samtal. Den är det ögonblick masken glider." data-en="My characters reveal themselves through what they say — and above all through what they don't say. Dialogue is not conversation. It is the moment the mask slips.">Mina karaktärer avslöjar sig genom vad de säger — och framför allt genom vad de inte säger. Dialogen är inte samtal. Den är det ögonblick masken glider.</p>
+      <div class="game-shell reveal">
+        <div class="game-topline">
+          <span>AI-GameFriend / Development truth</span>
+          <span class="live-dot">Private Alpha · 23.07.2026</span>
         </div>
-      </li>
-      <li class="reveal">
-        <span class="p-num">II</span>
-        <div>
-          <h3 data-sv="Barnet under den vuxne." data-en="The child beneath the adult.">Barnet under den vuxne.</h3>
-          <p data-sv="Varje karaktär jag skriver bär ett barn — oavsett makt, titel eller ålder. Barnet styr. Den vuxne kompenserar. Sprickan däremellan är berättelsen." data-en="Every character I write carries a child — regardless of power, title, or age. The child rules. The adult compensates. The crack between them is the story.">Varje karaktär jag skriver bär ett barn — oavsett makt, titel eller ålder. Barnet styr. Den vuxne kompenserar. Sprickan däremellan är berättelsen.</p>
+
+        <div class="game-intro">
+          <h3 data-sv="Tre lager. <em>En beslutskärna.</em>" data-en="Three layers. <em>One decision core.</em>">Tre lager. <em>En beslutskärna.</em></h3>
+          <div class="game-copy">
+            <p data-sv="Spelaren tänker först. AI-rivalen får inte fuska med dold information. Fakta hålls isär från modellens tolkning. Beslut och utfall sparas så att kampanjen kan bli ett strategiskt minne." data-en="The player thinks first. The AI rival may not cheat with hidden information. Facts remain separate from model interpretation. Decisions and outcomes are preserved so the campaign can become a strategic memory.">Spelaren tänker först. AI-rivalen får inte fuska med dold information. Fakta hålls isär från modellens tolkning. Beslut och utfall sparas så att kampanjen kan bli ett strategiskt minne.</p>
+            <p data-sv="Projektet utvecklas aktivt men är ännu inte en offentlig beta eller en färdig kommersiell produkt." data-en="The project is under active development, but is not yet a public beta or a finished commercial product.">Projektet utvecklas aktivt men är ännu inte en offentlig beta eller en färdig kommersiell produkt.</p>
+          </div>
         </div>
-      </li>
-      <li class="reveal">
-        <span class="p-num">III</span>
-        <div>
-          <h3 data-sv="Detaljen föder världen." data-en="The detail gives birth to the world.">Detaljen föder världen.</h3>
-          <p data-sv="En piprök, ett ägg i munnen, en glipande skjorta. Mina berättelser börjar med ett fragment — en enda sensorisk detalj — och karaktären växer ur den. Inte tvärtom." data-en="A pipe-smoke, an egg in the mouth, a gaping shirt. My stories begin with a fragment — a single sensory detail — and the character grows out of it. Not the other way around.">En piprök, ett ägg i munnen, en glipande skjorta. Mina berättelser börjar med ett fragment — en enda sensorisk detalj — och karaktären växer ur den. Inte tvärtom.</p>
+
+        <ol class="decision-loop" aria-label="AI-GameFriend beslutsloop">
+          <li class="loop-node"><span>01</span><strong data-sv="Rapporter" data-en="Reports">Rapporter</strong></li>
+          <li class="loop-node"><span>02</span><strong data-sv="Rådslag" data-en="Counsel">Rådslag</strong></li>
+          <li class="loop-node"><span>03</span><strong data-sv="Tre order" data-en="Three orders">Tre order</strong></li>
+          <li class="loop-node"><span>04</span><strong>Reveal</strong></li>
+          <li class="loop-node"><span>05</span><strong data-sv="Konsekvens" data-en="Consequence">Konsekvens</strong></li>
+        </ol>
+
+        <div class="game-modules">
+          <article class="game-module">
+            <span class="module-mode">Play</span>
+            <h4>Crown &amp; Counsel</h4>
+            <p data-sv="Ett turbaserat fantasystrategispel om makt, begränsad information och tre förseglade order. Fyra asymmetriska factions — Ashenfell, Wilden, Korth och Cognacia — möts genom en dold stridsmotor. En verifierad krönika skiljer det som hände från vad rådgivaren tror hände." data-en="A turn-based fantasy strategy game about power, limited information and three sealed orders. Four asymmetric factions — Ashenfell, Wilden, Korth and Cognacia — meet through a hidden combat engine. A verified Chronicle separates what happened from what the adviser thinks happened.">Ett turbaserat fantasystrategispel om makt, begränsad information och tre förseglade order. Fyra asymmetriska factions — Ashenfell, Wilden, Korth och Cognacia — möts genom en dold stridsmotor. En verifierad krönika skiljer det som hände från vad rådgivaren tror hände.</p>
+            <span class="module-proof" data-sv="Nu: spelbar lordship-prototyp. Nästa bevis: Sovereignty-versionen med riktig karta, rosters och djupare konsekvenser." data-en="Now: playable lordship prototype. Next proof: the Sovereignty version with a real map, rosters and deeper consequences.">Nu: spelbar lordship-prototyp. Nästa bevis: Sovereignty-versionen med riktig karta, rosters och djupare konsekvenser.</span>
+          </article>
+
+          <article class="game-module">
+            <span class="module-mode">Plan &amp; Learn</span>
+            <h4>Strategy War Room</h4>
+            <p data-sv="Ett beslutsverktyg för egna strategispel. Det skiljer känt från antaget och okänt, jämför verkligt olika planer, prövar motdrag och låter spelaren låsa sitt eget val före analysen av utfallet." data-en="A decision tool for the player's own strategy games. It separates known, assumed and unknown, compares genuinely different plans, tests counterplay and lets the player seal a choice before analysing the outcome.">Ett beslutsverktyg för egna strategispel. Det skiljer känt från antaget och okänt, jämför verkligt olika planer, prövar motdrag och låter spelaren låsa sitt eget val före analysen av utfallet.</p>
+            <span class="module-proof" data-sv="Nu: fungerande planerings-, commitment- och review-loop med lokal historik och export." data-en="Now: a working planning, commitment and review loop with local history and export.">Nu: fungerande planerings-, commitment- och review-loop med lokal historik och export.</span>
+          </article>
+
+          <article class="game-module">
+            <span class="module-mode">Labs</span>
+            <h4>AI House</h4>
+            <p data-sv="En experimentell miljö där AI-aktörer agerar i kontrollerade scenarier med roller, privata mål, begränsade handlingar och observerbara konsekvenser. Modeller kan jämföras under samma regler och informationsgränser." data-en="An experimental environment where AI actors operate in controlled scenarios with roles, private goals, limited actions and observable consequences. Models can be compared under the same rules and information boundaries.">En experimentell miljö där AI-aktörer agerar i kontrollerade scenarier med roller, privata mål, begränsade handlingar och observerbara konsekvenser. Modeller kan jämföras under samma regler och informationsgränser.</p>
+            <span class="module-proof" data-sv="Nu: fungerande simulations- och rapportgrund. Labs är en utvecklingsyta, inte produktens huvudingång." data-en="Now: a working simulation and reporting foundation. Labs is a development surface, not the product's main entry point.">Nu: fungerande simulations- och rapportgrund. Labs är en utvecklingsyta, inte produktens huvudingång.</span>
+          </article>
         </div>
-      </li>
-      <li class="reveal">
-        <span class="p-num">IV</span>
-        <div>
-          <h3 data-sv="Slutraden bär verket." data-en="The final line carries the work.">Slutraden bär verket.</h3>
-          <p data-sv="Jag skriver mot slutet. Varje berättelse konvergerar mot ett ögonblick — en gest, en mening, en tystnad — som samlar allt som föregått det. Om slutraden inte bär har ingenting burit." data-en="I write toward the ending. Every story converges on a single moment — a gesture, a sentence, a silence — that gathers everything that came before. If the final line doesn't carry, nothing has carried.">Jag skriver mot slutet. Varje berättelse konvergerar mot ett ögonblick — en gest, en mening, en tystnad — som samlar allt som föregått det. Om slutraden inte bär har ingenting burit.</p>
+
+        <div class="guardrail-row" role="group" aria-label="Produktgränser">
+          <span data-sv="Manuell och pause-friendly användning" data-en="Manual, pause-friendly use">Manuell och pause-friendly användning</span>
+          <span data-sv="Ingen läsning av save-filer eller dold speldata" data-en="No reading of save files or hidden game data">Ingen läsning av save-filer eller dold speldata</span>
+          <span data-sv="Local-first där det är möjligt" data-en="Local-first where possible">Local-first där det är möjligt</span>
+          <span data-sv="Ingen personlighetsdiagnostik eller autopilot" data-en="No personality diagnosis or autopilot">Ingen personlighetsdiagnostik eller autopilot</span>
         </div>
-      </li>
-      <li class="reveal">
-        <span class="p-num">V</span>
-        <div>
-          <h3 data-sv="Varje verk kräver sin egen röst." data-en="Every work demands its own voice.">Varje verk kräver sin egen röst.</h3>
-          <p data-sv="Medeltida krönika, klinisk science fiction, satirisk grotesk, mörk psykologi, samtidsrealism — jag skriver inte i en stil. Jag skriver i den stil berättelsen kräver. Författarens uppgift är att försvinna in i verket." data-en="Medieval chronicle, clinical science fiction, satirical grotesque, dark psychology, contemporary realism — I don't write in one style. I write in the style the story demands. The author's task is to disappear into the work.">Medeltida krönika, klinisk science fiction, satirisk grotesk, mörk psykologi, samtidsrealism — jag skriver inte i en stil. Jag skriver i den stil berättelsen kräver. Författarens uppgift är att försvinna in i verket.</p>
+
+        <div class="truth-row">
+          <strong data-sv="Vägen mot beta" data-en="Path to beta">Vägen mot beta</strong>
+          <span data-sv="Founder-retest → observerade externa tester → blockerfixar → liten closed beta → bevis på återspelning och retention." data-en="Founder retest → observed external testing → blocker fixes → small closed beta → evidence of replay and retention.">Founder-retest → observerade externa tester → blockerfixar → liten closed beta → bevis på återspelning och retention.</span>
+          <a class="button" href="mailto:pan.hardfeldt@gmail.com?subject=AI-GameFriend%20private%20alpha" data-sv="Intresse för testning" data-en="Testing interest">Intresse för testning</a>
         </div>
-      </li>
-    </ol>
-  </div>
-</section>
-
-<!-- Methods — public name: Surfacing (id stays #method for inbound link compat) -->
-<section id="method">
-  <div class="container">
-    <header class="reveal">
-      <span class="section-label" data-sv="Surfacing" data-en="Surfacing">Surfacing</span>
-      <h2 class="section-title surfacing-hero" data-sv="Du bär mer kapacitet än du använder." data-en="You carry more capacity than you use.">Du bär mer kapacitet än du använder.</h2>
-      <p class="section-desc surfacing-lead" data-sv="De flesta utvecklingsmetoder utgår från att du börjar från noll. Det stämmer sällan. Du har decenniers erfarenhet, intuition och omdöme — men ingen kanal för det. Surfacing gör den kapaciteten synlig och operativ." data-en="Most development methods assume you start from zero. That's rarely the case. You carry decades of experience, intuition, and judgement — but no channel for it. Surfacing makes that capacity visible and operative.">De flesta utvecklingsmetoder utgår från att du börjar från noll. Det stämmer sällan. Du har decenniers erfarenhet, intuition och omdöme — men ingen kanal för det. Surfacing gör den kapaciteten synlig och operativ.</p>
-    </header>
-
-    <!-- Vad Surfacing är -->
-    <div class="surface-block reveal">
-      <h3 class="surface-h3" data-sv="Vad Surfacing är" data-en="What Surfacing is">Vad Surfacing är</h3>
-      <p data-sv="Surfacing är en metod för att frigöra latent mänsklig kapacitet med hjälp av AI som kalibrerad spegel. Metoden bygger på en enkel observation: människor bär mer kompetens, perception och omdöme än de använder. Rätt struktur kan göra den kapaciteten tillgänglig på veckor istället för år." data-en="Surfacing is a method for releasing latent human capacity using AI as a calibrated mirror. The method rests on a simple observation: people carry more competence, perception, and judgement than they use. The right structure can make that capacity accessible in weeks rather than years.">Surfacing är en metod för att frigöra latent mänsklig kapacitet med hjälp av AI som kalibrerad spegel. Metoden bygger på en enkel observation: människor bär mer kompetens, perception och omdöme än de använder. Rätt struktur kan göra den kapaciteten tillgänglig på veckor istället för år.</p>
-      <p data-sv="Surfacing ersätter inte terapi eller coaching. Den ersätter inte heller utbildning — men den kan göra utbildning snabbare genom att synliggöra den inlärningsförmåga som redan finns och korta återkopplingsloopen från veckor till minuter. Surfacing löser det specifika problem som ingen av dessa löser: att göra det redan befintliga synligt, prövbart och självständigt." data-en="Surfacing does not replace therapy or coaching. Nor does it replace education — but it can make education faster by surfacing the learning capacity that is already there and shortening the feedback loop from weeks to minutes. Surfacing solves the specific problem none of these solve: making what already exists visible, testable, and independent.">Surfacing ersätter inte terapi eller coaching. Den ersätter inte heller utbildning — men den kan göra utbildning snabbare genom att synliggöra den inlärningsförmåga som redan finns och korta återkopplingsloopen från veckor till minuter. Surfacing löser det specifika problem som ingen av dessa löser: att göra det redan befintliga synligt, prövbart och självständigt.</p>
-      <p class="closing-line" data-sv="Metodens namn: det som var under ytan bryter igenom." data-en="The method's name: what was below the surface breaks through.">Metodens namn: det som var under ytan bryter igenom.</p>
+      </div>
     </div>
+  </section>
 
-    <!-- Mekanismen -->
-    <div class="surface-block reveal">
-      <h3 class="surface-h3" data-sv="Mekanismen" data-en="The mechanism">Mekanismen</h3>
-      <p data-sv="Surfacing fungerar genom att göra det redan befintliga synligt, utsätta det för kalibrerad friktion och korta loopen mellan försök, återkoppling och korrigering. Målet är inte beroende av AI, utan att bedömningsförmågan gradvis flyttas tillbaka till människan." data-en="Surfacing works by making what is already there visible, exposing it to calibrated friction, and shortening the loop between attempt, feedback, and correction. The goal is not dependence on AI, but for judgement to be gradually moved back to the human.">Surfacing fungerar genom att göra det redan befintliga synligt, utsätta det för kalibrerad friktion och korta loopen mellan försök, återkoppling och korrigering. Målet är inte beroende av AI, utan att bedömningsförmågan gradvis flyttas tillbaka till människan.</p>
+  <section class="section alt" id="authorship">
+    <div class="container">
+      <div class="section-heading reveal">
+        <span class="section-kicker" data-sv="Författarskap" data-en="Writing">Författarskap</span>
+        <h2 class="section-title" data-sv="Prosa där kroppen tänker och rummet dömer." data-en="Prose where the body thinks and the room passes judgement.">Prosa där kroppen tänker och rummet dömer.</h2>
+        <p class="section-intro" data-sv="Pan Härdfeldt skriver litterär mörkerprosa, filosofisk fantastik och spekulativ systemfiktion. Verken rör sig mellan svensk folkgotik, hovsatir, fabel och science fiction — med fokus på makt, kropp, skuld och berättelsernas verkningar." data-en="Pan Härdfeldt writes literary dark prose, philosophical speculative fiction and systems fiction. The works move between Swedish folk gothic, court satire, fable and science fiction — focused on power, the body, guilt and the effects of stories.">Pan Härdfeldt skriver litterär mörkerprosa, filosofisk fantastik och spekulativ systemfiktion. Verken rör sig mellan svensk folkgotik, hovsatir, fabel och science fiction — med fokus på makt, kropp, skuld och berättelsernas verkningar.</p>
+      </div>
+
+      <div class="works-grid reveal">
+        <article class="work-card">
+          <span class="work-form" data-sv="Mörk novellsvit · svensk folkgotik" data-en="Dark story cycle · Swedish folk gothic">Mörk novellsvit · svensk folkgotik</span>
+          <h3>Mörkret vissa bär</h3>
+          <p data-sv="En mörk novellsvit om kropp, skuld och de system människor bygger för att dölja vad de gör mot varandra." data-en="A dark story cycle about the body, guilt and the systems people build to hide what they do to one another.">En mörk novellsvit om kropp, skuld och de system människor bygger för att dölja vad de gör mot varandra.</p>
+          <span class="work-status" data-sv="Färdigt manus · i förlagsprocess" data-en="Completed manuscript · in publisher submission process">Färdigt manus · i förlagsprocess</span>
+        </article>
+
+        <article class="work-card">
+          <span class="work-form" data-sv="Filosofisk hovkrönika · litterär fabelroman" data-en="Philosophical court chronicle · literary fable novel">Filosofisk hovkrönika · litterär fabelroman</span>
+          <h3>Arior av plikt och förlåtelse</h3>
+          <p data-sv="En krönikör försöker fostra en prins genom berättelser — och prinsen lär sig använda berättelserna som vapen." data-en="A chronicler tries to educate a prince through stories — and the prince learns to use those stories as weapons.">En krönikör försöker fostra en prins genom berättelser — och prinsen lär sig använda berättelserna som vapen.</p>
+          <span class="work-status" data-sv="Färdigskrivet · Del I låst · Del II–III under revision" data-en="Complete draft · Part I locked · Parts II–III in revision">Färdigskrivet · Del I låst · Del II–III under revision</span>
+        </article>
+
+        <article class="work-card">
+          <span class="work-form" data-sv="Spekulativ systemroman · filosofisk science fiction" data-en="Speculative systems novel · philosophical science fiction">Spekulativ systemroman · filosofisk science fiction</span>
+          <h3>Det gudomliga maskineriet</h3>
+          <p data-sv="Ett verk i Hortus Gratia-världen om gudomliga system, helig byråkrati och skapade varelser som försöker avgöra vem som egentligen styr maskineriet." data-en="A work set in the world of Hortus Gratia, about divine systems, sacred bureaucracy and created beings trying to determine who truly controls the machinery.">Ett verk i Hortus Gratia-världen om gudomliga system, helig byråkrati och skapade varelser som försöker avgöra vem som egentligen styr maskineriet.</p>
+          <span class="work-status" data-sv="Färdigskrivet i tre delar · under revision" data-en="Complete in three parts · under revision">Färdigskrivet i tre delar · under revision</span>
+        </article>
+
+        <article class="work-card">
+          <span class="work-form" data-sv="Kortprosacykel · perceptionstexter" data-en="Short prose cycle · texts on perception">Kortprosacykel · perceptionstexter</span>
+          <h3>Ögon, öron och spegelglas</h3>
+          <p data-sv="Minst arton korta texter om seende, lyssnande och de ytor som både visar och förvränger människan." data-en="At least eighteen short texts about seeing, listening and the surfaces that both reveal and distort the human being.">Minst arton korta texter om seende, lyssnande och de ytor som både visar och förvränger människan.</p>
+          <span class="work-status" data-sv="Pågående kortprosacykel" data-en="Ongoing short prose cycle">Pågående kortprosacykel</span>
+        </article>
+      </div>
     </div>
+  </section>
 
-    <div class="manifesto-statement reveal">
-      <p data-sv="AI används inte som ersättare för människans omdöme, utan som spegel, motståndsyta och kalibreringsinstrument. Målet är inte bara bättre output, utan bättre seende, bättre självdiagnos och större självständighet." data-en="AI is used not as a replacement for human judgement, but as a mirror, a surface of resistance, and an instrument of calibration. The goal isn't only better output, but better seeing, better self-diagnosis, and greater independence.">AI används inte som ersättare för människans omdöme, utan som spegel, motståndsyta och kalibreringsinstrument. Målet är inte bara bättre output, utan bättre seende, bättre självdiagnos och större självständighet.</p>
-    </div>
-
-    <ol class="principles">
-      <li class="reveal">
-        <span class="p-num">01</span>
-        <div>
-          <h3 data-sv="Börja i befintlig kapacitet" data-en="Start from existing capacity">Börja i befintlig kapacitet</h3>
-          <p data-sv="De flesta utvecklingsmodeller antar att användaren börjar från noll. Det stämmer sällan. Människor bär erfarenhet, intuition och mönster som saknar kanal. Surfacing börjar därför med att kartlägga och namnge det som redan finns, snarare än att lära ut grunderna i något främmande." data-en="Most development models assume the user starts from zero. That's rarely the case. People carry experience, intuition, and patterns that lack a channel. Surfacing therefore begins by mapping and naming what is already there, rather than teaching the basics of something foreign.">De flesta utvecklingsmodeller antar att användaren börjar från noll. Det stämmer sällan. Människor bär erfarenhet, intuition och mönster som saknar kanal. Surfacing börjar därför med att kartlägga och namnge det som redan finns, snarare än att lära ut grunderna i något främmande.</p>
+  <section class="section" id="prose">
+    <div class="container">
+      <div class="prose-panel reveal">
+        <p class="prose-quote" data-sv="En prosa som <em>hörs</em> innan den förstås." data-en="Prose that is <em>heard</em> before it is understood.">En prosa som <em>hörs</em> innan den förstås.</p>
+        <div class="prose-copy">
+          <p data-sv="Rytm, andning och avbrott går före grammatisk regularitet. Figuren existerar som ljud innan hon förklaras som psykologi; det historiska registret fungerar som en mask som komprimerar både ömhet och grymhet. Under replikerna ligger en motivarkitektur där föremål, rum och återkomster bär ränta." data-en="Rhythm, breath and interruption precede grammatical regularity. A character exists as sound before being explained as psychology; the historical register acts as a mask that compresses tenderness and cruelty alike. Beneath the dialogue lies an architecture of motifs in which objects, rooms and recurrences accrue meaning.">Rytm, andning och avbrott går före grammatisk regularitet. Figuren existerar som ljud innan hon förklaras som psykologi; det historiska registret fungerar som en mask som komprimerar både ömhet och grymhet. Under replikerna ligger en motivarkitektur där föremål, rum och återkomster bär ränta.</p>
+          <ul class="prose-signals" aria-label="Prosans kännetecken">
+            <li data-sv="Dialog som händelse" data-en="Dialogue as event">Dialog som händelse</li>
+            <li data-sv="Det osagda bär" data-en="The unsaid carries">Det osagda bär</li>
+            <li data-sv="Historisk mask" data-en="Historical mask">Historisk mask</li>
+            <li data-sv="Moralisk grotesk" data-en="Moral grotesque">Moralisk grotesk</li>
+            <li data-sv="Motiv med minne" data-en="Motifs with memory">Motiv med minne</li>
+          </ul>
+          <a class="text-link" href="mailto:pan.hardfeldt@gmail.com?subject=Litter%C3%A4r%20kontakt" data-sv="Förlags- och rättighetsfrågor" data-en="Publishing and rights inquiries">Förlags- och rättighetsfrågor</a>
         </div>
-      </li>
-      <li class="reveal">
-        <span class="p-num">02</span>
-        <div>
-          <h3 data-sv="Ge kalibrerad friktion" data-en="Provide calibrated friction">Ge kalibrerad friktion</h3>
-          <p data-sv="Motståndet ska vara sant, smalt och bärbart — tillräckligt för att utmana, inte så mycket att det förlamar. AI:n fungerar som en stabil referenspunkt utan social kalibrering: ingen anpassning efter humör, status eller förväntan. Återkopplingen pekar på något specifikt, inte vagt beröm eller generellt missnöje." data-en="The resistance should be true, narrow, and bearable — enough to challenge, not so much that it paralyses. AI functions as a stable reference point without social calibration: no adjustment for mood, status, or expectation. Feedback points to something specific, not vague praise or general dissatisfaction.">Motståndet ska vara sant, smalt och bärbart — tillräckligt för att utmana, inte så mycket att det förlamar. AI:n fungerar som en stabil referenspunkt utan social kalibrering: ingen anpassning efter humör, status eller förväntan. Återkopplingen pekar på något specifikt, inte vagt beröm eller generellt missnöje.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt" id="professional">
+    <div class="container">
+      <div class="section-heading reveal">
+        <span class="section-kicker" data-sv="Professionellt arbete" data-en="Professional work">Professionellt arbete</span>
+        <h2 class="section-title" data-sv="Från komplex praktik till användbara system." data-en="From complex practice to useful systems.">Från komplex praktik till användbara system.</h2>
+        <p class="section-intro" data-sv="Sexton års erfarenhet från socialt arbete är inte en sidogren i projekten. Den är deras realitetskontroll: tydliga ansvarslinjer, mänsklig konsekvens och kvalitet som måste hålla även under press." data-en="Sixteen years of experience in social work is not a side branch of the projects. It is their reality check: clear lines of responsibility, human consequence and quality that must hold even under pressure.">Sexton års erfarenhet från socialt arbete är inte en sidogren i projekten. Den är deras realitetskontroll: tydliga ansvarslinjer, mänsklig konsekvens och kvalitet som måste hålla även under press.</p>
+      </div>
+
+      <div class="business-grid reveal">
+        <article class="business-card">
+          <span class="status pre">Pre-pilot</span>
+          <h3>Lupino · Civane Systems</h3>
+          <p data-sv="Strukturerat professionellt stöd för socialtjänst och barnavård: kompetensträning, praktikstöd och kvalitetssäkring som stödjer professionellt omdöme utan att ersätta ansvariga yrkespersoner." data-en="Structured professional support for social services and child welfare: competence development, practice support and quality assurance that strengthens professional judgement without replacing accountable practitioners.">Strukturerat professionellt stöd för socialtjänst och barnavård: kompetensträning, praktikstöd och kvalitetssäkring som stödjer professionellt omdöme utan att ersätta ansvariga yrkespersoner.</p>
+          <a class="text-link" href="https://lupino.se" target="_blank" rel="noopener" data-sv="Besök Lupino" data-en="Visit Lupino">Besök Lupino</a>
+        </article>
+
+        <article class="business-card">
+          <span class="status active" data-sv="Aktiv verksamhet" data-en="Active practice">Aktiv verksamhet</span>
+          <h3>Hardfeldt-Moberg Consulting AB</h3>
+          <p data-sv="Kvalificerade konsulttjänster inom socialtjänst, vård och omsorg samt LSS — som erfaren handläggare eller interim chef. Fokus på rättssäker handläggning, komplexa ärenden och stabilitet från dag ett." data-en="Qualified consulting for social services, health and care, and disability support — as an experienced caseworker or interim manager. Focused on legally sound practice, complex cases and stability from day one.">Kvalificerade konsulttjänster inom socialtjänst, vård och omsorg samt LSS — som erfaren handläggare eller interim chef. Fokus på rättssäker handläggning, komplexa ärenden och stabilitet från dag ett.</p>
+          <a class="text-link" href="/konsult/" data-sv="Se konsulttjänster" data-en="Explore consulting services">Se konsulttjänster</a>
+        </article>
+
+        <article class="business-card">
+          <span class="status active" data-sv="Verktygsplattform" data-en="Tool platform">Verktygsplattform</span>
+          <h3>NexTool</h3>
+          <p data-sv="En plattform med kalkylatorer och beslutsstöd för privatekonomi, investeringar, företagande och analys. Plattformen är också den publika produktmiljön för AI-GameFriend." data-en="A platform with calculators and decision support for personal finance, investing, entrepreneurship and analysis. It is also the public product environment for AI-GameFriend.">En plattform med kalkylatorer och beslutsstöd för privatekonomi, investeringar, företagande och analys. Plattformen är också den publika produktmiljön för AI-GameFriend.</p>
+          <a class="text-link" href="https://getnextool.com" target="_blank" rel="noopener" data-sv="Öppna NexTool" data-en="Open NexTool">Öppna NexTool</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <div class="container about-grid">
+      <div class="reveal">
+        <span class="section-kicker" data-sv="Om Pan" data-en="About Pan">Om Pan</span>
+        <p class="about-lead" data-sv="En praktiker som bygger system. En systembyggare som skriver berättelser." data-en="A practitioner who builds systems. A systems builder who writes stories.">En praktiker som bygger system. En systembyggare som skriver berättelser.</p>
+      </div>
+
+      <div class="about-copy reveal">
+        <p data-sv="Pan Härdfeldt har sexton års erfarenhet av myndighetsutövning, barn och unga, behandlingsarbete och juridiskt komplexa processer. Arbetet har format ett särskilt intresse för omdöme under press: vad människor ser, missar och gör när situationen inte erbjuder ett rent facit." data-en="Pan Härdfeldt has sixteen years of experience in public authority practice, child and youth services, treatment work and legally complex processes. This work has shaped a particular interest in judgement under pressure: what people see, miss and do when a situation offers no clean answer.">Pan Härdfeldt har sexton års erfarenhet av myndighetsutövning, barn och unga, behandlingsarbete och juridiskt komplexa processer. Arbetet har format ett särskilt intresse för omdöme under press: vad människor ser, missar och gör när situationen inte erbjuder ett rent facit.</p>
+        <p data-sv="Samma blick återkommer i Surfacing, AI-GameFriend, produktutvecklingen för social infrastruktur och författarskapet. Domänerna skiljer sig åt; kravet på ansvar, precision och mänsklig komplexitet gör det inte." data-en="The same perspective returns in Surfacing, AI-GameFriend, product development for social infrastructure and the writing. The domains differ; the demand for responsibility, precision and human complexity does not.">Samma blick återkommer i Surfacing, AI-GameFriend, produktutvecklingen för social infrastruktur och författarskapet. Domänerna skiljer sig åt; kravet på ansvar, precision och mänsklig komplexitet gör det inte.</p>
+
+        <div class="about-facts">
+          <div class="about-fact"><strong>Helsingborg</strong><span data-sv="Bas i Sverige" data-en="Based in Sweden">Bas i Sverige</span></div>
+          <div class="about-fact"><strong>SV / EN</strong><span data-sv="Arbetsspråk" data-en="Working languages">Arbetsspråk</span></div>
+          <div class="about-fact"><strong data-sv="Människa + AI" data-en="Human + AI">Människa + AI</strong><span data-sv="Inte människa mot AI" data-en="Not human versus AI">Inte människa mot AI</span></div>
+          <div class="about-fact"><strong data-sv="Omdöme" data-en="Judgement">Omdöme</strong><span data-sv="Den gemensamma nämnaren" data-en="The common denominator">Den gemensamma nämnaren</span></div>
         </div>
-      </li>
-      <li class="reveal">
-        <span class="p-num">03</span>
-        <div>
-          <h3 data-sv="Korta återkopplingsloopen" data-en="Shorten the feedback loop">Korta återkopplingsloopen</h3>
-          <p data-sv="Cykeltiden mellan utförande, återkoppling och korrigering krymper från dagar eller veckor till minuter. Det egna omdömet får möjlighet att kalibreras under en sammanhängande session, innan principen hinner glömmas eller förvridas. Det är friktionens täthet — inte dess hårdhet — som gör arbetet." data-en="The cycle time between execution, feedback, and correction shrinks from days or weeks to minutes. Your own judgement gets a chance to calibrate within a single session, before the principle can be forgotten or distorted. It's the density of the friction — not its harshness — that does the work.">Cykeltiden mellan utförande, återkoppling och korrigering krymper från dagar eller veckor till minuter. Det egna omdömet får möjlighet att kalibreras under en sammanhängande session, innan principen hinner glömmas eller förvridas. Det är friktionens täthet — inte dess hårdhet — som gör arbetet.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="contact-panel reveal">
+        <span class="section-kicker" data-sv="Kontakt" data-en="Contact">Kontakt</span>
+        <h2 data-sv="Låt oss börja med den verkliga frågan." data-en="Let us begin with the real question.">Låt oss börja med den verkliga frågan.</h2>
+        <p data-sv="Hör av dig om konsultuppdrag, Surfacing, AI- och produktdialoger, föreläsningar, private-alpha-testning, förlagsintresse eller samarbeten där omdöme och komplexa mänskliga system står i centrum." data-en="Get in touch about consulting, Surfacing, AI and product conversations, talks, private-alpha testing, publishing inquiries or collaborations centred on judgement and complex human systems.">Hör av dig om konsultuppdrag, Surfacing, AI- och produktdialoger, föreläsningar, private-alpha-testning, förlagsintresse eller samarbeten där omdöme och komplexa mänskliga system står i centrum.</p>
+        <div class="contact-links">
+          <a class="button primary" href="mailto:pan.hardfeldt@gmail.com" data-sv="Mejla Pan" data-en="Email Pan">Mejla Pan</a>
+          <a class="button" href="https://linkedin.com/in/panhardfeldt" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="button" href="/konsult/" data-sv="Konsulttjänster" data-en="Consulting services">Konsulttjänster</a>
         </div>
-      </li>
-      <li class="reveal">
-        <span class="p-num">04</span>
-        <div>
-          <h3 data-sv="Arbeta med principer, inte regler" data-en="Work with principles, not rules">Arbeta med principer, inte regler</h3>
-          <p data-sv="Regler följs mekaniskt och producerar mekanisk output. Principer internaliseras och måste vägas mot situationen. Surfacing levererar inte instruktioner som 'gör aldrig X', utan principer som användaren får tillämpa med eget omdöme — och som kan ifrågasättas där situationen kräver det." data-en="Rules are followed mechanically and produce mechanical output. Principles must be internalised and weighed against the situation. Surfacing doesn't deliver instructions like 'never do X', but principles that the user applies with their own judgement — and which can be questioned where the situation calls for it.">Regler följs mekaniskt och producerar mekanisk output. Principer internaliseras och måste vägas mot situationen. Surfacing levererar inte instruktioner som "gör aldrig X", utan principer som användaren får tillämpa med eget omdöme — och som kan ifrågasättas där situationen kräver det.</p>
-        </div>
-      </li>
-      <li class="reveal">
-        <span class="p-num">05</span>
-        <div>
-          <h3 data-sv="Överför bedömningsförmåga till människan" data-en="Transfer judgement to the human">Överför bedömningsförmåga till människan</h3>
-          <p data-sv="Målet är inte beroende, utan självständighet. Processen ska gradvis gå från AI-ledd till användarledd, med AI som bekräftare snarare än domare. Det tydligaste tecknet på att kompetensen har internaliserats är att användaren själv identifierar och åtgärdar svagheter innan AI:n hinner namnge dem." data-en="The goal isn't dependence, but independence. The process should gradually shift from AI-led to user-led, with AI as confirmer rather than judge. The clearest sign that competence has been internalised is that the user identifies and addresses weaknesses before the AI names them.">Målet är inte beroende, utan självständighet. Processen ska gradvis gå från AI-ledd till användarledd, med AI som bekräftare snarare än domare. Det tydligaste tecknet på att kompetensen har internaliserats är att användaren själv identifierar och åtgärdar svagheter innan AI:n hinner namnge dem.</p>
-        </div>
-      </li>
-    </ol>
-
-    <!-- Vad Surfacing inte är -->
-    <div class="surface-block reveal">
-      <h3 class="surface-h3" data-sv="Vad Surfacing inte är" data-en="What Surfacing is not">Vad Surfacing inte är</h3>
-      <p data-sv="Tydliga gränser gör metoden trovärdig. Surfacing är ett specifikt verktyg för en specifik sak — inte en ersättning för andra praktiker." data-en="Clear boundaries make the method trustworthy. Surfacing is a specific tool for a specific thing — not a replacement for other practices.">Tydliga gränser gör metoden trovärdig. Surfacing är ett specifikt verktyg för en specifik sak — inte en ersättning för andra praktiker.</p>
-    </div>
-    <div class="not-grid reveal">
-      <div class="not-card">
-        <h4 data-sv="Inte coaching." data-en="Not coaching.">Inte coaching.</h4>
-        <p data-sv="Coaching ställer frågor för att du ska hitta egna svar. Surfacing speglar — den visar vad som finns, specifikt och mätbart." data-en="Coaching asks questions so that you find your own answers. Surfacing mirrors — it shows what is there, specifically and measurably.">Coaching ställer frågor för att du ska hitta egna svar. Surfacing speglar — den visar vad som finns, specifikt och mätbart.</p>
-      </div>
-      <div class="not-card">
-        <h4 data-sv="Inte utbildning." data-en="Not education.">Inte utbildning.</h4>
-        <p data-sv="Utbildning fyller på kunskap. Surfacing synliggör det du redan har." data-en="Education adds knowledge. Surfacing makes visible what you already carry.">Utbildning fyller på kunskap. Surfacing synliggör det du redan har.</p>
-      </div>
-      <div class="not-card">
-        <h4 data-sv="Inte terapi." data-en="Not therapy.">Inte terapi.</h4>
-        <p data-sv="Surfacing bearbetar inte trauma och diagnostiserar inte. Den frigör kapacitet." data-en="Surfacing does not process trauma and does not diagnose. It releases capacity.">Surfacing bearbetar inte trauma och diagnostiserar inte. Den frigör kapacitet.</p>
-      </div>
-      <div class="not-card">
-        <h4 data-sv="Inte ett AI-verktyg." data-en="Not an AI tool.">Inte ett AI-verktyg.</h4>
-        <p data-sv="AI:n skapar ingenting. Den speglar, kalibrerar och dokumenterar. All kompetens och kreativitet tillhör dig." data-en="The AI creates nothing. It mirrors, calibrates, and documents. All competence and creativity belong to you.">AI:n skapar ingenting. Den speglar, kalibrerar och dokumenterar. All kompetens och kreativitet tillhör dig.</p>
-      </div>
-      <div class="not-card">
-        <h4 data-sv="Inte en garanti." data-en="Not a guarantee.">Inte en garanti.</h4>
-        <p data-sv="Surfacing kräver att det finns latent kapacitet att synliggöra. Den skapar inte kompetens ur tomma intet. Resultatet beror på dig, din domän och vad som redan finns under ytan." data-en="Surfacing requires there to be latent capacity to surface. It does not create competence from nothing. The outcome depends on you, your domain, and what is already below the surface.">Surfacing kräver att det finns latent kapacitet att synliggöra. Den skapar inte kompetens ur tomma intet. Resultatet beror på dig, din domän och vad som redan finns under ytan.</p>
       </div>
     </div>
-
-    <!-- Dokumenterat case -->
-    <div class="surface-block reveal">
-      <h3 class="surface-h3" data-sv="Ett dokumenterat case" data-en="A documented case">Ett dokumenterat case</h3>
-      <p data-sv="Surfacing utvecklades först genom Pan Härdfeldts egen litterära process. I december 2025 gjordes de första seriösa skönlitterära försöken. Under de följande fem månaderna producerades fyra större litterära arbeten, varav två färdigställda manuskript för förlagskontakt, och ungefär 360 boksidor publicerbar text." data-en="Surfacing was first developed through Pan Härdfeldt's own literary process. In December 2025 the first serious attempts at fiction were made. Over the following five months, four major literary works were produced — two of them completed manuscripts ready for publishing contact — and roughly 360 book pages of publishable text.">Surfacing utvecklades först genom Pan Härdfeldts egen litterära process. I december 2025 gjordes de första seriösa skönlitterära försöken. Under de följande fem månaderna producerades fyra större litterära arbeten, varav två färdigställda manuskript för förlagskontakt, och ungefär 360 boksidor publicerbar text.</p>
-      <p data-sv="Poängen är inte att AI ersatte omdömet. Poängen är att återkopplingsloopen blev tillräckligt tät för att omdömet skulle tränas snabbare. Processen dokumenterades löpande: steg, tekniker, kvalitetshöjningar och återkommande mönster kunde följas medan arbetet pågick." data-en="The point is not that AI replaced judgement. The point is that the feedback loop became tight enough for judgement to be trained more quickly. The process was documented as it went: steps, techniques, quality improvements, and recurring patterns could be followed while the work was in progress.">Poängen är inte att AI ersatte omdömet. Poängen är att återkopplingsloopen blev tillräckligt tät för att omdömet skulle tränas snabbare. Processen dokumenterades löpande: steg, tekniker, kvalitetshöjningar och återkommande mönster kunde följas medan arbetet pågick.</p>
-      <p data-sv="Surfacing presenteras därför inte som en universell garanti, utan som en observerad mekanism: när befintlig kapacitet möter rätt sorts friktion kan utvecklingstakten förändras kraftigt." data-en="Surfacing is therefore not presented as a universal guarantee, but as an observed mechanism: when existing capacity meets the right kind of friction, the pace of development can change significantly.">Surfacing presenteras därför inte som en universell garanti, utan som en observerad mekanism: när befintlig kapacitet möter rätt sorts friktion kan utvecklingstakten förändras kraftigt.</p>
-    </div>
-
-    <!-- Tillämpningsområden -->
-    <div class="surface-block reveal">
-      <h3 class="surface-h3" data-sv="Tillämpningsområden" data-en="Areas of application">Tillämpningsområden</h3>
-      <p data-sv="Surfacing utvecklades genom skönlitterärt skrivande men principerna är domänoberoende. Metoden kan tillämpas i områden där mänskligt omdöme, perception och erfarenhetsbaserad kompetens är kärnan." data-en="Surfacing was developed through literary writing, but the principles are domain-independent. The method can be applied in areas where human judgement, perception, and experience-based competence are at the core.">Surfacing utvecklades genom skönlitterärt skrivande men principerna är domänoberoende. Metoden kan tillämpas i områden där mänskligt omdöme, perception och erfarenhetsbaserad kompetens är kärnan.</p>
-    </div>
-    <div class="apply-grid reveal">
-      <div class="apply-card">
-        <h4 data-sv="Kreativa yrken" data-en="Creative work">Kreativa yrken</h4>
-        <p data-sv="Författare, musiker, formgivare, arkitekter. Konstnärlig röst och estetiskt omdöme som väntar på kanal." data-en="Writers, musicians, designers, architects. Artistic voice and aesthetic judgement waiting for a channel.">Författare, musiker, formgivare, arkitekter. Konstnärlig röst och estetiskt omdöme som väntar på kanal.</p>
-      </div>
-      <div class="apply-card">
-        <h4 data-sv="Ledarskap" data-en="Leadership">Ledarskap</h4>
-        <p data-sv="Chefer, projektledare, entreprenörer. Situationsläsning och beslutsfattande som redan finns men inte används fullt ut." data-en="Managers, project leaders, entrepreneurs. Situation-reading and decision-making that's already there but not fully used.">Chefer, projektledare, entreprenörer. Situationsläsning och beslutsfattande som redan finns men inte används fullt ut.</p>
-      </div>
-      <div class="apply-card">
-        <h4 data-sv="Vård och socialt arbete" data-en="Healthcare and social work">Vård och socialt arbete</h4>
-        <p data-sv="Sjuksköterskor, läkare, socialarbetare. Klinisk blick och bedömningsförmåga som finslipar sig själv med rätt spegel." data-en="Nurses, doctors, social workers. Clinical perception and assessment that sharpens itself with the right mirror.">Sjuksköterskor, läkare, socialarbetare. Klinisk blick och bedömningsförmåga som finslipar sig själv med rätt spegel.</p>
-      </div>
-      <div class="apply-card">
-        <h4 data-sv="Utbildning" data-en="Education">Utbildning</h4>
-        <p data-sv="Lärare, handledare, forskare. Pedagogisk perception som mognar snabbare med kalibrerad återkoppling." data-en="Teachers, supervisors, researchers. Pedagogical perception that matures more quickly with calibrated feedback.">Lärare, handledare, forskare. Pedagogisk perception som mognar snabbare med kalibrerad återkoppling.</p>
-      </div>
-      <div class="apply-card">
-        <h4 data-sv="Juridik och bedömning" data-en="Law and assessment">Juridik och bedömning</h4>
-        <p data-sv="Domare, utredare, analytiker. Mönsterigenkänning och etisk intuition som skärps." data-en="Judges, investigators, analysts. Pattern recognition and ethical intuition that sharpens.">Domare, utredare, analytiker. Mönsterigenkänning och etisk intuition som skärps.</p>
-      </div>
-    </div>
-
-    <!-- Produkter -->
-    <div class="surface-block reveal">
-      <h3 class="surface-h3" data-sv="Produkter" data-en="Offerings">Produkter</h3>
-      <p data-sv="Fyra format som följer samma metod, kalibrerade efter vad situationen kräver." data-en="Four formats that follow the same method, calibrated to what the situation calls for.">Fyra format som följer samma metod, kalibrerade efter vad situationen kräver.</p>
-    </div>
-    <div class="products-grid">
-      <a href="mailto:pan.hardfeldt@gmail.com?subject=Surfacing Sprint" class="cta-card reveal">
-        <span class="cta-eyebrow" data-sv="Sprint · 6 veckor" data-en="Sprint · 6 weeks">Sprint · 6 veckor</span>
-        <h3 data-sv="Surfacing Sprint" data-en="Surfacing Sprint">Surfacing Sprint</h3>
-        <p data-sv="Individuellt program med AI-spegel och mänsklig facilitator. Dokumenterad progression med mätpunkter. Målet: identifiera och frigöra specifik latent kapacitet inom din domän — och att du inte ska behöva oss efteråt." data-en="An individual programme with AI mirror and human facilitator. Documented progression with measurement points. The goal: identify and release specific latent capacity within your domain — and so you won't need us afterwards.">Individuellt program med AI-spegel och mänsklig facilitator. Dokumenterad progression med mätpunkter. Målet: identifiera och frigöra specifik latent kapacitet inom din domän — och att du inte ska behöva oss efteråt.</p>
-        <span class="cta-link" data-sv="Prata om en Sprint" data-en="Discuss a Sprint">Prata om en Sprint</span>
-      </a>
-      <a href="mailto:pan.hardfeldt@gmail.com?subject=Surfacing Workshop" class="cta-card reveal">
-        <span class="cta-eyebrow" data-sv="Workshop · halv- eller heldag" data-en="Workshop · half- or full-day">Workshop · halv- eller heldag</span>
-        <h3 data-sv="Surfacing Workshop" data-en="Surfacing Workshop">Surfacing Workshop</h3>
-        <p data-sv="Ditt team tillämpar principerna på era egna frågor. Fokus ligger på att hitta rätt sorts friktion för domänen, korta loopen och bygga ett arbetssätt som fungerar efter att workshopen är slut." data-en="Your team applies the principles to your own questions. The focus is on finding the right kind of friction for the domain, shortening the loop, and building a way of working that holds after the workshop ends.">Ditt team tillämpar principerna på era egna frågor. Fokus ligger på att hitta rätt sorts friktion för domänen, korta loopen och bygga ett arbetssätt som fungerar efter att workshopen är slut.</p>
-        <span class="cta-link" data-sv="Boka workshop" data-en="Book workshop">Boka workshop</span>
-      </a>
-      <a href="mailto:pan.hardfeldt@gmail.com?subject=Surfacing Föreläsning" class="cta-card reveal">
-        <span class="cta-eyebrow" data-sv="Föreläsning · 60–90 minuter" data-en="Talk · 60–90 minutes">Föreläsning · 60–90 minuter</span>
-        <h3 data-sv="Surfacing Föreläsning" data-en="Surfacing Talk">Surfacing Föreläsning</h3>
-        <p data-sv="Principerna, mekanismen och det dokumenterade caset. Anpassas efter publik — produktutveckling, skrivande, ledarskap eller socialt arbete." data-en="The principles, the mechanism, and the documented case. Adapted to the audience — product development, writing, leadership, or social work.">Principerna, mekanismen och det dokumenterade caset. Anpassas efter publik — produktutveckling, skrivande, ledarskap eller socialt arbete.</p>
-        <span class="cta-link" data-sv="Boka föreläsning" data-en="Book a talk">Boka föreläsning</span>
-      </a>
-      <a href="mailto:pan.hardfeldt@gmail.com?subject=Surfacing Advisory" class="cta-card reveal">
-        <span class="cta-eyebrow" data-sv="Advisory · löpande" data-en="Advisory · ongoing">Advisory · löpande</span>
-        <h3 data-sv="Surfacing Advisory" data-en="Surfacing Advisory">Surfacing Advisory</h3>
-        <p data-sv="Rådgivning för organisationer som vill implementera Surfacing-principer i sin egen verksamhet — bättre återkopplingsloopar, skarpare omdöme, mer självständiga arbetssätt." data-en="Advisory for organisations that want to implement Surfacing principles in their own operations — better feedback loops, sharper judgement, more independent ways of working.">Rådgivning för organisationer som vill implementera Surfacing-principer i sin egen verksamhet — bättre återkopplingsloopar, skarpare omdöme, mer självständiga arbetssätt.</p>
-        <span class="cta-link" data-sv="Prata om Advisory" data-en="Discuss Advisory">Prata om Advisory</span>
-      </a>
-    </div>
-
-    <!-- Vad vi säljer -->
-    <div class="value-block reveal">
-      <span class="aside-label" data-sv="Vad vi säljer" data-en="What we sell">Vad vi säljer</span>
-      <p data-sv="Komprimerad tid. Utveckling som normalt tar år kan i vissa fall komprimeras till veckor — inte genom att hoppa över steg, utan genom att göra varje steg synligt, mätbart och omedelbart." data-en="Compressed time. Development that normally takes years can in some cases be compressed to weeks — not by skipping steps, but by making every step visible, measurable, and immediate.">Komprimerad tid. Utveckling som normalt tar år kan i vissa fall komprimeras till veckor — inte genom att hoppa över steg, utan genom att göra varje steg synligt, mätbart och omedelbart.</p>
-      <p data-sv="Surfacing är precision, inte volym. Varje tillämpning kalibreras per person och domän. Målet är inte att skapa beroende, utan att göra kapacitet synlig, prövbar och självständig." data-en="Surfacing is precision, not volume. Each application is calibrated to person and domain. The goal is not to create dependence, but to make capacity visible, testable, and independent.">Surfacing är precision, inte volym. Varje tillämpning kalibreras per person och domän. Målet är inte att skapa beroende, utan att göra kapacitet synlig, prövbar och självständig.</p>
-      <p data-sv="Surfacing är ett premiumformat för situationer där precision, tid och omdöme spelar stor roll." data-en="Surfacing is a premium format for situations where precision, time, and judgement matter most.">Surfacing är ett premiumformat för situationer där precision, tid och omdöme spelar stor roll.</p>
-    </div>
-
-    <!-- Final CTA -->
-    <div class="surface-final-cta reveal">
-      <h3 data-sv="Vill du använda Surfacing?" data-en="Want to use Surfacing?">Vill du använda Surfacing?</h3>
-      <p data-sv="Hör av dig om det gäller föreläsning, workshop, individuell Sprint eller rådgivning för organisationer som vill bygga bättre återkopplingsloopar, skarpare omdöme och mer självständiga arbetssätt." data-en="Get in touch about a talk, workshop, individual Sprint, or advisory for organisations that want to build better feedback loops, sharper judgement, and more independent ways of working.">Hör av dig om det gäller föreläsning, workshop, individuell Sprint eller rådgivning för organisationer som vill bygga bättre återkopplingsloopar, skarpare omdöme och mer självständiga arbetssätt.</p>
-      <a href="#contact" class="contact-btn primary" data-sv="Kontakta Pan" data-en="Contact Pan">Kontakta Pan</a>
-      <span class="closing-line" data-sv="Surfacing. Det som redan finns — synliggjort." data-en="Surfacing. What is already there — made visible.">Surfacing. Det som redan finns — synliggjort.</span>
-    </div>
-  </div>
-</section>
-
-<!-- Contact -->
-<section id="contact">
-  <div class="container">
-    <div class="reveal">
-      <span class="section-label" data-sv="Kontakt" data-en="Contact">Kontakt</span>
-      <h2 class="section-title" data-sv="Hör av dig" data-en="Get in touch">Hör av dig</h2>
-      <p class="section-desc" data-sv="Hör av dig om det gäller konsultuppdrag inom socialt arbete, AI- eller produktdialoger, föreläsningar, workshops, förlagsintresse eller andra samarbeten där omdöme, ansvar och komplexa mänskliga system står i centrum. Jag återkommer så snart jag kan." data-en="Get in touch about social work consulting, AI or product conversations, talks, workshops, publishing interest, or other collaborations where judgement, responsibility, and complex human systems are at the centre. I'll get back as soon as I can.">Hör av dig om det gäller konsultuppdrag inom socialt arbete, AI- eller produktdialoger, föreläsningar, workshops, förlagsintresse eller andra samarbeten där omdöme, ansvar och komplexa mänskliga system står i centrum. Jag återkommer så snart jag kan.</p>
-    </div>
-
-    <div class="contact-links reveal">
-      <a href="mailto:pan.hardfeldt@gmail.com" class="contact-btn primary" data-sv="✉ Mejla mig" data-en="✉ Email me">✉ Mejla mig</a>
-    </div>
-    <div class="contact-secondary reveal">
-      <a href="https://linkedin.com/in/panhardfeldt" target="_blank">LinkedIn</a>
-      <a href="https://getnextool.com" target="_blank">NexTool</a>
-      <a href="https://lupino.se" target="_blank">Lupino</a>
-    </div>
-  </div>
-</section>
-
+  </section>
 </main>
 
-<footer>
-  <div class="footer-links">
-    <a href="#work" data-sv="Arbete" data-en="Work">Arbete</a>
-    <a href="#method" data-sv="Metoder" data-en="Methods">Metoder</a>
-    <a href="#ai-gamefriend" data-sv="AI &amp; verktyg" data-en="AI &amp; tools">AI &amp; verktyg</a>
-    <a href="#literature" data-sv="Litteratur" data-en="Literature">Litteratur</a>
-    <a href="#consulting" data-sv="Konsulting" data-en="Consulting">Konsulting</a>
-    <a href="#om-mig" data-sv="Om" data-en="About">Om</a>
-    <a href="#contact" data-sv="Kontakt" data-en="Contact">Kontakt</a>
-    <a href="mailto:pan.hardfeldt@gmail.com" data-sv="Mejl" data-en="Email">Mejl</a>
-    <a href="https://linkedin.com/in/panhardfeldt" target="_blank">LinkedIn</a>
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>© 2026 Pan Härdfeldt · Helsingborg, Sverige</p>
+    <div class="footer-links">
+      <a href="#surfacing">Surfacing</a>
+      <a href="#ai-gamefriend">AI-GameFriend</a>
+      <a href="#authorship" data-sv="Författarskap" data-en="Writing">Författarskap</a>
+      <a href="https://lupino.se" target="_blank" rel="noopener">Lupino</a>
+      <a href="mailto:pan.hardfeldt@gmail.com" data-sv="E-post" data-en="Email">E-post</a>
+    </div>
   </div>
-  <p>© 2026 Pan Härdfeldt · Kista, Stockholm</p>
 </footer>
 
 <script>
-// Language toggle
-let currentLang = 'sv';
+const langButtons = document.querySelectorAll(".lang-btn");
+const translatable = document.querySelectorAll("[data-sv][data-en]");
 
-function setLang(lang) {
-  currentLang = lang;
-  document.querySelectorAll('.lang-btn').forEach(btn => {
-    btn.classList.toggle('active', btn.textContent.trim() === lang.toUpperCase());
-  });
+function setLanguage(lang) {
   document.documentElement.lang = lang;
-  document.querySelectorAll('[data-sv]').forEach(el => {
-    el.textContent = el.getAttribute(`data-${lang}`);
-  });
-}
-
-// Scroll reveal
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
+  translatable.forEach((element) => {
+    const value = element.getAttribute(`data-${lang}`);
+    if (value.includes("<em>") || value.includes("<strong>")) {
+      element.innerHTML = value;
+    } else {
+      element.textContent = value;
     }
   });
-}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-
-document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-// Smooth scroll for nav (desktop + mobile)
-document.querySelectorAll('nav a, .mobile-menu a').forEach(link => {
-  link.addEventListener('click', (e) => {
-    e.preventDefault();
-    const target = document.querySelector(link.getAttribute('href'));
-    if (target) target.scrollIntoView({ behavior: 'smooth' });
-    closeMenu();
+  langButtons.forEach((button) => {
+    const active = button.dataset.lang === lang;
+    button.classList.toggle("active", active);
+    button.setAttribute("aria-pressed", String(active));
   });
+  try {
+    localStorage.setItem("pan-site-language", lang);
+  } catch (_) {}
+}
+
+langButtons.forEach((button) => {
+  button.addEventListener("click", () => setLanguage(button.dataset.lang));
 });
 
-// Mobile menu
-function toggleMenu() {
-  const btn = document.querySelector('.menu-toggle');
-  const menu = document.getElementById('mobile-menu');
-  const open = btn.getAttribute('aria-expanded') === 'true';
-  btn.setAttribute('aria-expanded', String(!open));
-  menu.classList.toggle('open', !open);
-}
+try {
+  const savedLanguage = localStorage.getItem("pan-site-language");
+  if (savedLanguage === "en") setLanguage("en");
+} catch (_) {}
+
+const menuButton = document.querySelector(".menu-toggle");
+const mobileNav = document.getElementById("mobile-nav");
+
 function closeMenu() {
-  const btn = document.querySelector('.menu-toggle');
-  const menu = document.getElementById('mobile-menu');
-  if (!btn || !menu) return;
-  btn.setAttribute('aria-expanded', 'false');
-  menu.classList.remove('open');
+  menuButton.setAttribute("aria-expanded", "false");
+  mobileNav.classList.remove("open");
 }
-document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMenu(); });
 
-// Scroll-spy: highlight current section in nav
-(function () {
-  const navLinks = Array.from(document.querySelectorAll('nav a[href^="#"]'));
-  const targets = navLinks
-    .map(a => ({ a, id: a.getAttribute('href').slice(1) }))
-    .map(t => ({ ...t, el: document.getElementById(t.id) }))
-    .filter(t => t.el);
-  if (!targets.length) return;
+menuButton.addEventListener("click", () => {
+  const open = menuButton.getAttribute("aria-expanded") === "true";
+  menuButton.setAttribute("aria-expanded", String(!open));
+  mobileNav.classList.toggle("open", !open);
+});
 
-  const setActive = (id) => {
-    navLinks.forEach(a => {
-      const match = a.getAttribute('href') === '#' + id;
-      a.classList.toggle('is-active', match);
-      if (match) a.setAttribute('aria-current', 'true');
-      else a.removeAttribute('aria-current');
+mobileNav.querySelectorAll("a").forEach((link) => link.addEventListener("click", closeMenu));
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") closeMenu();
+});
+
+const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const revealElements = document.querySelectorAll(".reveal");
+
+if (reducedMotion || !("IntersectionObserver" in window)) {
+  revealElements.forEach((element) => element.classList.add("visible"));
+} else {
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      }
     });
-  };
+  }, { threshold: .12, rootMargin: "0px 0px -40px" });
+  revealElements.forEach((element) => revealObserver.observe(element));
+}
 
-  const spy = new IntersectionObserver((entries) => {
+const navLinks = Array.from(document.querySelectorAll('.desktop-nav a[href^="#"]'));
+const sections = navLinks
+  .map((link) => document.querySelector(link.getAttribute("href")))
+  .filter(Boolean);
+
+if ("IntersectionObserver" in window && sections.length) {
+  const activeObserver = new IntersectionObserver((entries) => {
     const visible = entries
-      .filter(e => e.isIntersecting)
+      .filter((entry) => entry.isIntersecting)
       .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
-    if (visible[0]) setActive(visible[0].target.id);
-  }, { rootMargin: '-40% 0px -50% 0px', threshold: [0, 0.25, 0.5, 0.75, 1] });
-
-  targets.forEach(t => spy.observe(t.el));
-})();
+    if (!visible[0]) return;
+    navLinks.forEach((link) => {
+      const active = link.getAttribute("href") === `#${visible[0].target.id}`;
+      link.classList.toggle("is-active", active);
+      if (active) link.setAttribute("aria-current", "location");
+      else link.removeAttribute("aria-current");
+    });
+  }, { rootMargin: "-35% 0px -55%", threshold: [0, .2, .5, .8] });
+  sections.forEach((section) => activeObserver.observe(section));
+}
 </script>
-
 </body>
 </html>
